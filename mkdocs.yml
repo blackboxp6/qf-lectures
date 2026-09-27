@@ -1,0 +1,117 @@
+site_name: Quantitative Finance Lectures
+site_description: A rigorous, free curriculum in quantitative finance — mathematics, statistics, stochastic calculus, derivatives pricing, portfolio theory, and machine learning applied to markets.
+site_author: Joshua Bloodymier P. Salvino
+site_url: https://jsbldquant04.github.io/qf-lectures/
+repo_name: jsbldquant04/qf-lectures
+repo_url: https://github.com/jsbldquant04/qf-lectures
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Source Sans Pro
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - def_list
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.mark
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Curriculum: curriculum.md
+  - "0. Prerequisites":
+      - prerequisites/index.md
+      - Python, NumPy & Pandas for Quant Finance: prerequisites/python-numpy-pandas.md
+  - "1. Financial Foundations":
+      - financial-foundations/index.md
+      - Returns and Log Returns: financial-foundations/returns-and-log-returns.md
+  - "2. Statistics & Econometrics":
+      - statistics/index.md
+      - Probability Distributions in Finance: statistics/probability-distributions.md
+  - "3. Portfolio & Risk": portfolio-risk/index.md
+  - "4. Derivatives": derivatives/index.md
+  - "5. Stochastic Finance": stochastic-finance/index.md
+  - "6. Quantitative Trading": trading/index.md
+  - "7. Advanced Quant Finance": advanced/index.md
+  - "8. Machine Learning for Finance": machine-learning/index.md
+  - "9. Research Laboratory": research-lab/index.md
+  - References & Bibliography: references/index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jsbldquant04
+  generator: false
+
+copyright: >
+  © 2026 Joshua Bloodymier P. Salvino. Educational content for learning purposes only — not investment advice.

@@ -1,0 +1,42 @@
+:root {
+  --qf-code-radius: 6px;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+}
+
+.md-typeset table {
+  font-size: 0.78rem;
+}
+
+.md-typeset .admonition.objectives {
+  border-color: #448aff;
+}
+.md-typeset .objectives > .admonition-title {
+  background-color: rgba(68, 138, 255, 0.1);
+}
+.md-typeset .objectives > .admonition-title::before {
+  background-color: #448aff;
+}
+
+.md-typeset .admonition.mistake {
+  border-color: #ff5252;
+}
+.md-typeset .mistake > .admonition-title {
+  background-color: rgba(255, 82, 82, 0.1);
+}
+
+.qf-figure {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.qf-figure img {
+  max-width: 100%;
+  border-radius: var(--qf-code-radius);
+}
+.qf-figure figcaption {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.4rem;
+}

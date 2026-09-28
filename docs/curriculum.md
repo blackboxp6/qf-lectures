@@ -22,13 +22,13 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 | [Financial Instruments: Equities and Bonds](financial-foundations/equities-and-bonds.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Derivatives: An Overview](financial-foundations/derivatives-overview.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Market Structure and Order Books](financial-foundations/market-structure-order-books.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Portfolio Basics | :material-progress-clock:{ style="color:#ff9800" } |
+| [Portfolio Basics](financial-foundations/portfolio-basics.md) | :material-check-circle:{ style="color:#4caf50" } |
 
 ## 2. Statistics & Econometrics
 | Lecture | Status |
 |---|---|
 | [Probability Distributions in Finance](statistics/probability-distributions.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Estimation Theory (MLE, MoM) | :material-progress-clock:{ style="color:#ff9800" } |
+| [Estimation Theory (MLE, MoM)](statistics/estimation-theory.md) | :material-check-circle:{ style="color:#4caf50" } |
 | Hypothesis Testing for Financial Data | :material-progress-clock:{ style="color:#ff9800" } |
 | Linear Regression and Regularization | :material-progress-clock:{ style="color:#ff9800" } |
 | Principal Component Analysis | :material-progress-clock:{ style="color:#ff9800" } |

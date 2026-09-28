@@ -156,6 +156,6 @@ The choice of return distribution is not academic — it directly determines how
 ---
 
 <div class="grid" markdown>
-[:material-arrow-left: Previous: Market Structure and Order Books](/qf-lectures/financial-foundations/market-structure-order-books/){ .md-button }
-[Back to Curriculum :material-arrow-right:](/qf-lectures/curriculum/){ .md-button .md-button--primary }
+[:material-arrow-left: Previous: Portfolio Basics](/qf-lectures/financial-foundations/portfolio-basics/){ .md-button }
+[Next: Estimation Theory :material-arrow-right:](/qf-lectures/statistics/estimation-theory/){ .md-button .md-button--primary }
 </div>

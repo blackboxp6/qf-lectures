@@ -27,6 +27,8 @@ Every citation used anywhere on this site is collected here, organized by module
 - Shreve, S. E. (2004). *Stochastic Calculus for Finance I & II*. Springer Finance.
 - Tsay, R. S. (2010). *Analysis of Financial Time Series* (3rd ed.). Wiley.
 - Bodie, Z., Kane, A., & Marcus, A. J. (2021). *Investments* (12th ed.). McGraw-Hill.
+- Casella, G., & Berger, R. L. (2002). *Statistical Inference* (2nd ed.). Duxbury.
+- Harris, L. (2003). *Trading and Exchanges: Market Microstructure for Practitioners*. Oxford University Press.
 
 ## Empirical / methodological papers
 

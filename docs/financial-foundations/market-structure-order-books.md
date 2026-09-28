@@ -178,5 +178,5 @@ Market structure is not a peripheral detail — it is where trading theory meets
 
 <div class="grid" markdown>
 [:material-arrow-left: Previous: Derivatives — An Overview](/qf-lectures/financial-foundations/derivatives-overview/){ .md-button }
-[Next: Probability Distributions in Finance :material-arrow-right:](/qf-lectures/statistics/probability-distributions/){ .md-button .md-button--primary }
+[Next: Portfolio Basics :material-arrow-right:](/qf-lectures/financial-foundations/portfolio-basics/){ .md-button .md-button--primary }
 </div>

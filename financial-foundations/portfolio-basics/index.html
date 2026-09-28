@@ -12,9 +12,13 @@
         <meta name="author" content="Joshua Bloodymier P. Salvino">
       
       
-        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/_template/lecture-template/">
+        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/financial-foundations/portfolio-basics/">
       
       
+        <link rel="prev" href="../market-structure-order-books/">
+      
+      
+        <link rel="next" href="../../statistics/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>[Lecture Title] - Quantitative Finance Lectures</title>
+        <title>Portfolio Basics - Quantitative Finance Lectures</title>
       
     
     
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lecture-title" class="md-skip">
+        <a href="#portfolio-basics" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              [Lecture Title]
+              Portfolio Basics
             
           </span>
         </div>
@@ -267,11 +271,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../financial-foundations/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -621,6 +627,8 @@
       
   
   
+    
+  
   
   
     
@@ -645,21 +653,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../financial-foundations/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -670,13 +681,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             1. Financial Foundations
@@ -692,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-foundations/returns-and-log-returns/" class="md-nav__link">
+      <a href="../returns-and-log-returns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -713,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-foundations/compounding-time-value/" class="md-nav__link">
+      <a href="../compounding-time-value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-foundations/equities-and-bonds/" class="md-nav__link">
+      <a href="../equities-and-bonds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-foundations/derivatives-overview/" class="md-nav__link">
+      <a href="../derivatives-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-foundations/market-structure-order-books/" class="md-nav__link">
+      <a href="../market-structure-order-books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,10 +805,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../financial-foundations/portfolio-basics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Portfolio Basics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -806,6 +837,127 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Intuition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mathematical formulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Derivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-worked-numerical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Worked numerical example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-python-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Python implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-financial-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Financial interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Common mistakes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1229,7 +1381,7 @@
                   
 
   
-    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/_template/lecture-template.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/financial-foundations/portfolio-basics.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1237,69 +1389,148 @@
   
 
 
-<h1 id="lecture-title">[Lecture Title]<a class="headerlink" href="#lecture-title" title="Permanent link">&para;</a></h1>
+<h1 id="portfolio-basics">Portfolio Basics<a class="headerlink" href="#portfolio-basics" title="Permanent link">&para;</a></h1>
 <div class="admonition objectives">
 <p class="admonition-title">Learning objectives</p>
 <p>By the end of this lecture you should be able to:</p>
 <ul>
-<li>[ ] Objective 1</li>
-<li>[ ] Objective 2</li>
-<li>[ ] Objective 3</li>
+<li>[ ] Define portfolio weights and compute a portfolio's return as a weighted average of asset returns</li>
+<li>[ ] Derive the expected return and variance of a portfolio, in both two-asset and matrix form</li>
+<li>[ ] Explain why portfolio volatility is generally <em>less</em> than the weighted average of asset volatilities, and what role correlation plays</li>
+<li>[ ] Compute portfolio risk and return in Python using NumPy matrix operations</li>
 </ul>
 </div>
 <h2 id="1-intuition">1. Intuition<a class="headerlink" href="#1-intuition" title="Permanent link">&para;</a></h2>
-<p>Explain the idea in plain language before any mathematics. Use an analogy or a motivating financial question. State clearly what problem this concept solves and why a quant needs it.</p>
+<p>A <strong>portfolio</strong> is simply a collection of assets held together. The central insight of modern finance is that the risk of a portfolio is <em>not</em> the average of the risks of its parts. When two assets do not move in perfect lockstep, a loss in one is partly offset by a gain (or a smaller loss) in the other, so combining them smooths the overall ride. This is <strong>diversification</strong>.</p>
+<p>Two numbers per asset are not enough to describe this. You also need to know how assets move <em>together</em>, which is captured by covariance and correlation. That is why, from this lecture onward, portfolios are described with a vector of expected returns and a covariance matrix. Module 3 builds Markowitz optimization, CAPM, and risk measures directly on the formulas derived here.</p>
 <h2 id="2-mathematical-formulation">2. Mathematical formulation<a class="headerlink" href="#2-mathematical-formulation" title="Permanent link">&para;</a></h2>
-<p>State the formal definition(s) precisely. Define <strong>every</strong> symbol used, in words, immediately after it appears — do not assume the reader already knows what a variable means.</p>
+<p>Consider <span class="arithmatex">\( N \)</span> assets. Let <span class="arithmatex">\( w_i \)</span> be the <strong>weight</strong> (fraction of total wealth) invested in asset <span class="arithmatex">\( i \)</span>, with the budget constraint</p>
 <div class="arithmatex">\[
-\text{[equation here]}
+\sum_{i=1}^{N} w_i = 1
 \]</div>
-<p>Where:</p>
+<p>Let <span class="arithmatex">\( R_i \)</span> be the (random) simple return of asset <span class="arithmatex">\( i \)</span> over one period. The portfolio's simple return is the weighted average</p>
+<div class="arithmatex">\[
+R_p = \sum_{i=1}^{N} w_i R_i = \mathbf{w}^\top \mathbf{R}
+\]</div>
+<p>(This is why the previous lecture on returns said to aggregate <em>across assets</em> using simple returns.)</p>
+<p><strong>Expected return.</strong> Let <span class="arithmatex">\( \mu_i = E[R_i] \)</span> and <span class="arithmatex">\( \boldsymbol{\mu} = (\mu_1, \dots, \mu_N)^\top \)</span>. By linearity of expectation,</p>
+<div class="arithmatex">\[
+\mu_p = E[R_p] = \sum_i w_i \mu_i = \mathbf{w}^\top \boldsymbol{\mu}
+\]</div>
+<p><strong>Variance.</strong> Let <span class="arithmatex">\( \Sigma \)</span> be the covariance matrix with entries <span class="arithmatex">\( \Sigma_{ij} = \text{Cov}(R_i, R_j) \)</span>, so <span class="arithmatex">\( \Sigma_{ii} = \sigma_i^2 \)</span>. Then</p>
+<div class="arithmatex">\[
+\sigma_p^2 = \text{Var}(R_p) = \sum_{i=1}^{N}\sum_{j=1}^{N} w_i w_j \Sigma_{ij} = \mathbf{w}^\top \Sigma\, \mathbf{w}
+\]</div>
+<p><strong>Two-asset special case.</strong> With correlation <span class="arithmatex">\( \rho = \dfrac{\text{Cov}(R_1,R_2)}{\sigma_1 \sigma_2} \)</span> and weights <span class="arithmatex">\( w \)</span> and <span class="arithmatex">\( 1-w \)</span>:</p>
+<div class="arithmatex">\[
+\sigma_p^2 = w^2\sigma_1^2 + (1-w)^2\sigma_2^2 + 2\,w(1-w)\,\rho\,\sigma_1\sigma_2
+\]</div>
+<p>where:</p>
 <ul>
-<li><span class="arithmatex">\( x \)</span> — [meaning]</li>
-<li><span class="arithmatex">\( y \)</span> — [meaning]</li>
+<li><span class="arithmatex">\( \mu_i \)</span> — expected return of asset <span class="arithmatex">\( i \)</span></li>
+<li><span class="arithmatex">\( \sigma_i \)</span> — standard deviation (volatility) of asset <span class="arithmatex">\( i \)</span></li>
+<li><span class="arithmatex">\( \rho \)</span> — correlation between the two assets' returns, between <span class="arithmatex">\(-1\)</span> and <span class="arithmatex">\(+1\)</span></li>
+<li><span class="arithmatex">\( \sigma_p \)</span> — portfolio volatility, the square root of <span class="arithmatex">\( \sigma_p^2 \)</span></li>
 </ul>
 <h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
-<p>Walk through the derivation step by step where one is illuminating. Prefer showing <em>why</em> a result is true over merely stating it. Mark clearly which steps are definitions, which are assumptions, and which are algebraic consequences.</p>
+<p><strong>Portfolio variance from the definition.</strong> Write the portfolio's deviation from its mean as <span class="arithmatex">\( R_p - \mu_p = \sum_i w_i (R_i - \mu_i) \)</span>. Then</p>
+<div class="arithmatex">\[
+\text{Var}(R_p) = E\!\left[\Big(\sum_i w_i (R_i-\mu_i)\Big)\Big(\sum_j w_j (R_j-\mu_j)\Big)\right] = \sum_i \sum_j w_i w_j\, E[(R_i-\mu_i)(R_j-\mu_j)]
+\]</div>
+<p>and <span class="arithmatex">\( E[(R_i-\mu_i)(R_j-\mu_j)] = \Sigma_{ij} \)</span> is the definition of covariance. This gives <span class="arithmatex">\( \mathbf{w}^\top \Sigma \mathbf{w} \)</span>. For <span class="arithmatex">\( N=2 \)</span> the double sum has four terms: two "own variance" terms and two identical cross terms, which combine into <span class="arithmatex">\( 2 w_1 w_2 \Sigma_{12} = 2w(1-w)\rho\sigma_1\sigma_2 \)</span>.</p>
+<p><strong>Why diversification works.</strong> Because <span class="arithmatex">\( \rho \le 1 \)</span>, the cross term is at most <span class="arithmatex">\( 2w(1-w)\sigma_1\sigma_2 \)</span>, so</p>
+<div class="arithmatex">\[
+\sigma_p^2 \le w^2\sigma_1^2 + (1-w)^2\sigma_2^2 + 2w(1-w)\sigma_1\sigma_2 = \big(w\sigma_1 + (1-w)\sigma_2\big)^2
+\]</div>
+<p>Taking square roots, <span class="arithmatex">\( \sigma_p \le w\sigma_1 + (1-w)\sigma_2 \)</span>, with equality only when <span class="arithmatex">\( \rho = 1 \)</span>. Portfolio volatility never exceeds the weighted average of individual volatilities, and it falls below it whenever correlation is less than one. This is an algebraic fact, not an empirical claim. How large the benefit is in practice depends on the actual correlations, which are estimated from data and change over time.</p>
 <h2 id="4-worked-numerical-example">4. Worked numerical example<a class="headerlink" href="#4-worked-numerical-example" title="Permanent link">&para;</a></h2>
-<p>Use concrete numbers (prices, rates, returns) and carry them through the formula by hand before writing any code.</p>
+<p>Asset 1: <span class="arithmatex">\( \mu_1 = 8\% \)</span>, <span class="arithmatex">\( \sigma_1 = 20\% \)</span>. Asset 2: <span class="arithmatex">\( \mu_2 = 4\% \)</span>, <span class="arithmatex">\( \sigma_2 = 10\% \)</span>. Correlation <span class="arithmatex">\( \rho = 0.3 \)</span>. Weights <span class="arithmatex">\( w_1 = 0.6 \)</span>, <span class="arithmatex">\( w_2 = 0.4 \)</span>. (Illustrative numbers, not estimates from real data.)</p>
+<p><strong>Expected return:</strong></p>
+<div class="arithmatex">\[
+\mu_p = 0.6(0.08) + 0.4(0.04) = 0.048 + 0.016 = 6.4\%
+\]</div>
+<p><strong>Variance:</strong></p>
+<div class="arithmatex">\[
+\sigma_p^2 = (0.6)^2(0.20)^2 + (0.4)^2(0.10)^2 + 2(0.6)(0.4)(0.3)(0.20)(0.10)
+\]</div>
+<div class="arithmatex">\[
+= 0.0144 + 0.0016 + 0.00288 = 0.01888
+\]</div>
+<div class="arithmatex">\[
+\sigma_p = \sqrt{0.01888} \approx 13.74\%
+\]</div>
+<p>The weighted average of the two volatilities is <span class="arithmatex">\( 0.6(20\%) + 0.4(10\%) = 16\% \)</span>. The portfolio's volatility of 13.74% is about 2.26 percentage points lower. That gap is the diversification benefit at <span class="arithmatex">\( \rho = 0.3 \)</span>.</p>
 <h2 id="5-python-implementation">5. Python implementation<a class="headerlink" href="#5-python-implementation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Reproducible, self-contained example.</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Clearly a pedagogical demonstration, not a trading recommendation.</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">])</span>           <span class="c1"># expected returns</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">])</span>        <span class="c1"># volatilities</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">rho</span> <span class="o">=</span> <span class="mf">0.3</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">rho</span><span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                 <span class="p">[</span><span class="n">rho</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Covariance matrix: Sigma_ij = rho_ij * sigma_i * sigma_j</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">corr</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">sigma</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">])</span>              <span class="c1"># weights sum to 1</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mf">1.0</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">port_return</span> <span class="o">=</span> <span class="n">w</span> <span class="o">@</span> <span class="n">mu</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">port_var</span> <span class="o">=</span> <span class="n">w</span> <span class="o">@</span> <span class="n">Sigma</span> <span class="o">@</span> <span class="n">w</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">port_vol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">port_var</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">weighted_avg_vol</span> <span class="o">=</span> <span class="n">w</span> <span class="o">@</span> <span class="n">sigma</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected return:       </span><span class="si">{</span><span class="n">port_return</span><span class="si">:</span><span class="s2">.4%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Portfolio volatility:  </span><span class="si">{</span><span class="n">port_vol</span><span class="si">:</span><span class="s2">.4%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Weighted avg vol:      </span><span class="si">{</span><span class="n">weighted_avg_vol</span><span class="si">:</span><span class="s2">.4%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Diversification gain:  </span><span class="si">{</span><span class="n">weighted_avg_vol</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">port_vol</span><span class="si">:</span><span class="s2">.4%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># Volatility as correlation varies (weights fixed)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">]:</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">],</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">sigma</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rho=</span><span class="si">{</span><span class="n">r</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">  -&gt;  portfolio vol = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">w</span><span class="w"> </span><span class="o">@</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">@</span><span class="w"> </span><span class="n">w</span><span class="p">)</span><span class="si">:</span><span class="s2">.4%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
+<p>The <code>@</code> operator is matrix multiplication, so <code>w @ Sigma @ w</code> is exactly <span class="arithmatex">\( \mathbf{w}^\top \Sigma \mathbf{w} \)</span>.</p>
 <h2 id="6-visualization">6. Visualization<a class="headerlink" href="#6-visualization" title="Permanent link">&para;</a></h2>
 <figure class="qf-figure">
-<!-- Replace with an actual image: ![Description of chart](../assets/images/your-chart.png) -->
-<figcaption>Figure caption explaining what the chart shows and why it matters.</figcaption>
+<p><img alt="Two-asset portfolio volatility as a function of weight, for four correlation values" src="../../assets/images/portfolio-basics-diversification.png" /></p>
+<figcaption>Portfolio volatility as the weight in the riskier asset varies, for four correlation values. At perfect correlation (red) volatility is just the straight-line weighted average. As correlation falls, the curve bends downward. With negative correlation, some mixes are less volatile than either asset alone.</figcaption>
 </figure>
 <h2 id="7-financial-interpretation">7. Financial interpretation<a class="headerlink" href="#7-financial-interpretation" title="Permanent link">&para;</a></h2>
-<p>Translate the mathematical result back into what it means for an investor, trader, or risk manager. What decision does this concept inform?</p>
+<p>The formula <span class="arithmatex">\( \mathbf{w}^\top \Sigma \mathbf{w} \)</span> is the foundation of portfolio theory. It says an asset's contribution to portfolio risk depends on how it covaries with everything else you hold, not just its own volatility. This is the idea behind Markowitz optimization, beta, and risk parity in Module 3. Note also that expected return is linear in the weights while risk is not. Combining assets can therefore improve the trade-off between the two, which is the motivation for the efficient frontier.</p>
 <h2 id="8-common-mistakes">8. Common mistakes<a class="headerlink" href="#8-common-mistakes" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake</p>
-<p>Describe a specific, common misunderstanding or implementation bug related to this concept, and how to avoid it.</p>
+<p class="admonition-title">Common mistake: averaging volatilities</p>
+<p>Computing portfolio risk as <span class="arithmatex">\( \sum_i w_i \sigma_i \)</span> is only correct when all assets are perfectly correlated. Otherwise it overstates risk. Use the full covariance matrix.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Common mistake: treating correlations as stable</p>
+<p>The diversification benefit depends on correlations, and estimated correlations can change substantially over time, particularly in market stress. Treat a historical covariance matrix as an estimate, not a fixed fact. Estimation error in <span class="arithmatex">\( \Sigma \)</span> is a major theme of Modules 3 and 7.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Common mistake: forgetting the weights must sum to one</p>
+<p>The formulas above assume a fully invested portfolio with no leverage or cash. If weights don't sum to one, returns and variances are computed on a different base and are not comparable. Short positions (negative weights) are allowed, but the sum must still be one.</p>
 </div>
 <h2 id="9-exercises">9. Exercises<a class="headerlink" href="#9-exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li>[Conceptual question]</li>
-<li>[Computational exercise]</li>
-<li>[Open-ended / research-style question]</li>
+<li>Using the example in Section 4, compute portfolio volatility for <span class="arithmatex">\( \rho = -0.5 \)</span> and <span class="arithmatex">\( \rho = 1 \)</span>. Check the <span class="arithmatex">\( \rho = 1 \)</span> answer against the weighted average of volatilities.</li>
+<li>For the two-asset case, show that the weight minimizing portfolio variance is <span class="arithmatex">\( w^* = \dfrac{\sigma_2^2 - \rho\sigma_1\sigma_2}{\sigma_1^2 + \sigma_2^2 - 2\rho\sigma_1\sigma_2} \)</span> by differentiating <span class="arithmatex">\( \sigma_p^2 \)</span> with respect to <span class="arithmatex">\( w \)</span>. Evaluate it for the numbers in Section 4.</li>
+<li>Extend the Python code to three assets with a covariance matrix of your choice, and confirm that the portfolio variance is never negative. Why must a valid covariance matrix be positive semi-definite?</li>
 </ol>
 <h2 id="10-further-reading">10. Further reading<a class="headerlink" href="#10-further-reading" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[Optional accessible articles, lecture notes, or blog posts — clearly separated from formal references below]</li>
+<li>Module 3 begins with Markowitz mean-variance optimization, which chooses weights to trade off <span class="arithmatex">\( \mu_p \)</span> against <span class="arithmatex">\( \sigma_p \)</span>.</li>
 </ul>
 <h2 id="11-references">11. References<a class="headerlink" href="#11-references" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Author, A. (Year). "Title." <em>Journal</em>, volume(issue), pages. [link if available]</li>
+<li>Markowitz, H. (1952). "Portfolio Selection." <em>The Journal of Finance</em>, 7(1), 77–91.</li>
+<li>Bodie, Z., Kane, A., &amp; Marcus, A. J. (2021). <em>Investments</em> (12th ed.), Chapters 6–7. McGraw-Hill.</li>
+<li>NumPy Developers. "<code>numpy.outer</code>." <a href="https://numpy.org/doc/stable/reference/generated/numpy.outer.html">numpy.org/doc</a></li>
 </ol>
 <hr />
 <div class="grid">
-<p><a class="md-button" href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous lecture</a>
-<a class="md-button md-button--primary" href="#">Next lecture <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
+<p><a class="md-button" href="/qf-lectures/financial-foundations/market-structure-order-books/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Market Structure and Order Books</a>
+<a class="md-button md-button--primary" href="/qf-lectures/statistics/probability-distributions/">Next: Probability Distributions in Finance <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </div>
 
 
@@ -1334,6 +1565,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../market-structure-order-books/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Market Structure and Order Books">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Market Structure and Order Books
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../statistics/" class="md-footer__link md-footer__link--next" aria-label="Next: Module 2 — Statistics &amp;amp; Econometrics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Module 2 — Statistics &amp; Econometrics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

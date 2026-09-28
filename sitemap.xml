@@ -1,71 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/curriculum/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/curriculum/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/_template/lecture-template/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/_template/lecture-template/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/advanced/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/advanced/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/derivatives/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/derivatives/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/financial-foundations/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/financial-foundations/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/financial-foundations/returns-and-log-returns/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/financial-foundations/compounding-time-value/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/machine-learning/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/financial-foundations/derivatives-overview/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/portfolio-risk/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/financial-foundations/equities-and-bonds/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/prerequisites/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/financial-foundations/market-structure-order-books/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/prerequisites/python-numpy-pandas/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/financial-foundations/returns-and-log-returns/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/references/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/machine-learning/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/research-lab/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/portfolio-risk/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/statistics/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/prerequisites/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/statistics/probability-distributions/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/prerequisites/python-numpy-pandas/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/stochastic-finance/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/references/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://jsbldquant04.github.io/qf-lectures/trading/</loc>
-         <lastmod>2026-09-27</lastmod>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/research-lab/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/statistics/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/statistics/probability-distributions/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/stochastic-finance/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/trading/</loc>
+         <lastmod>2026-09-28</lastmod>
     </url>
 </urlset>

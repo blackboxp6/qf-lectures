@@ -1,9 +1,9 @@
 site_name: Quantitative Finance Lectures
 site_description: A rigorous, free curriculum in quantitative finance — mathematics, statistics, stochastic calculus, derivatives pricing, portfolio theory, and machine learning applied to markets.
 site_author: Joshua Bloodymier P. Salvino
-site_url: https://jsbldquant04.github.io/qf-lectures/
-repo_name: jsbldquant04/qf-lectures
-repo_url: https://github.com/jsbldquant04/qf-lectures
+site_url: https://YOUR_GITHUB_USERNAME.github.io/qf-lectures/
+repo_name: YOUR_GITHUB_USERNAME/qf-lectures
+repo_url: https://github.com/YOUR_GITHUB_USERNAME/qf-lectures
 edit_uri: edit/main/docs/
 
 theme:
@@ -59,7 +59,6 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
-      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences:
@@ -95,6 +94,10 @@ nav:
   - "1. Financial Foundations":
       - financial-foundations/index.md
       - Returns and Log Returns: financial-foundations/returns-and-log-returns.md
+      - Compounding and the Time Value of Money: financial-foundations/compounding-time-value.md
+      - "Financial Instruments: Equities and Bonds": financial-foundations/equities-and-bonds.md
+      - "Derivatives: An Overview": financial-foundations/derivatives-overview.md
+      - Market Structure and Order Books: financial-foundations/market-structure-order-books.md
   - "2. Statistics & Econometrics":
       - statistics/index.md
       - Probability Distributions in Finance: statistics/probability-distributions.md
@@ -110,7 +113,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/jsbldquant04
+      link: https://github.com/YOUR_GITHUB_USERNAME
   generator: false
 
 copyright: >

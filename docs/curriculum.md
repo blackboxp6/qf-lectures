@@ -18,10 +18,10 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 | Lecture | Status |
 |---|---|
 | [Returns and Log Returns](financial-foundations/returns-and-log-returns.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Compounding and the Time Value of Money | :material-progress-clock:{ style="color:#ff9800" } |
-| Financial Instruments: Equities and Bonds | :material-progress-clock:{ style="color:#ff9800" } |
-| Derivatives: An Overview | :material-progress-clock:{ style="color:#ff9800" } |
-| Market Structure and Order Books | :material-progress-clock:{ style="color:#ff9800" } |
+| [Compounding and the Time Value of Money](financial-foundations/compounding-time-value.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Financial Instruments: Equities and Bonds](financial-foundations/equities-and-bonds.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Derivatives: An Overview](financial-foundations/derivatives-overview.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Market Structure and Order Books](financial-foundations/market-structure-order-books.md) | :material-check-circle:{ style="color:#4caf50" } |
 | Portfolio Basics | :material-progress-clock:{ style="color:#ff9800" } |
 
 ## 2. Statistics & Econometrics

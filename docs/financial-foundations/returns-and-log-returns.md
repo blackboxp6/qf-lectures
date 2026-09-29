@@ -191,6 +191,6 @@ A practical rule of thumb used throughout this curriculum: aggregate returns **a
 ---
 
 <div class="grid" markdown>
-[:material-arrow-left: Previous: Python, NumPy & Pandas](/qf-lectures/prerequisites/python-numpy-pandas/){ .md-button }
+[:material-arrow-left: Previous: Optimization Foundations](/qf-lectures/prerequisites/optimization/){ .md-button }
 [Next: Compounding and the Time Value of Money :material-arrow-right:](/qf-lectures/financial-foundations/compounding-time-value/){ .md-button .md-button--primary }
 </div>

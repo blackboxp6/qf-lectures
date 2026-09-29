@@ -19,6 +19,9 @@ Every citation used anywhere on this site is collected here, organized by module
 - Fama, E. F. (1970). "Efficient Capital Markets: A Review of Theory and Empirical Work." *The Journal of Finance*, 25(2), 383–417.
 - Engle, R. F. (1982). "Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation." *Econometrica*, 50(4), 987–1007.
 - Bollerslev, T. (1986). "Generalized Autoregressive Conditional Heteroskedasticity." *Journal of Econometrics*, 31(3), 307–327.
+- Student [W. S. Gosset] (1908). "The Probable Error of a Mean." *Biometrika*, 6(1), 1–25.
+- Harvey, C. R., Liu, Y., & Zhu, H. (2016). "...and the Cross-Section of Expected Returns." *The Review of Financial Studies*, 29(1), 5–68.
+- Gordon, M. J., & Shapiro, E. (1956). "Capital Equipment Analysis: The Required Rate of Profit." *Management Science*, 3(1), 102–110.
 
 ## Textbooks
 
@@ -28,6 +31,12 @@ Every citation used anywhere on this site is collected here, organized by module
 - Tsay, R. S. (2010). *Analysis of Financial Time Series* (3rd ed.). Wiley.
 - Bodie, Z., Kane, A., & Marcus, A. J. (2021). *Investments* (12th ed.). McGraw-Hill.
 - Casella, G., & Berger, R. L. (2002). *Statistical Inference* (2nd ed.). Duxbury.
+- Stewart, J. (2020). *Calculus: Early Transcendentals* (9th ed.). Cengage Learning.
+- Strang, G. (2016). *Introduction to Linear Algebra* (5th ed.). Wellesley-Cambridge Press.
+- Horn, R. A., & Johnson, C. R. (2013). *Matrix Analysis* (2nd ed.). Cambridge University Press.
+- Blitzstein, J. K., & Hwang, J. (2019). *Introduction to Probability* (2nd ed.). CRC Press.
+- Wasserman, L. (2004). *All of Statistics*. Springer.
+- Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
 - Harris, L. (2003). *Trading and Exchanges: Market Microstructure for Practitioners*. Oxford University Press.
 
 ## Empirical / methodological papers

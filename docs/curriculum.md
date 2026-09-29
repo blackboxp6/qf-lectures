@@ -8,11 +8,11 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 | Lecture | Status |
 |---|---|
 | [Python, NumPy & Pandas for Quantitative Finance](prerequisites/python-numpy-pandas.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Calculus for Finance (derivatives, integrals, Taylor series) | :material-progress-clock:{ style="color:#ff9800" } |
-| Linear Algebra for Finance (matrices, eigenvalues, PCA groundwork) | :material-progress-clock:{ style="color:#ff9800" } |
-| Probability Foundations | :material-progress-clock:{ style="color:#ff9800" } |
-| Statistical Inference Foundations | :material-progress-clock:{ style="color:#ff9800" } |
-| Optimization Foundations | :material-progress-clock:{ style="color:#ff9800" } |
+| [Calculus for Finance (derivatives, integrals, Taylor series)](prerequisites/calculus.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Linear Algebra for Finance (matrices, eigenvalues, PCA groundwork)](prerequisites/linear-algebra.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Probability Foundations](prerequisites/probability.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Statistical Inference Foundations](prerequisites/statistical-inference.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Optimization Foundations](prerequisites/optimization.md) | :material-check-circle:{ style="color:#4caf50" } |
 
 ## 1. Financial Foundations
 | Lecture | Status |

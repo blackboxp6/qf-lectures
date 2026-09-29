@@ -91,6 +91,11 @@ nav:
   - "0. Prerequisites":
       - prerequisites/index.md
       - Python, NumPy & Pandas for Quant Finance: prerequisites/python-numpy-pandas.md
+      - Calculus for Finance: prerequisites/calculus.md
+      - Linear Algebra for Finance: prerequisites/linear-algebra.md
+      - Probability Foundations: prerequisites/probability.md
+      - Statistical Inference Foundations: prerequisites/statistical-inference.md
+      - Optimization Foundations: prerequisites/optimization.md
   - "1. Financial Foundations":
       - financial-foundations/index.md
       - Returns and Log Returns: financial-foundations/returns-and-log-returns.md

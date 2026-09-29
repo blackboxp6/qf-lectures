@@ -160,5 +160,5 @@ Every quantitative task downstream of this lecture — computing a return series
 
 <div class="grid" markdown>
 [:material-arrow-left: Back to Curriculum](/qf-lectures/curriculum/){ .md-button }
-[Next: Returns and Log Returns :material-arrow-right:](/qf-lectures/financial-foundations/returns-and-log-returns/){ .md-button .md-button--primary }
+[Next: Calculus for Finance :material-arrow-right:](/qf-lectures/prerequisites/calculus/){ .md-button .md-button--primary }
 </div>

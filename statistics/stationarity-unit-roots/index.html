@@ -12,13 +12,13 @@
         <meta name="author" content="Joshua Bloodymier P. Salvino">
       
       
-        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/statistics/estimation-theory/">
+        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/statistics/stationarity-unit-roots/">
       
       
-        <link rel="prev" href="../probability-distributions/">
+        <link rel="prev" href="../pca/">
       
       
-        <link rel="next" href="../hypothesis-testing/">
+        <link rel="next" href="../../portfolio-risk/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Estimation Theory: MLE and Method of Moments - Quantitative Finance Lectures</title>
+        <title>Stationarity and Unit Roots - Quantitative Finance Lectures</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#estimation-theory-mle-and-method-of-moments" class="md-skip">
+        <a href="#stationarity-and-unit-roots" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Estimation Theory: MLE and Method of Moments
+              Stationarity and Unit Roots
             
           </span>
         </div>
@@ -1037,6 +1037,90 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../estimation-theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estimation Theory: MLE and Method of Moments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hypothesis-testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypothesis Testing for Financial Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regression-regularization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Regression and Regularization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1053,7 +1137,7 @@
           
   
   <span class="md-ellipsis">
-    Estimation Theory: MLE and Method of Moments
+    Stationarity and Unit Roots
   </span>
   
 
@@ -1064,7 +1148,7 @@
         
   
   <span class="md-ellipsis">
-    Estimation Theory: MLE and Method of Moments
+    Stationarity and Unit Roots
   </span>
   
 
@@ -1190,90 +1274,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hypothesis-testing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hypothesis Testing for Financial Data
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../regression-regularization/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Linear Regression and Regularization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pca/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Principal Component Analysis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../stationarity-unit-roots/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stationarity and Unit Roots
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1588,7 +1588,7 @@
                   
 
   
-    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/statistics/estimation-theory.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/statistics/stationarity-unit-roots.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1596,169 +1596,158 @@
   
 
 
-<h1 id="estimation-theory-mle-and-method-of-moments">Estimation Theory: MLE and Method of Moments<a class="headerlink" href="#estimation-theory-mle-and-method-of-moments" title="Permanent link">&para;</a></h1>
+<h1 id="stationarity-and-unit-roots">Stationarity and Unit Roots<a class="headerlink" href="#stationarity-and-unit-roots" title="Permanent link">&para;</a></h1>
 <div class="admonition objectives">
 <p class="admonition-title">Learning objectives</p>
 <p>By the end of this lecture you should be able to:</p>
 <ul>
-<li>[ ] Distinguish a parameter, an estimator, and an estimate</li>
-<li>[ ] Define bias and explain why an unbiased estimator is not automatically the "best" one</li>
-<li>[ ] Derive the maximum likelihood estimators of the mean and variance of a Normal distribution</li>
-<li>[ ] Explain why the MLE of the variance is biased, and correct it</li>
-<li>[ ] Fit a distribution to return data by maximum likelihood in Python</li>
+<li>[ ] Define (weak) stationarity and explain why it matters for time-series modeling</li>
+<li>[ ] Explain what a "unit root" is and why a random walk is non-stationary</li>
+<li>[ ] Interpret an autocorrelation function (ACF) and distinguish the ACF signatures of stationary versus non-stationary series</li>
+<li>[ ] Run an Augmented Dickey-Fuller test in Python and interpret its result correctly</li>
 </ul>
 </div>
 <h2 id="1-intuition">1. Intuition<a class="headerlink" href="#1-intuition" title="Permanent link">&para;</a></h2>
-<p>Every model in this curriculum has <strong>parameters</strong>: the mean and volatility of returns, the degrees of freedom of a Student-t, the coefficients of a regression. These are unknown constants of the process generating the data. All we have is a finite sample, so we need a rule that turns data into a guess for each parameter. That rule is an <strong>estimator</strong>, and the number it produces from a particular sample is an <strong>estimate</strong>.</p>
-<p>Because the sample is random, the estimate is random too. Estimation theory is about judging rules: on average, are they right (bias)? How much do they wobble from sample to sample (variance)? The two most widely used recipes are the <strong>method of moments</strong> (match sample averages to theoretical moments) and <strong>maximum likelihood</strong> (choose the parameters that make the observed data most probable).</p>
+<p>Most of classical statistics, means, variances, regression standard errors, assumes the data-generating process does not change character over time. A time series is <strong>stationary</strong> if its statistical properties (mean, variance, autocorrelation structure) are stable through time. Asset <strong>prices</strong> are famously not stationary: a stock at $400 has no natural tendency to return to $40 just because that was its level a decade ago. Asset <strong>returns</strong>, by contrast, usually look much closer to stationary, which is one more reason (beyond the additivity argument in the Returns and Log Returns lecture) that time-series models throughout this module are built on returns rather than raw prices.</p>
+<p>A price series behaving like a <strong>random walk</strong>, where today's price equals yesterday's price plus an unpredictable shock, is the textbook example of non-stationarity, and it has a "unit root," a specific mathematical signature explained below. Recognizing stationarity, or its absence, is a prerequisite for correctly applying almost every time-series technique that follows in this module: AR/MA/ARIMA models, GARCH, and cointegration.</p>
 <h2 id="2-mathematical-formulation">2. Mathematical formulation<a class="headerlink" href="#2-mathematical-formulation" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">\( x_1, \dots, x_n \)</span> be independent observations from a distribution with density <span class="arithmatex">\( f(x;\theta) \)</span>, where <span class="arithmatex">\( \theta \)</span> is the parameter (or vector of parameters).</p>
-<p><strong>Likelihood and log-likelihood.</strong></p>
+<p>A time series <span class="arithmatex">\( \{X_t\} \)</span> is <strong>weakly (covariance) stationary</strong> if:</p>
 <div class="arithmatex">\[
-L(\theta) = \prod_{i=1}^{n} f(x_i;\theta) \qquad\qquad \ell(\theta) = \ln L(\theta) = \sum_{i=1}^{n} \ln f(x_i;\theta)
+E[X_t]=\mu \ \ (\text{constant, independent of } t), \qquad \text{Var}(X_t)=\sigma^2 \ \ (\text{constant}), \qquad \text{Cov}(X_t,X_{t+k})=\gamma_k \ \ (\text{depends only on the lag } k,\text{ not on } t)
 \]</div>
-<p>The <strong>maximum likelihood estimator</strong> is</p>
+<p><strong>Autocorrelation function (ACF).</strong></p>
 <div class="arithmatex">\[
-\hat{\theta}_{\text{MLE}} = \arg\max_{\theta}\ \ell(\theta)
+\rho_k = \frac{\gamma_k}{\gamma_0} = \text{Corr}(X_t, X_{t+k})
 \]</div>
-<p>We take logs because sums are easier to differentiate than products, and the log is increasing so the maximizer is unchanged.</p>
-<p><strong>Method of moments.</strong> Set the theoretical moments <span class="arithmatex">\( E[X^k] \)</span>, which depend on <span class="arithmatex">\( \theta \)</span>, equal to the sample moments <span class="arithmatex">\( \frac{1}{n}\sum_i x_i^k \)</span>, and solve for <span class="arithmatex">\( \theta \)</span>.</p>
-<p><strong>Bias.</strong> For an estimator <span class="arithmatex">\( \hat\theta \)</span>,</p>
+<p><strong>AR(1) process.</strong> <span class="arithmatex">\( X_t = \phi X_{t-1} + \varepsilon_t \)</span>, with <span class="arithmatex">\( \varepsilon_t \)</span> i.i.d. mean-zero noise. This process is stationary if and only if <span class="arithmatex">\( |\phi|&lt;1 \)</span>.</p>
+<p><strong>Random walk.</strong> The special case <span class="arithmatex">\( \phi=1 \)</span>:</p>
 <div class="arithmatex">\[
-\text{Bias}(\hat\theta) = E[\hat\theta] - \theta
+X_t = X_{t-1} + \varepsilon_t
 \]</div>
-<p>An estimator is <strong>unbiased</strong> if its bias is zero.</p>
-<p><strong>Normal case.</strong> For <span class="arithmatex">\( X \sim \mathcal{N}(\mu,\sigma^2) \)</span>:</p>
+<p>This is said to have a <strong>unit root</strong>, referring to the root of the process's characteristic equation <span class="arithmatex">\( 1-\phi z=0 \)</span> lying exactly at <span class="arithmatex">\( z=1 \)</span>.</p>
+<p><strong>Augmented Dickey-Fuller (ADF) test.</strong> Tests <span class="arithmatex">\( H_0:\ \)</span> the series has a unit root (is non-stationary), against <span class="arithmatex">\( H_1: \)</span> it is stationary, by estimating</p>
 <div class="arithmatex">\[
-\hat\mu = \bar{x} = \frac{1}{n}\sum_{i=1}^n x_i \qquad\qquad \hat\sigma^2_{\text{MLE}} = \frac{1}{n}\sum_{i=1}^n (x_i-\bar{x})^2
+\Delta X_t = \alpha + \beta t + \gamma X_{t-1} + \sum_{i=1}^p \delta_i \Delta X_{t-i} + \varepsilon_t
 \]</div>
-<p>and the bias-corrected sample variance is</p>
-<div class="arithmatex">\[
-s^2 = \frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2
-\]</div>
+<p>and testing whether <span class="arithmatex">\( \gamma=0 \)</span> (unit root, non-stationary) versus <span class="arithmatex">\( \gamma&lt;0 \)</span> (stationary), using critical values specific to this test rather than the standard t-distribution (Dickey &amp; Fuller, 1979).</p>
 <h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
-<p><strong>MLE for the Normal.</strong> The log-likelihood is</p>
+<p><strong>Why an AR(1) is stationary only for <span class="arithmatex">\( |\phi|&lt;1 \)</span>.</strong> Assume the process has run for a long time and reached a stable variance <span class="arithmatex">\( \text{Var}(X_t)=\sigma_X^2 \)</span> for all <span class="arithmatex">\( t \)</span> (this is the definition of covariance stationarity applied to the variance). Since <span class="arithmatex">\( \varepsilon_t \)</span> is independent of <span class="arithmatex">\( X_{t-1} \)</span>,</p>
 <div class="arithmatex">\[
-\ell(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln\sigma^2 - \frac{1}{2\sigma^2}\sum_{i=1}^n (x_i-\mu)^2
+\text{Var}(X_t) = \phi^2\,\text{Var}(X_{t-1}) + \text{Var}(\varepsilon_t) \quad\Longrightarrow\quad \sigma_X^2 = \phi^2\sigma_X^2+\sigma_\varepsilon^2 \quad\Longrightarrow\quad \sigma_X^2=\frac{\sigma_\varepsilon^2}{1-\phi^2}
 \]</div>
-<p>Differentiate with respect to <span class="arithmatex">\( \mu \)</span> and set to zero:</p>
+<p>This solution for <span class="arithmatex">\( \sigma_X^2 \)</span> is finite and positive only when <span class="arithmatex">\( \phi^2&lt;1 \)</span>, i.e. <span class="arithmatex">\( |\phi|&lt;1 \)</span>. At <span class="arithmatex">\( \phi=1 \)</span> the formula blows up (division by zero), signaling that no finite, time-invariant variance exists, consistent with what direct calculation of a random walk's variance shows next.</p>
+<p><strong>Why a random walk's variance grows without bound.</strong> Unroll the random walk recursively: <span class="arithmatex">\( X_t = X_0+\sum_{s=1}^t \varepsilon_s \)</span>. Then</p>
 <div class="arithmatex">\[
-\frac{\partial \ell}{\partial \mu} = \frac{1}{\sigma^2}\sum_i (x_i-\mu) = 0 \quad\Longrightarrow\quad \hat\mu = \bar{x}
+\text{Var}(X_t) = \text{Var}\left(\sum_{s=1}^t \varepsilon_s\right) = t\,\sigma_\varepsilon^2
 \]</div>
-<p>Differentiate with respect to <span class="arithmatex">\( \sigma^2 \)</span> and set to zero:</p>
-<div class="arithmatex">\[
-\frac{\partial \ell}{\partial \sigma^2} = -\frac{n}{2\sigma^2} + \frac{1}{2\sigma^4}\sum_i (x_i-\mu)^2 = 0 \quad\Longrightarrow\quad \hat\sigma^2 = \frac{1}{n}\sum_i (x_i-\hat\mu)^2
-\]</div>
-<p><strong>Why the MLE variance is biased.</strong> Write <span class="arithmatex">\( x_i - \bar{x} = (x_i-\mu) - (\bar{x}-\mu) \)</span> and expand:</p>
-<div class="arithmatex">\[
-\sum_i (x_i-\bar{x})^2 = \sum_i (x_i-\mu)^2 - n(\bar{x}-\mu)^2
-\]</div>
-<p>Take expectations. Each <span class="arithmatex">\( E[(x_i-\mu)^2] = \sigma^2 \)</span>, and <span class="arithmatex">\( E[(\bar{x}-\mu)^2] = \text{Var}(\bar{x}) = \sigma^2/n \)</span>. Therefore</p>
-<div class="arithmatex">\[
-E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)\sigma^2
-\]</div>
-<p>so <span class="arithmatex">\( E[\hat\sigma^2_{\text{MLE}}] = \frac{n-1}{n}\sigma^2 &lt; \sigma^2 \)</span>. The estimator systematically underestimates variance because <span class="arithmatex">\( \bar{x} \)</span> was fitted to the same data and is, by construction, closer to the observations than the true <span class="arithmatex">\( \mu \)</span> is. Dividing by <span class="arithmatex">\( n-1 \)</span> instead of <span class="arithmatex">\( n \)</span> removes the bias, giving <span class="arithmatex">\( s^2 \)</span>. The bias vanishes as <span class="arithmatex">\( n \)</span> grows, and it matters most in small samples.</p>
-<p><strong>Method of moments for the Normal.</strong> Matching <span class="arithmatex">\( E[X]=\mu \)</span> and <span class="arithmatex">\( E[X^2]=\sigma^2+\mu^2 \)</span> to the sample moments gives the same estimators as MLE here. This is a coincidence of the Normal, not a general rule. For other distributions the two methods can differ, and MLE is generally preferred for its efficiency properties in large samples.</p>
+<p>using independence of the shocks. The variance grows linearly in <span class="arithmatex">\( t \)</span> without limit, directly violating the "constant variance" requirement of stationarity. This is the formal reason a random walk (and, empirically, most raw asset price series) is non-stationary: there is no fixed spread the series settles into; it wanders further and further from any starting point over time.</p>
+<p><strong>Why the ACF signatures differ.</strong> For a stationary AR(1), it can be shown that <span class="arithmatex">\( \rho_k=\phi^{|k|} \)</span>, which decays geometrically to zero as <span class="arithmatex">\( k \)</span> grows (since <span class="arithmatex">\( |\phi|&lt;1 \)</span>). For a random walk, the autocorrelation between <span class="arithmatex">\( X_t \)</span> and <span class="arithmatex">\( X_{t+k} \)</span> approaches 1 for any fixed <span class="arithmatex">\( k \)</span> as the series lengthens, and empirically the sample ACF of a random walk decays extremely slowly, near-linearly, rather than geometrically. This qualitative difference, fast geometric decay versus slow, near-linear decay, is a quick visual diagnostic for stationarity before ever running a formal test, and it is exactly what Section 6's chart shows.</p>
 <h2 id="4-worked-numerical-example">4. Worked numerical example<a class="headerlink" href="#4-worked-numerical-example" title="Permanent link">&para;</a></h2>
-<p>Five daily returns (in percent): <span class="arithmatex">\( 1,\ -2,\ 3,\ 0,\ 2 \)</span>. (Illustrative data.)</p>
-<p><strong>Mean:</strong> <span class="arithmatex">\( \bar{x} = (1-2+3+0+2)/5 = 0.8\% \)</span>.</p>
-<p><strong>Squared deviations:</strong> <span class="arithmatex">\( (0.2)^2 = 0.04,\ (-2.8)^2 = 7.84,\ (2.2)^2 = 4.84,\ (-0.8)^2 = 0.64,\ (1.2)^2 = 1.44 \)</span>. Sum <span class="arithmatex">\( = 14.8 \)</span>.</p>
-<p><strong>MLE variance:</strong> <span class="arithmatex">\( 14.8/5 = 2.96\ (\%^2) \)</span>, so <span class="arithmatex">\( \hat\sigma \approx 1.72\% \)</span>.</p>
-<p><strong>Unbiased variance:</strong> <span class="arithmatex">\( 14.8/4 = 3.70\ (\%^2) \)</span>, so <span class="arithmatex">\( s \approx 1.92\% \)</span>.</p>
-<p>With only 5 observations the two differ by 25%, which is the factor <span class="arithmatex">\( n/(n-1) = 5/4 \)</span>.</p>
+<p>Simulate a 400-step random walk and a 400-step AR(1) process with <span class="arithmatex">\( \phi=0.7 \)</span>, both driven by independent standard Normal shocks. The random walk wanders visibly away from zero with no tendency to return (Section 6, top panel), while the AR(1) series fluctuates around zero throughout (bottom panel). Computing sample autocorrelations out to lag 30: the AR(1) series' ACF decays close to the theoretical <span class="arithmatex">\( 0.7^k \)</span> (e.g., <span class="arithmatex">\( \rho_1\approx0.7 \)</span>, <span class="arithmatex">\( \rho_5\approx0.7^5\approx0.168 \)</span>), while the random walk's ACF remains close to 1 across all 30 lags shown, exactly the slow-decay signature described in Section 3.</p>
 <h2 id="5-python-implementation">5. Python implementation<a class="headerlink" href="#5-python-implementation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">adfuller</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>   <span class="c1"># returns in percent</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">T</span> <span class="o">=</span> <span class="mi">400</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">var_mle</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># divide by n</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">var_unb</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>      <span class="c1"># divide by n-1</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mean=</span><span class="si">{</span><span class="n">mean</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  MLE var=</span><span class="si">{</span><span class="n">var_mle</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  unbiased var=</span><span class="si">{</span><span class="n">var_unb</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># --- Simulation: check the bias claim from Section 3 ---</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">true_var</span><span class="p">,</span> <span class="n">n_small</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mi">5</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">samples</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">true_var</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20000</span><span class="p">,</span> <span class="n">n_small</span><span class="p">))</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg MLE variance:     &quot;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      <span class="s2">&quot;(theory:&quot;</span><span class="p">,</span> <span class="n">true_var</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_small</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_small</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg unbiased variance:&quot;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># --- MLE for a fat-tailed model: fit a Student-t by maximum likelihood ---</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">returns</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">df_hat</span><span class="p">,</span> <span class="n">loc_hat</span><span class="p">,</span> <span class="n">scale_hat</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">returns</span><span class="p">)</span>   <span class="c1"># numerical MLE</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fitted Student-t: df=</span><span class="si">{</span><span class="n">df_hat</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, loc=</span><span class="si">{</span><span class="n">loc_hat</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">, scale=</span><span class="si">{</span><span class="n">scale_hat</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">random_walk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">T</span><span class="p">))</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">phi</span> <span class="o">=</span> <span class="mf">0.7</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">ar1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">ar1</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">phi</span> <span class="o">*</span> <span class="n">ar1</span><span class="p">[</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">def</span> <span class="nf">sample_acf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">nlags</span><span class="p">):</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">:],</span> <span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="n">k</span><span class="p">])[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nlags</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)])</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random walk ACF (lags 1, 5, 10, 20):&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">sample_acf</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="mi">20</span><span class="p">)[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">]],</span> <span class="mi">3</span><span class="p">))</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AR(1) ACF     (lags 1, 5, 10, 20):&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">sample_acf</span><span class="p">(</span><span class="n">ar1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">]],</span> <span class="mi">3</span><span class="p">))</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Theoretical AR(1) rho_k = phi^k:  &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">phi</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">]),</span> <span class="mi">3</span><span class="p">))</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># --- Augmented Dickey-Fuller test ---</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">adf_rw</span> <span class="o">=</span> <span class="n">adfuller</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="n">autolag</span><span class="o">=</span><span class="s2">&quot;AIC&quot;</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">adf_ar</span> <span class="o">=</span> <span class="n">adfuller</span><span class="p">(</span><span class="n">ar1</span><span class="p">,</span> <span class="n">autolag</span><span class="o">=</span><span class="s2">&quot;AIC&quot;</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Random walk ADF stat=</span><span class="si">{</span><span class="n">adf_rw</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, p-value=</span><span class="si">{</span><span class="n">adf_rw</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">  (expect: fail to reject unit root)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AR(1) ADF stat=</span><span class="si">{</span><span class="n">adf_ar</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, p-value=</span><span class="si">{</span><span class="n">adf_ar</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">  (expect: reject unit root)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1"># --- Differencing a random walk makes it stationary ---</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">diffed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">random_walk</span><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="n">adf_diff</span> <span class="o">=</span> <span class="n">adfuller</span><span class="p">(</span><span class="n">diffed</span><span class="p">,</span> <span class="n">autolag</span><span class="o">=</span><span class="s2">&quot;AIC&quot;</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Differenced random walk ADF stat=</span><span class="si">{</span><span class="n">adf_diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, p-value=</span><span class="si">{</span><span class="n">adf_diff</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">  (expect: reject unit root)&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><code>stats.t.fit</code> maximizes the log-likelihood numerically, because the Student-t has no closed-form MLE. Numerical optimization is a general theme of Module 0's optimization lecture.</p>
+<p><code>statsmodels</code> is a standard, widely used Python econometrics library; install it with <code>pip install statsmodels</code> if it is not already part of your environment.</p>
 <p>Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># --- Chart 1: log-likelihood curve, peaking at the MLE of sigma ---</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">mu_hat</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">sig_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">loglik</span> <span class="o">=</span> <span class="o">-</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">sig_grid</span><span class="p">)</span> <span class="o">-</span> <span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu_hat</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sig_grid</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">sig_mle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu_hat</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">))</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sig_grid</span><span class="p">,</span> <span class="n">loglik</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.8</span><span class="p">)</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">sig_mle</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff9800&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;MLE σ̂ = </span><span class="si">{</span><span class="n">sig_mle</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;σ (with μ fixed at sample mean)&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Log-likelihood&quot;</span><span class="p">)</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Log-likelihood peaks at the MLE&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># --- Chart 1: random walk vs. mean-reverting AR(1) series ---</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff5252&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Non-Stationary: Random Walk (unit root)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Level&quot;</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ar1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#4caf50&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stationary: AR(1), φ=</span><span class="si">{</span><span class="n">phi</span><span class="si">}</span><span class="s2"> (reverts to 0)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Level&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time&quot;</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># --- Chart 2: ACF comparison ---</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">acf_rw</span> <span class="o">=</span> <span class="n">sample_acf</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">acf_ar</span> <span class="o">=</span> <span class="n">sample_acf</span><span class="p">(</span><span class="n">ar1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># --- Chart 2: average MLE vs. unbiased variance across simulated samples ---</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="s2">&quot;MLE</span><span class="se">\n</span><span class="s2">(divide by n)&quot;</span><span class="p">,</span> <span class="s2">&quot;Unbiased</span><span class="se">\n</span><span class="s2">(divide by n−1)&quot;</span><span class="p">],</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            <span class="p">[</span><span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()],</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>            <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#ff5252&quot;</span><span class="p">,</span> <span class="s2">&quot;#4caf50&quot;</span><span class="p">])</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">true_var</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;True σ² = </span><span class="si">{</span><span class="n">true_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average estimate, n = </span><span class="si">{</span><span class="n">n_small</span><span class="si">}</span><span class="s2"> (20,000 samples)&quot;</span><span class="p">)</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Estimated variance&quot;</span><span class="p">)</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">9.5</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">31</span><span class="p">),</span> <span class="n">acf_rw</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;ACF: Random Walk (decays very slowly)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">31</span><span class="p">),</span> <span class="n">acf_ar</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ACF: AR(1) φ=</span><span class="si">{</span><span class="n">phi</span><span class="si">}</span><span class="s2"> (decays geometrically)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axes</span><span class="p">:</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Lag&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Autocorrelation&quot;</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
 <h2 id="6-visualization">6. Visualization<a class="headerlink" href="#6-visualization" title="Permanent link">&para;</a></h2>
 <figure class="qf-figure">
-<p><img alt="Left: log-likelihood curve peaking at the MLE of sigma. Right: bar chart showing the MLE variance underestimates the true variance while the unbiased version does not" src="../../assets/images/estimation-mle-bias.png" /></p>
-<figcaption>Left: the log-likelihood of the five sample returns as a function of σ, peaking at the MLE. Right: across 20,000 simulated samples of size 5 from a Normal with true variance 4, the MLE variance averages about 3.2 (matching the theoretical \( \tfrac{4}{5}\times 4 \)), while the n−1 version averages about 4.</figcaption>
+<p><img alt="A random walk wandering with no return tendency compared to a mean-reverting AR(1) series that fluctuates around zero" src="../../assets/images/stationarity-rw-vs-ar.png" /></p>
+<figcaption>Top: a simulated random walk (φ=1), non-stationary, drifting arbitrarily far from its starting level. Bottom: a simulated stationary AR(1) process (φ=0.7), which continually reverts toward its long-run mean of zero.</figcaption>
+</figure>
+<figure class="qf-figure">
+<p><img alt="Autocorrelation function of the random walk decaying very slowly, versus the AR(1) series decaying geometrically" src="../../assets/images/stationarity-acf-comparison.png" /></p>
+<figcaption>The random walk's sample ACF (left) stays close to 1 across many lags, the slow-decay signature of non-stationarity. The AR(1) series' ACF (right) decays geometrically, closely tracking the theoretical φᵏ curve derived in Section 3.</figcaption>
 </figure>
 <h2 id="7-financial-interpretation">7. Financial interpretation<a class="headerlink" href="#7-financial-interpretation" title="Permanent link">&para;</a></h2>
-<p>Nearly every risk number is an estimate: volatility, covariance, beta, expected return. Sample noise means these numbers carry uncertainty, and with the short histories common in finance that uncertainty can be large. Expected returns in particular are notoriously hard to estimate precisely, while volatilities are estimated far more accurately. The choice of estimator matters most where data are scarce, such as tail risk, where extreme observations are by definition rare. MLE also underpins the GARCH models later in this module, which are fitted by maximizing a likelihood.</p>
+<p>Whether a series is stationary determines which tools are valid. Regressing one non-stationary price series on another can produce a <strong>spurious regression</strong>, an apparently strong, statistically "significant" relationship that is really an artifact of both series independently trending or wandering, with no genuine economic link, a classic and important warning (Granger &amp; Newbold, 1974). This is precisely why the cointegration lecture later in this module exists: it develops the specific conditions under which regressing non-stationary price series on each other is nonetheless meaningful. Volatility models (ARCH/GARCH, this module) and standard AR/MA models are built assuming the series being modeled, typically returns, is already stationary or has been transformed (e.g., differenced) until it is.</p>
 <h2 id="8-common-mistakes">8. Common mistakes<a class="headerlink" href="#8-common-mistakes" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: mixing up ddof conventions</p>
-<p>NumPy's <code>var</code> and <code>std</code> divide by <span class="arithmatex">\( n \)</span> by default (<code>ddof=0</code>), while pandas' <code>.var()</code> and <code>.std()</code> divide by <span class="arithmatex">\( n-1 \)</span> (<code>ddof=1</code>). The same data can give different volatilities depending on the library. Check which one you are using.</p>
+<p class="admonition-title">Common mistake: fitting time-series models directly to price levels</p>
+<p>Because prices are typically non-stationary, applying an AR/MA model, or standard regression, directly to raw price levels rather than returns or price differences risks all the problems described above, including spurious regression and mis-estimated standard errors.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: equating unbiased with best</p>
-<p>Unbiasedness is one desirable property, not the only one. An estimator can be slightly biased yet have lower overall error, and <span class="arithmatex">\( s \)</span> is itself a biased estimator of the standard deviation <span class="arithmatex">\( \sigma \)</span>, even though <span class="arithmatex">\( s^2 \)</span> is unbiased for <span class="arithmatex">\( \sigma^2 \)</span>.</p>
+<p class="admonition-title">Common mistake: misinterpreting the ADF null hypothesis</p>
+<p>The ADF null hypothesis is that a unit root is present (the series is non-stationary). A high p-value means "cannot reject non-stationarity", not "the series is definitely non-stationary," and a low p-value supports (but does not prove with certainty) stationarity. Confusing which hypothesis is which direction reverses the conclusion.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: ignoring estimation uncertainty</p>
-<p>Reporting a single estimated volatility or mean return with no notion of its sampling error invites false precision. Standard errors and confidence intervals, covered in the next lectures, quantify this.</p>
+<p class="admonition-title">Common mistake: over-differencing</p>
+<p>Differencing a series more times than necessary to achieve stationarity introduces unnecessary noise and can create spurious negative autocorrelation. Test for stationarity after each differencing step rather than differencing repeatedly by default.</p>
 </div>
 <h2 id="9-exercises">9. Exercises<a class="headerlink" href="#9-exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Derive the MLE of the rate <span class="arithmatex">\( \lambda \)</span> for an Exponential distribution with density <span class="arithmatex">\( f(x;\lambda)=\lambda e^{-\lambda x} \)</span>, <span class="arithmatex">\( x \ge 0 \)</span>. Verify that it matches the method of moments estimator.</li>
-<li>Modify the simulation in Section 5 to use <span class="arithmatex">\( n=50 \)</span> instead of <span class="arithmatex">\( n=5 \)</span>. How does the gap between the MLE and unbiased variances change, and does it match the factor <span class="arithmatex">\( (n-1)/n \)</span>?</li>
-<li>Simulate returns from a Student-t with 3 degrees of freedom and compare the sampling variability of <span class="arithmatex">\( s^2 \)</span> against a Normal sample of the same size. What does this suggest about estimating variance for fat-tailed returns?</li>
+<li>Simulate an AR(1) process with <span class="arithmatex">\( \phi=0.95 \)</span> (close to, but below, the unit root boundary) and compare its ACF decay rate to the <span class="arithmatex">\( \phi=0.7 \)</span> case in Section 5. What does this suggest about how easy it is to visually distinguish a highly persistent stationary series from a true unit root?</li>
+<li>Run the ADF test on the <em>cumulative sum</em> of the AR(1) series from Section 5 (i.e., integrate it once). Confirm it now behaves like a unit-root process.</li>
+<li>Using real or simulated daily price data for a stock, run the ADF test on (a) the raw price level and (b) the log returns. Confirm the expected qualitative outcome for each.</li>
 </ol>
 <h2 id="10-further-reading">10. Further reading<a class="headerlink" href="#10-further-reading" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The next lectures in this module build on estimators to construct confidence intervals and hypothesis tests.</li>
+<li>The next two lectures in this module, AR/MA/ARIMA models and Cointegration, build directly on the concepts introduced here.</li>
 </ul>
 <h2 id="11-references">11. References<a class="headerlink" href="#11-references" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Casella, G., &amp; Berger, R. L. (2002). <em>Statistical Inference</em> (2nd ed.), Chapters 7 and 10. Duxbury.</li>
-<li>Campbell, J. Y., Lo, A. W., &amp; MacKinlay, A. C. (1997). <em>The Econometrics of Financial Markets</em>, Appendix and Chapter 1. Princeton University Press.</li>
-<li>SciPy Developers. "<code>scipy.stats.t</code>." <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html">docs.scipy.org</a></li>
+<li>Dickey, D. A., &amp; Fuller, W. A. (1979). "Distribution of the Estimators for Autoregressive Time Series with a Unit Root." <em>Journal of the American Statistical Association</em>, 74(366a), 427–431.</li>
+<li>Granger, C. W. J., &amp; Newbold, P. (1974). "Spurious Regressions in Econometrics." <em>Journal of Econometrics</em>, 2(2), 111–120.</li>
+<li>Tsay, R. S. (2010). <em>Analysis of Financial Time Series</em> (3rd ed.), Chapter 2. Wiley.</li>
+<li>statsmodels Developers. "<code>statsmodels.tsa.stattools.adfuller</code>." <a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.adfuller.html">statsmodels.org</a></li>
 </ol>
 <hr />
 <div class="grid">
-<p><a class="md-button" href="/qf-lectures/statistics/probability-distributions/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Probability Distributions in Finance</a>
-<a class="md-button md-button--primary" href="/qf-lectures/statistics/hypothesis-testing/">Next: Hypothesis Testing for Financial Data <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
+<p><a class="md-button" href="/qf-lectures/statistics/pca/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Principal Component Analysis</a>
+<a class="md-button md-button--primary" href="/qf-lectures/statistics/arima-models/">Next: AR / MA / ARIMA Models <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </div>
 
 
@@ -1798,7 +1787,7 @@ E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../probability-distributions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Probability Distributions in Finance">
+          <a href="../pca/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Principal Component Analysis">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1808,20 +1797,20 @@ E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)
                 Previous
               </span>
               <div class="md-ellipsis">
-                Probability Distributions in Finance
+                Principal Component Analysis
               </div>
             </div>
           </a>
         
         
           
-          <a href="../hypothesis-testing/" class="md-footer__link md-footer__link--next" aria-label="Next: Hypothesis Testing for Financial Data">
+          <a href="../../portfolio-risk/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Portfolio &amp; Risk">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Hypothesis Testing for Financial Data
+                3. Portfolio & Risk
               </div>
             </div>
             <div class="md-footer__button md-icon">

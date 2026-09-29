@@ -139,6 +139,26 @@ for r in [1.0, 0.3, 0.0, -0.5]:
 
 The `@` operator is matrix multiplication, so `w @ Sigma @ w` is exactly \( \mathbf{w}^\top \Sigma \mathbf{w} \).
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+weights = np.linspace(0, 1, 200)
+fig, ax = plt.subplots(figsize=(7.2, 4.2))
+for r_val, color in [(1.0, "#ff5252"), (0.3, "#3f51b5"), (0.0, "#4caf50"), (-0.5, "#ff9800")]:
+    S_r = np.array([[1, r_val], [r_val, 1]]) * np.outer(sigma, sigma)
+    vol = np.sqrt([ [wi, 1-wi] @ S_r @ [wi, 1-wi] for wi in weights ])
+    ax.plot(weights, vol * 100, color=color, linewidth=1.7, label=f"correlation = {r_val:+.1f}")
+ax.set_xlabel("Weight in Asset 1 (20% vol); remainder in Asset 2 (10% vol)")
+ax.set_ylabel("Portfolio volatility (% per year)")
+ax.set_title("Diversification: Lower Correlation, Lower Portfolio Risk")
+ax.legend(frameon=False, fontsize=8)
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

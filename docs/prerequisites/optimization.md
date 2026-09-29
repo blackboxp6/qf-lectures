@@ -142,6 +142,34 @@ res = minimize(lambda w: w @ Sigma_full @ w, x0=[0.5, 0.5], constraints=cons)
 print("Target-return efficient weights:", np.round(res.x, 4))
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces both panels in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+# --- Left panel: portfolio variance as a convex function of the weight ---
+w_grid = np.linspace(-0.3, 1.3, 300)
+var_grid = [np.array([wi, 1-wi]) @ Sigma @ np.array([wi, 1-wi]) for wi in w_grid]
+var_star = np.array([w_star, 1-w_star]) @ Sigma @ np.array([w_star, 1-w_star])
+
+fig, axes = plt.subplots(1, 2, figsize=(9.4, 4))
+axes[0].plot(w_grid, var_grid, color="#3f51b5", lw=1.8)
+axes[0].plot([w_star], [var_star], "o", color="#ff5252", label=f"minimum at w₁ = {w_star:.3f}")
+axes[0].set_xlabel("Weight in Asset 1"); axes[0].set_ylabel("Portfolio variance")
+axes[0].set_title("A convex objective: one minimum"); axes[0].legend(frameon=False, fontsize=8)
+
+# --- Right panel: gradient descent path on a quadratic bowl ---
+X, Y = np.meshgrid(np.linspace(-2.5, 2.5, 200), np.linspace(-1.8, 1.8, 200))
+path_arr = np.array(path)
+axes[1].contour(X, Y, 0.5*(X**2 + 10*Y**2), levels=12, cmap="Blues")
+axes[1].plot(path_arr[:, 0], path_arr[:, 1], "o-", ms=3, color="#ff5252")
+axes[1].set_title("Gradient descent on f = ½(x² + 10y²)")
+axes[1].set_xlabel("x"); axes[1].set_ylabel("y")
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

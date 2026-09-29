@@ -1,9 +1,9 @@
 site_name: Quantitative Finance Lectures
 site_description: A rigorous, free curriculum in quantitative finance — mathematics, statistics, stochastic calculus, derivatives pricing, portfolio theory, and machine learning applied to markets.
 site_author: Joshua Bloodymier P. Salvino
-site_url: https://blackboxp6.github.io/qf-lectures/
+site_url: https://jsbldquant04.github.io/qf-lectures/
 repo_name: jsbldquant04/qf-lectures
-repo_url: https://github.com/blackboxp6/qf-lectures
+repo_url: https://github.com/jsbldquant04/qf-lectures
 edit_uri: edit/main/docs/
 
 theme:
@@ -108,6 +108,10 @@ nav:
       - statistics/index.md
       - Probability Distributions in Finance: statistics/probability-distributions.md
       - "Estimation Theory: MLE and Method of Moments": statistics/estimation-theory.md
+      - Hypothesis Testing for Financial Data: statistics/hypothesis-testing.md
+      - Linear Regression and Regularization: statistics/regression-regularization.md
+      - Principal Component Analysis: statistics/pca.md
+      - Stationarity and Unit Roots: statistics/stationarity-unit-roots.md
   - "3. Portfolio & Risk": portfolio-risk/index.md
   - "4. Derivatives": derivatives/index.md
   - "5. Stochastic Finance": stochastic-finance/index.md
@@ -120,7 +124,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/blackboxp6
+      link: https://github.com/jsbldquant04
   generator: false
 
 copyright: >

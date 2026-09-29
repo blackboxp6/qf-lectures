@@ -126,6 +126,39 @@ equity_value = gordon_growth_price(next_dividend=2.0, required_return=0.09, grow
 print(f"\nGordon Growth equity value: ${equity_value:.2f}")
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+# --- Chart 1: price vs. yield ---
+yield_grid = np.linspace(0.01, 0.12, 100)
+price_curve = [bond_price(1000, 0.05, y, 10) for y in yield_grid]
+
+fig, ax = plt.subplots(figsize=(7, 4.2))
+ax.plot(yield_grid * 100, price_curve, color="#3f51b5", linewidth=1.8)
+ax.axvline(5, color="#ff9800", linestyle="--", linewidth=1, label="Coupon rate (5%)")
+ax.axhline(1000, color="#9e9e9e", linestyle=":", linewidth=1, label="Face value ($1,000)")
+ax.set_xlabel("Yield to maturity (%)"); ax.set_ylabel("Bond price ($)")
+ax.set_title("Bond Price vs. Yield: an Inverse, Convex Relationship\n(10-yr, 5% semiannual coupon, $1,000 face)")
+ax.legend(frameon=False, fontsize=8)
+fig.tight_layout()
+plt.show()
+
+# --- Chart 2: claim priority in the capital structure ---
+fig, ax = plt.subplots(figsize=(6.5, 4.2))
+categories = ["Senior debt", "Subordinated\ndebt", "Equity\n(residual claim)"]
+colors = ["#1a237e", "#5c6bc0", "#ff9800"]
+for i, (cat, c) in enumerate(zip(categories, colors)):
+    ax.bar(["Capital structure"], [1], bottom=[i], color=c, edgecolor="white", width=0.5)
+    ax.text(0, i + 0.5, cat, ha="center", va="center", color="white", fontsize=9, fontweight="bold")
+ax.set_ylim(0, 3); ax.set_yticks([])
+ax.set_title("Claim Priority: Debt is Paid Before Equity")
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

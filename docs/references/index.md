@@ -21,6 +21,12 @@ Every citation used anywhere on this site is collected here, organized by module
 - Bollerslev, T. (1986). "Generalized Autoregressive Conditional Heteroskedasticity." *Journal of Econometrics*, 31(3), 307–327.
 - Student [W. S. Gosset] (1908). "The Probable Error of a Mean." *Biometrika*, 6(1), 1–25.
 - Harvey, C. R., Liu, Y., & Zhu, H. (2016). "...and the Cross-Section of Expected Returns." *The Review of Financial Studies*, 29(1), 5–68.
+- Newey, W. K., & West, K. D. (1987). "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix." *Econometrica*, 55(3), 703–708.
+- Lo, A. W. (2002). "The Statistics of Sharpe Ratios." *Financial Analysts Journal*, 58(4), 36–52.
+- Tibshirani, R. (1996). "Regression Shrinkage and Selection via the Lasso." *Journal of the Royal Statistical Society: Series B*, 58(1), 267–288.
+- Dickey, D. A., & Fuller, W. A. (1979). "Distribution of the Estimators for Autoregressive Time Series with a Unit Root." *Journal of the American Statistical Association*, 74(366a), 427–431.
+- Granger, C. W. J., & Newbold, P. (1974). "Spurious Regressions in Econometrics." *Journal of Econometrics*, 2(2), 111–120.
+- Connor, G., & Korajczyk, R. A. (1986). "Performance Measurement with the Arbitrage Pricing Theory: A New Framework for Analysis." *Journal of Financial Economics*, 15(3), 373–394.
 - Gordon, M. J., & Shapiro, E. (1956). "Capital Equipment Analysis: The Required Rate of Profit." *Management Science*, 3(1), 102–110.
 
 ## Textbooks
@@ -37,6 +43,8 @@ Every citation used anywhere on this site is collected here, organized by module
 - Blitzstein, J. K., & Hwang, J. (2019). *Introduction to Probability* (2nd ed.). CRC Press.
 - Wasserman, L. (2004). *All of Statistics*. Springer.
 - Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Jolliffe, I. T. (2002). *Principal Component Analysis* (2nd ed.). Springer Series in Statistics.
 - Harris, L. (2003). *Trading and Exchanges: Market Microstructure for Practitioners*. Oxford University Press.
 
 ## Empirical / methodological papers
@@ -61,6 +69,8 @@ Every citation used anywhere on this site is collected here, organized by module
 - pandas Development Team — [pandas.pydata.org/docs](https://pandas.pydata.org/docs/)
 - SciPy Developers — [docs.scipy.org](https://docs.scipy.org/)
 - Matplotlib Development Team — [matplotlib.org/stable](https://matplotlib.org/stable/)
+- scikit-learn Developers — [scikit-learn.org](https://scikit-learn.org/stable/)
+- statsmodels Developers — [statsmodels.org](https://www.statsmodels.org/stable/)
 
 ---
 

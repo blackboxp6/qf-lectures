@@ -110,6 +110,28 @@ print("Best t-statistic:", t.max().round(2))
 print("Bonferroni-adjusted critical value:", stats.norm.ppf(1 - 0.05 / (2 * N)).round(2))
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+from scipy import stats
+
+fig, ax = plt.subplots(figsize=(7.2, 4.2))
+ax.hist(t, bins=50, color="#9fa8da", density=True)
+grid = np.linspace(-4, 4, 200)
+ax.plot(grid, stats.norm.pdf(grid), color="black", lw=1.4, label="Normal(0,1)")
+ax.axvline(1.96, color="#ff5252", ls="--")
+ax.axvline(-1.96, color="#ff5252", ls="--", label="±1.96")
+ax.axvline(t.max(), color="#4caf50", ls="-", lw=2, label=f"best of {N}: t = {t.max():.2f}")
+ax.set_xlabel("t-statistic of mean daily return"); ax.set_ylabel("Density")
+ax.set_title(f"{N} Strategies With Zero True Edge: "
+             f"{100*(np.abs(t) > 1.96).mean():.1f}% Look 'Significant'")
+ax.legend(frameon=False, fontsize=8)
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

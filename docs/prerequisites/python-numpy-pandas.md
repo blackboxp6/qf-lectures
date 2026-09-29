@@ -116,6 +116,24 @@ print(rolling_mean_20.tail())
 
 `prices.rolling(window=20).mean()` is doing the same conceptual thing as writing a loop that, for every day `t`, averages days `t-19` through `t` — but again, vectorized and index-aware, and it correctly produces `NaN` for the first 19 days where a full 20-day window doesn't yet exist.
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(s.index, s.values, label="Simulated price", color="#3f51b5", linewidth=1.3)
+ax.plot(rolling_mean_20.index, rolling_mean_20.values, label="20-day rolling mean",
+        color="#ff9800", linewidth=1.5)
+ax.set_title("Simulated Price Series with a Rolling Mean (NumPy/pandas)")
+ax.set_xlabel("Date")
+ax.set_ylabel("Price")
+ax.legend(frameon=False)
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

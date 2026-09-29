@@ -114,6 +114,29 @@ fitted_dof, fitted_loc, fitted_scale = stats.t.fit(t_sample_raw)
 print(f"\nFitted Student-t degrees of freedom: {fitted_dof:.2f} (true value: {dof})")
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6 (drawn on a log density scale so the tail behavior is visible):
+
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(7, 4.2))
+bins = np.linspace(-8, 8, 100)
+ax.hist(normal_sample, bins=bins, density=True, alpha=0.45, color="#3f51b5", label="Normal(0,1) sample")
+ax.hist(t_sample, bins=bins, density=True, alpha=0.45, color="#ff5252",
+        label=f"Standardized Student-t (df={dof}) sample")
+
+grid = np.linspace(-8, 8, 400)
+ax.plot(grid, stats.norm.pdf(grid), color="#1a237e", linewidth=1.5, label="Normal(0,1) density")
+ax.set_yscale("log")
+ax.set_ylim(1e-5, 1)
+ax.set_title("Fat Tails: Student-t vs. Normal (log density scale)")
+ax.set_xlabel("Standardized value"); ax.set_ylabel("Density (log scale)")
+ax.legend(frameon=False, fontsize=8)
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

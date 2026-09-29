@@ -122,6 +122,27 @@ print("Var of top-eigenvector portfolio:", v @ Sigma @ v, "= eigenvalue", vals[-
 
 `np.linalg.eigh` is the routine for symmetric matrices. It is faster and numerically safer than the general `np.linalg.eig`, and it returns real eigenvalues.
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+rng = np.random.default_rng(11)
+points = rng.multivariate_normal([0, 0], Sigma, 1000)
+
+fig, ax = plt.subplots(figsize=(6, 4.6))
+ax.scatter(points[:, 0], points[:, 1], s=6, alpha=0.35, color="#9fa8da")
+for eigval, eigvec, color in zip(vals, vecs.T, ["#ff5252", "#4caf50"]):
+    arrow = 2 * np.sqrt(eigval) * eigvec
+    ax.annotate("", xy=arrow, xytext=(0, 0), arrowprops=dict(arrowstyle="->", color=color, lw=2))
+ax.set_aspect("equal")
+ax.set_xlabel("Asset 1 return (%)"); ax.set_ylabel("Asset 2 return (%)")
+ax.set_title("Eigenvectors of a Covariance Matrix Point Along the Data's Axes")
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

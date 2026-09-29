@@ -165,6 +165,46 @@ r_continuous_equiv = np.log(1 + ear_monthly)
 print(f"\nContinuous rate equivalent to that monthly-compounded EAR: {r_continuous_equiv*100:.4f}%")
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+# --- Chart 1: growth curves over 20 years ---
+years = np.linspace(0, 20, 200)
+simple_curve = PV * (1 + r * years)
+annual_curve = PV * (1 + r) ** years
+continuous_curve = PV * np.exp(r * years)
+
+fig, ax = plt.subplots(figsize=(7.2, 4.2))
+ax.plot(years, simple_curve, label="Simple interest", color="#ff5252", linewidth=1.6)
+ax.plot(years, annual_curve, label="Annual compounding", color="#3f51b5", linewidth=1.6)
+ax.plot(years, continuous_curve, label="Continuous compounding", color="#4caf50",
+        linewidth=1.6, linestyle="--")
+ax.set_xlabel("Years"); ax.set_ylabel("Value of $100 invested at 8%")
+ax.set_title("Simple vs. Compound vs. Continuous Compounding")
+ax.legend(frameon=False)
+fig.tight_layout()
+plt.show()
+
+# --- Chart 2: value after 10 years at increasing compounding frequency ---
+freqs = {"Annual (m=1)": 1, "Quarterly (m=4)": 4, "Monthly (m=12)": 12, "Daily (m=365)": 365}
+vals = [fv_discrete(PV, r, t, m) for m in freqs.values()] + [fv_continuous]
+labels = list(freqs.keys()) + ["Continuous (m→∞)"]
+
+fig, ax = plt.subplots(figsize=(7, 4))
+bars = ax.bar(labels, vals, color=["#9fa8da", "#7986cb", "#5c6bc0", "#3949ab", "#4caf50"])
+ax.set_ylabel("Value of $100 after 10 years at 8%")
+ax.set_title("Compounding Frequency Converges to the Continuous Limit")
+plt.setp(ax.get_xticklabels(), rotation=20, ha="right")
+for b, v in zip(bars, vals):
+    ax.annotate(f"{v:.2f}", (b.get_x() + b.get_width()/2, v),
+                textcoords="offset points", xytext=(0, 4), ha="center", fontsize=8)
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

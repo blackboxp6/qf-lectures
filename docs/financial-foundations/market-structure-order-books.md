@@ -136,6 +136,27 @@ print(f"\nMarket buy of {qty} shares -> avg execution price: ${avg_price:.4f}")
 print(f"Slippage vs. mid price: ${avg_price - mid_price(bids, asks):.4f} per share")
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+bid_prices = [p for p, _ in bids]; bid_sizes = [q for _, q in bids]
+ask_prices = [p for p, _ in asks]; ask_sizes = [q for _, q in asks]
+
+fig, ax = plt.subplots(figsize=(7.2, 4.4))
+ax.barh(bid_prices, bid_sizes, height=0.03, color="#4caf50", label="Bids (buy orders)")
+ax.barh(ask_prices, ask_sizes, height=0.03, color="#ff5252", label="Asks (sell orders)")
+ax.axhline(mid_price(bids, asks), color="black", linestyle="--", linewidth=1,
+           label=f"Mid price (${mid_price(bids, asks):.2f})")
+ax.set_xlabel("Resting order size (shares)"); ax.set_ylabel("Price ($)")
+ax.set_title("A Limit Order Book: Resting Bids and Asks Around the Mid Price")
+ax.legend(frameon=False, fontsize=8, loc="lower right")
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

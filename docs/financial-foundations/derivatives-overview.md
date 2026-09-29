@@ -134,6 +134,48 @@ print(f"\nAt S_T=${S_T_scenario:.0f}:  call profit = ${call_profit:.2f},  put pr
 # This is a preview; the full derivation and its arbitrage argument appear in Module 4.
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+S_grid = np.linspace(60, 140, 200)
+call_pay = call_payoff(S_grid, K)
+put_pay = put_payoff(S_grid, K)
+
+# --- Chart 1: call and put payoff/profit diagrams ---
+fig, axes = plt.subplots(1, 2, figsize=(9, 4))
+axes[0].plot(S_grid, call_pay, color="#4caf50", linewidth=1.8, label="Payoff at expiration")
+axes[0].plot(S_grid, call_pay - premium_call, color="#3f51b5", linewidth=1.4,
+             linestyle="--", label="Profit (net of premium)")
+axes[0].axhline(0, color="black", linewidth=0.7)
+axes[0].axvline(K, color="#9e9e9e", linestyle=":", linewidth=1)
+axes[0].set_title(f"Long Call (K=${K:.0f})"); axes[0].legend(frameon=False, fontsize=8)
+
+axes[1].plot(S_grid, put_pay, color="#ff5252", linewidth=1.8, label="Payoff at expiration")
+axes[1].plot(S_grid, put_pay - premium_put, color="#3f51b5", linewidth=1.4,
+             linestyle="--", label="Profit (net of premium)")
+axes[1].axhline(0, color="black", linewidth=0.7)
+axes[1].axvline(K, color="#9e9e9e", linestyle=":", linewidth=1)
+axes[1].set_title(f"Long Put (K=${K:.0f})"); axes[1].legend(frameon=False, fontsize=8)
+
+fig.suptitle("Option Payoff Diagrams: Asymmetric, Capped-Loss Claims", fontsize=10)
+fig.tight_layout(rect=[0, 0, 1, 0.93])
+plt.show()
+
+# --- Chart 2: linear forward payoff vs. kinked call payoff ---
+fig, ax = plt.subplots(figsize=(7, 4.2))
+ax.plot(S_grid, forward_payoff(S_grid, K), color="#ff9800", linewidth=1.8, label="Long forward payoff (linear)")
+ax.plot(S_grid, call_pay, color="#4caf50", linewidth=1.8, label="Long call payoff (kinked, capped loss)")
+ax.axhline(0, color="black", linewidth=0.7)
+ax.axvline(K, color="#9e9e9e", linestyle=":", linewidth=1)
+ax.set_title("Linear (Forward) vs. Nonlinear (Option) Payoffs")
+ax.legend(frameon=False)
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

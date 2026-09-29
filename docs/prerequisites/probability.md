@@ -137,6 +137,27 @@ b = a ** 2
 print("Corr(X, X^2) =", np.corrcoef(a, b)[0, 1].round(4))
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+from scipy import stats
+
+fig, axes = plt.subplots(1, 3, figsize=(10, 3.4), sharey=True)
+for ax, n_size in zip(axes, [1, 5, 30]):
+    sample_means = rng.exponential(1.0, (50000, n_size)).mean(axis=1)
+    z_scores = (sample_means - 1.0) / (1.0 / np.sqrt(n_size))
+    ax.hist(z_scores, bins=60, density=True, range=(-4, 4), color="#9fa8da")
+    grid = np.linspace(-4, 4, 200)
+    ax.plot(grid, stats.norm.pdf(grid), color="#ff5252", lw=1.6)
+    ax.set_title(f"n = {n_size}"); ax.set_xlabel("standardized sample mean")
+
+fig.suptitle("Central Limit Theorem: Means of Skewed Draws Approach the Normal", fontsize=10)
+fig.tight_layout(rect=[0, 0, 1, 0.92])
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

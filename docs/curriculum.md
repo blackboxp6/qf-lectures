@@ -29,10 +29,10 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 |---|---|
 | [Probability Distributions in Finance](statistics/probability-distributions.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Estimation Theory (MLE, MoM)](statistics/estimation-theory.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Hypothesis Testing for Financial Data | :material-progress-clock:{ style="color:#ff9800" } |
-| Linear Regression and Regularization | :material-progress-clock:{ style="color:#ff9800" } |
-| Principal Component Analysis | :material-progress-clock:{ style="color:#ff9800" } |
-| Stationarity and Unit Roots | :material-progress-clock:{ style="color:#ff9800" } |
+| [Hypothesis Testing for Financial Data](statistics/hypothesis-testing.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Linear Regression and Regularization](statistics/regression-regularization.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Principal Component Analysis](statistics/pca.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Stationarity and Unit Roots](statistics/stationarity-unit-roots.md) | :material-check-circle:{ style="color:#4caf50" } |
 | AR / MA / ARIMA Models | :material-progress-clock:{ style="color:#ff9800" } |
 | Volatility Modeling: ARCH/GARCH | :material-progress-clock:{ style="color:#ff9800" } |
 | Cointegration | :material-progress-clock:{ style="color:#ff9800" } |

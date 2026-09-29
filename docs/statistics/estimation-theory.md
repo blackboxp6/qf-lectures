@@ -140,6 +140,37 @@ print(f"Fitted Student-t: df={df_hat:.2f}, loc={loc_hat:.5f}, scale={scale_hat:.
 
 `stats.t.fit` maximizes the log-likelihood numerically, because the Student-t has no closed-form MLE. Numerical optimization is a general theme of Module 0's optimization lecture.
 
+
+Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+# --- Chart 1: log-likelihood curve, peaking at the MLE of sigma ---
+mu_hat = x.mean()
+sig_grid = np.linspace(0.8, 5, 300)
+n = len(x)
+loglik = -n*np.log(sig_grid) - ((x - mu_hat)**2).sum()/(2*sig_grid**2) - 0.5*n*np.log(2*np.pi)
+sig_mle = np.sqrt(((x - mu_hat)**2).mean())
+
+fig, axes = plt.subplots(1, 2, figsize=(9, 3.9))
+axes[0].plot(sig_grid, loglik, color="#3f51b5", linewidth=1.8)
+axes[0].axvline(sig_mle, color="#ff9800", linestyle="--", label=f"MLE σ̂ = {sig_mle:.2f}")
+axes[0].set_xlabel("σ (with μ fixed at sample mean)"); axes[0].set_ylabel("Log-likelihood")
+axes[0].set_title("Log-likelihood peaks at the MLE"); axes[0].legend(frameon=False, fontsize=8)
+
+# --- Chart 2: average MLE vs. unbiased variance across simulated samples ---
+axes[1].bar(["MLE\n(divide by n)", "Unbiased\n(divide by n−1)"],
+            [samples.var(axis=1, ddof=0).mean(), samples.var(axis=1, ddof=1).mean()],
+            color=["#ff5252", "#4caf50"])
+axes[1].axhline(true_var, color="black", linestyle="--", label=f"True σ² = {true_var}")
+axes[1].set_title(f"Average estimate, n = {n_small} (20,000 samples)")
+axes[1].set_ylabel("Estimated variance")
+axes[1].legend(frameon=False, fontsize=8)
+fig.tight_layout()
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>
@@ -182,5 +213,5 @@ Nearly every risk number is an estimate: volatility, covariance, beta, expected 
 
 <div class="grid" markdown>
 [:material-arrow-left: Previous: Probability Distributions in Finance](/qf-lectures/statistics/probability-distributions/){ .md-button }
-[Back to Curriculum :material-arrow-right:](/qf-lectures/curriculum/){ .md-button .md-button--primary }
+[Next: Hypothesis Testing for Financial Data :material-arrow-right:](/qf-lectures/statistics/hypothesis-testing/){ .md-button .md-button--primary }
 </div>

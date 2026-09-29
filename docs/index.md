@@ -67,4 +67,4 @@ See the [Curriculum](curriculum.md) page for the detailed, lecture-by-lecture br
 
 ---
 
-*Author: Joshua Bloodymier P. Salvino — Data Scientist
+*Author: Joshua Bloodymier P. Salvino — Data Analyst, MS Applied Mathematics (Mathematical Finance) candidate, University of the Philippines Diliman.*

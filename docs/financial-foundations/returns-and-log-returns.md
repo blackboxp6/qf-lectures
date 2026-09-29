@@ -144,6 +144,37 @@ multi_period_log_return = np.log(prices.iloc[-1] / prices.iloc[0])
 print("\nDirect multi-period log return:", round(multi_period_log_return, 5))
 ```
 
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(1, 2, figsize=(8.5, 3.6))
+
+# Panel A: the round-trip price path
+p = prices.values
+axes[0].plot([0, 1, 2], p, marker="o", color="#3f51b5")
+for i, val in enumerate(p):
+    axes[0].annotate(f"{val:.0f}", (i, val), textcoords="offset points", xytext=(0, 8), ha="center")
+axes[0].set_xticks([0, 1, 2]); axes[0].set_xticklabels(["t=0", "t=1", "t=2"])
+axes[0].set_ylabel("Price"); axes[0].set_title("A round-trip price path")
+
+# Panel B: sum of simple returns vs. sum of log returns
+labels = ["Simple return\nsum", "Log return\nsum"]
+values = [simple_returns.sum(), log_returns.sum()]
+axes[1].bar(labels, values, color=["#ff5252", "#4caf50"])
+axes[1].axhline(0, color="black", linewidth=0.8)
+axes[1].set_title("Sum of period returns: simple vs. log")
+for i, v in enumerate(values):
+    axes[1].annotate(f"{v:.4f}", (i, v), textcoords="offset points",
+                      xytext=(0, 6 if v >= 0 else -14), ha="center")
+
+fig.suptitle("Simple Returns Do Not Sum to the True Round-Trip Outcome — Log Returns Do", fontsize=10)
+fig.tight_layout(rect=[0, 0, 1, 0.93])
+plt.show()
+```
+
 ## 6. Visualization
 
 <figure class="qf-figure" markdown>

@@ -112,12 +112,33 @@ print(f"exact:   {exact:.5f}")
 # --- Numerical integration: trapezoid rule vs. the exact Normal CDF ---
 from scipy import stats
 grid = np.linspace(-1.96, 1.96, 2001)
-area = np.trapz(stats.norm.pdf(grid), grid)      # np.trapezoid in NumPy >= 2.0
+trapezoid = getattr(np, "trapezoid", None) or np.trapz   # NumPy >= 2.0 renamed trapz to trapezoid
+area = trapezoid(stats.norm.pdf(grid), grid)
 print("Area under N(0,1) density on [-1.96, 1.96]:", round(area, 5))
 print("Exact via CDF:", round(stats.norm.cdf(1.96) - stats.norm.cdf(-1.96), 5))
 ```
 
-If your NumPy version is 2.0 or newer, `np.trapz` has been renamed `np.trapezoid`. Use whichever your installation provides.
+The code above works on both older and newer NumPy releases: NumPy 2.0 renamed `trapz` to `trapezoid`, so the snippet falls back to `trapz` only if `trapezoid` is unavailable.
+
+
+Continuing directly from the code above, here is the plotting code that produces the chart in Section 6:
+
+```python
+import matplotlib.pyplot as plt
+
+x_grid = np.linspace(-0.6, 0.8, 400)
+fig, ax = plt.subplots(figsize=(7.2, 4.2))
+ax.plot(x_grid, np.log1p(x_grid), color="black", linewidth=2, label="ln(1+x) (exact)")
+ax.plot(x_grid, x_grid, color="#ff5252", linestyle="--", label="1st order: x")
+ax.plot(x_grid, x_grid - x_grid**2/2, color="#3f51b5", linestyle="--", label="2nd order: x - x²/2")
+ax.plot(x_grid, x_grid - x_grid**2/2 + x_grid**3/3, color="#4caf50", linestyle="--",
+        label="3rd order: + x³/3")
+ax.set_ylim(-1.2, 0.8); ax.set_xlabel("x (simple return)"); ax.set_ylabel("Log return")
+ax.set_title("Taylor Approximations of the Log Return")
+ax.legend(frameon=False, fontsize=8)
+fig.tight_layout()
+plt.show()
+```
 
 ## 6. Visualization
 

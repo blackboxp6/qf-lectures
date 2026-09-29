@@ -12,13 +12,13 @@
         <meta name="author" content="Joshua Bloodymier P. Salvino">
       
       
-        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/statistics/estimation-theory/">
+        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/prerequisites/optimization/">
       
       
-        <link rel="prev" href="../probability-distributions/">
+        <link rel="prev" href="../statistical-inference/">
       
       
-        <link rel="next" href="../../portfolio-risk/">
+        <link rel="next" href="../../financial-foundations/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Estimation Theory: MLE and Method of Moments - Quantitative Finance Lectures</title>
+        <title>Optimization Foundations - Quantitative Finance Lectures</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#estimation-theory-mle-and-method-of-moments" class="md-skip">
+        <a href="#optimization-foundations" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Estimation Theory: MLE and Method of Moments
+              Optimization Foundations
             
           </span>
         </div>
@@ -251,11 +251,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../prerequisites/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -291,13 +293,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../statistics/" class="md-tabs__link">
           
   
     
@@ -541,6 +541,8 @@
       
   
   
+    
+  
   
   
     
@@ -565,21 +567,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../prerequisites/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -590,13 +595,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             0. Prerequisites
@@ -612,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/python-numpy-pandas/" class="md-nav__link">
+      <a href="../python-numpy-pandas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/calculus/" class="md-nav__link">
+      <a href="../calculus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/linear-algebra/" class="md-nav__link">
+      <a href="../linear-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/probability/" class="md-nav__link">
+      <a href="../probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -696,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/statistical-inference/" class="md-nav__link">
+      <a href="../statistical-inference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,10 +719,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../prerequisites/optimization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Optimization Foundations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -726,6 +751,127 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Intuition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mathematical formulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Derivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-worked-numerical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Worked numerical example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-python-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Python implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-financial-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Financial interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Common mistakes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -943,8 +1089,6 @@
       
   
   
-    
-  
   
   
     
@@ -961,24 +1105,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../statistics/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -989,13 +1130,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             2. Statistics & Econometrics
@@ -1011,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../probability-distributions/" class="md-nav__link">
+      <a href="../../statistics/probability-distributions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,30 +1170,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Estimation Theory: MLE and Method of Moments
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../statistics/estimation-theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,127 +1182,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-intuition" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Intuition
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-mathematical-formulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Mathematical formulation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-derivation" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Derivation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-worked-numerical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Worked numerical example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-python-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Python implementation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-visualization" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Visualization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-financial-interpretation" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Financial interpretation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-common-mistakes" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Common mistakes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Exercises
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Further reading
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1496,7 +1496,7 @@
                   
 
   
-    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/statistics/estimation-theory.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/prerequisites/optimization.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1504,141 +1504,150 @@
   
 
 
-<h1 id="estimation-theory-mle-and-method-of-moments">Estimation Theory: MLE and Method of Moments<a class="headerlink" href="#estimation-theory-mle-and-method-of-moments" title="Permanent link">&para;</a></h1>
+<h1 id="optimization-foundations">Optimization Foundations<a class="headerlink" href="#optimization-foundations" title="Permanent link">&para;</a></h1>
 <div class="admonition objectives">
 <p class="admonition-title">Learning objectives</p>
 <p>By the end of this lecture you should be able to:</p>
 <ul>
-<li>[ ] Distinguish a parameter, an estimator, and an estimate</li>
-<li>[ ] Define bias and explain why an unbiased estimator is not automatically the "best" one</li>
-<li>[ ] Derive the maximum likelihood estimators of the mean and variance of a Normal distribution</li>
-<li>[ ] Explain why the MLE of the variance is biased, and correct it</li>
-<li>[ ] Fit a distribution to return data by maximum likelihood in Python</li>
+<li>[ ] State an optimization problem in terms of an objective function, decision variables, and constraints</li>
+<li>[ ] Define a convex function and a convex problem, and explain why convexity guarantees a unique minimum</li>
+<li>[ ] Derive the unconstrained minimum-variance portfolio using calculus, and set up a constrained problem with a Lagrange multiplier</li>
+<li>[ ] Use gradient descent and a constrained solver (SciPy) to find an optimum numerically</li>
 </ul>
 </div>
 <h2 id="1-intuition">1. Intuition<a class="headerlink" href="#1-intuition" title="Permanent link">&para;</a></h2>
-<p>Every model in this curriculum has <strong>parameters</strong>: the mean and volatility of returns, the degrees of freedom of a Student-t, the coefficients of a regression. These are unknown constants of the process generating the data. All we have is a finite sample, so we need a rule that turns data into a guess for each parameter. That rule is an <strong>estimator</strong>, and the number it produces from a particular sample is an <strong>estimate</strong>.</p>
-<p>Because the sample is random, the estimate is random too. Estimation theory is about judging rules: on average, are they right (bias)? How much do they wobble from sample to sample (variance)? The two most widely used recipes are the <strong>method of moments</strong> (match sample averages to theoretical moments) and <strong>maximum likelihood</strong> (choose the parameters that make the observed data most probable).</p>
+<p>Almost every model in this curriculum ends in an optimization problem: choose portfolio weights to minimize risk for a given return, choose model parameters to maximize a likelihood, choose trading rule parameters to maximize a backtested Sharpe ratio. Optimization is the machinery that turns "the best choice, given some criterion and some constraints" into a number.</p>
+<p>The single most useful property a problem can have is <strong>convexity</strong>. A convex objective, minimized over a convex set of allowed choices, has no false peaks or valleys to get trapped in: any local minimum is the global minimum. Markowitz portfolio optimization (Module 3) is convex, which is one reason it became the workhorse of the field; many machine learning problems (Module 8) are not, which is one reason they need more elaborate solvers.</p>
 <h2 id="2-mathematical-formulation">2. Mathematical formulation<a class="headerlink" href="#2-mathematical-formulation" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">\( x_1, \dots, x_n \)</span> be independent observations from a distribution with density <span class="arithmatex">\( f(x;\theta) \)</span>, where <span class="arithmatex">\( \theta \)</span> is the parameter (or vector of parameters).</p>
-<p><strong>Likelihood and log-likelihood.</strong></p>
+<p>A generic optimization problem:</p>
 <div class="arithmatex">\[
-L(\theta) = \prod_{i=1}^{n} f(x_i;\theta) \qquad\qquad \ell(\theta) = \ln L(\theta) = \sum_{i=1}^{n} \ln f(x_i;\theta)
+\min_{\mathbf{x}}\ f(\mathbf{x}) \qquad \text{subject to}\quad g_i(\mathbf{x})\le 0,\ \ h_j(\mathbf{x})=0
 \]</div>
-<p>The <strong>maximum likelihood estimator</strong> is</p>
+<p>where <span class="arithmatex">\( f \)</span> is the <strong>objective</strong>, <span class="arithmatex">\( \mathbf{x} \)</span> the decision variables, <span class="arithmatex">\( g_i \)</span> inequality constraints, and <span class="arithmatex">\( h_j \)</span> equality constraints.</p>
+<p><strong>Unconstrained first-order condition.</strong> If <span class="arithmatex">\( f \)</span> is differentiable and <span class="arithmatex">\( \mathbf{x}^* \)</span> minimizes it, then the gradient vanishes:</p>
 <div class="arithmatex">\[
-\hat{\theta}_{\text{MLE}} = \arg\max_{\theta}\ \ell(\theta)
+\nabla f(\mathbf{x}^*)=\mathbf{0}
 \]</div>
-<p>We take logs because sums are easier to differentiate than products, and the log is increasing so the maximizer is unchanged.</p>
-<p><strong>Method of moments.</strong> Set the theoretical moments <span class="arithmatex">\( E[X^k] \)</span>, which depend on <span class="arithmatex">\( \theta \)</span>, equal to the sample moments <span class="arithmatex">\( \frac{1}{n}\sum_i x_i^k \)</span>, and solve for <span class="arithmatex">\( \theta \)</span>.</p>
-<p><strong>Bias.</strong> For an estimator <span class="arithmatex">\( \hat\theta \)</span>,</p>
+<p><strong>Convexity.</strong> A function <span class="arithmatex">\( f \)</span> is convex if, for all <span class="arithmatex">\( \mathbf x,\mathbf y \)</span> and <span class="arithmatex">\( t\in[0,1] \)</span>,</p>
 <div class="arithmatex">\[
-\text{Bias}(\hat\theta) = E[\hat\theta] - \theta
+f\big(t\mathbf x+(1-t)\mathbf y\big)\ \le\ t f(\mathbf x)+(1-t) f(\mathbf y)
 \]</div>
-<p>An estimator is <strong>unbiased</strong> if its bias is zero.</p>
-<p><strong>Normal case.</strong> For <span class="arithmatex">\( X \sim \mathcal{N}(\mu,\sigma^2) \)</span>:</p>
+<p>Geometrically, the graph lies below any chord connecting two points on it. A twice-differentiable <span class="arithmatex">\( f \)</span> is convex if and only if its Hessian (matrix of second derivatives) is positive semi-definite everywhere.</p>
+<p><strong>Lagrangian, for equality-constrained problems.</strong> To minimize <span class="arithmatex">\( f(\mathbf x) \)</span> subject to <span class="arithmatex">\( h(\mathbf x)=0 \)</span>, form</p>
 <div class="arithmatex">\[
-\hat\mu = \bar{x} = \frac{1}{n}\sum_{i=1}^n x_i \qquad\qquad \hat\sigma^2_{\text{MLE}} = \frac{1}{n}\sum_{i=1}^n (x_i-\bar{x})^2
+\mathcal L(\mathbf x,\lambda)=f(\mathbf x)-\lambda\,h(\mathbf x)
 \]</div>
-<p>and the bias-corrected sample variance is</p>
+<p>and set <span class="arithmatex">\( \nabla_{\mathbf x}\mathcal L=0 \)</span> and <span class="arithmatex">\( \partial\mathcal L/\partial\lambda=0 \)</span> (which just restates the constraint).</p>
+<p><strong>Gradient descent.</strong> An iterative unconstrained method:</p>
 <div class="arithmatex">\[
-s^2 = \frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2
+\mathbf x_{k+1}=\mathbf x_k-\eta\,\nabla f(\mathbf x_k)
 \]</div>
+<p>where <span class="arithmatex">\( \eta&gt;0 \)</span> is the step size (learning rate).</p>
 <h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
-<p><strong>MLE for the Normal.</strong> The log-likelihood is</p>
+<p><strong>Minimum-variance two-asset portfolio.</strong> Minimize <span class="arithmatex">\( \sigma_p^2(w)=w^2\sigma_1^2+(1-w)^2\sigma_2^2+2w(1-w)\rho\sigma_1\sigma_2 \)</span> over <span class="arithmatex">\( w \)</span>, unconstrained (weights are allowed to be any real number, short sales permitted). Differentiate and set to zero:</p>
 <div class="arithmatex">\[
-\ell(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln\sigma^2 - \frac{1}{2\sigma^2}\sum_{i=1}^n (x_i-\mu)^2
+\frac{d\sigma_p^2}{dw}=2w\sigma_1^2-2(1-w)\sigma_2^2+2\rho\sigma_1\sigma_2(1-2w)=0
 \]</div>
-<p>Differentiate with respect to <span class="arithmatex">\( \mu \)</span> and set to zero:</p>
+<p>Collecting terms in <span class="arithmatex">\( w \)</span>:</p>
 <div class="arithmatex">\[
-\frac{\partial \ell}{\partial \mu} = \frac{1}{\sigma^2}\sum_i (x_i-\mu) = 0 \quad\Longrightarrow\quad \hat\mu = \bar{x}
+w\big(2\sigma_1^2+2\sigma_2^2-4\rho\sigma_1\sigma_2\big)=2\sigma_2^2-2\rho\sigma_1\sigma_2
 \]</div>
-<p>Differentiate with respect to <span class="arithmatex">\( \sigma^2 \)</span> and set to zero:</p>
 <div class="arithmatex">\[
-\frac{\partial \ell}{\partial \sigma^2} = -\frac{n}{2\sigma^2} + \frac{1}{2\sigma^4}\sum_i (x_i-\mu)^2 = 0 \quad\Longrightarrow\quad \hat\sigma^2 = \frac{1}{n}\sum_i (x_i-\hat\mu)^2
+w^*=\frac{\sigma_2^2-\rho\sigma_1\sigma_2}{\sigma_1^2+\sigma_2^2-2\rho\sigma_1\sigma_2}
 \]</div>
-<p><strong>Why the MLE variance is biased.</strong> Write <span class="arithmatex">\( x_i - \bar{x} = (x_i-\mu) - (\bar{x}-\mu) \)</span> and expand:</p>
+<p>This confirms the formula given as an exercise in Portfolio Basics. Because <span class="arithmatex">\( \sigma_p^2(w) \)</span> is a quadratic in <span class="arithmatex">\( w \)</span> with a positive leading coefficient (as long as <span class="arithmatex">\( \rho\ne\pm1 \)</span> and both assets have positive variance), it is convex, and the point where the derivative vanishes is the unique global minimum, not merely a local one.</p>
+<p><strong>Why convexity guarantees a global minimum.</strong> Suppose <span class="arithmatex">\( \mathbf x^* \)</span> is a local minimum of a convex <span class="arithmatex">\( f \)</span> but not global, so some <span class="arithmatex">\( \mathbf y \)</span> has <span class="arithmatex">\( f(\mathbf y)&lt;f(\mathbf x^*) \)</span>. Convexity gives, for small <span class="arithmatex">\( t&gt;0 \)</span>,</p>
 <div class="arithmatex">\[
-\sum_i (x_i-\bar{x})^2 = \sum_i (x_i-\mu)^2 - n(\bar{x}-\mu)^2
+f\big(\mathbf x^*+t(\mathbf y-\mathbf x^*)\big)\le (1-t)f(\mathbf x^*)+t f(\mathbf y) &lt; f(\mathbf x^*)
 \]</div>
-<p>Take expectations. Each <span class="arithmatex">\( E[(x_i-\mu)^2] = \sigma^2 \)</span>, and <span class="arithmatex">\( E[(\bar{x}-\mu)^2] = \text{Var}(\bar{x}) = \sigma^2/n \)</span>. Therefore</p>
-<div class="arithmatex">\[
-E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)\sigma^2
-\]</div>
-<p>so <span class="arithmatex">\( E[\hat\sigma^2_{\text{MLE}}] = \frac{n-1}{n}\sigma^2 &lt; \sigma^2 \)</span>. The estimator systematically underestimates variance because <span class="arithmatex">\( \bar{x} \)</span> was fitted to the same data and is, by construction, closer to the observations than the true <span class="arithmatex">\( \mu \)</span> is. Dividing by <span class="arithmatex">\( n-1 \)</span> instead of <span class="arithmatex">\( n \)</span> removes the bias, giving <span class="arithmatex">\( s^2 \)</span>. The bias vanishes as <span class="arithmatex">\( n \)</span> grows, and it matters most in small samples.</p>
-<p><strong>Method of moments for the Normal.</strong> Matching <span class="arithmatex">\( E[X]=\mu \)</span> and <span class="arithmatex">\( E[X^2]=\sigma^2+\mu^2 \)</span> to the sample moments gives the same estimators as MLE here. This is a coincidence of the Normal, not a general rule. For other distributions the two methods can differ, and MLE is generally preferred for its efficiency properties in large samples.</p>
+<p>so points arbitrarily close to <span class="arithmatex">\( \mathbf x^* \)</span> along the direction of <span class="arithmatex">\( \mathbf y \)</span> have strictly lower objective value, contradicting that <span class="arithmatex">\( \mathbf x^* \)</span> is a local minimum. Hence for a convex function, every local minimum is global. This is the formal reason Markowitz optimization, ridge and lasso regression (Module 2), and many risk measures have a single well-defined answer instead of many competing local optima.</p>
 <h2 id="4-worked-numerical-example">4. Worked numerical example<a class="headerlink" href="#4-worked-numerical-example" title="Permanent link">&para;</a></h2>
-<p>Five daily returns (in percent): <span class="arithmatex">\( 1,\ -2,\ 3,\ 0,\ 2 \)</span>. (Illustrative data.)</p>
-<p><strong>Mean:</strong> <span class="arithmatex">\( \bar{x} = (1-2+3+0+2)/5 = 0.8\% \)</span>.</p>
-<p><strong>Squared deviations:</strong> <span class="arithmatex">\( (0.2)^2 = 0.04,\ (-2.8)^2 = 7.84,\ (2.2)^2 = 4.84,\ (-0.8)^2 = 0.64,\ (1.2)^2 = 1.44 \)</span>. Sum <span class="arithmatex">\( = 14.8 \)</span>.</p>
-<p><strong>MLE variance:</strong> <span class="arithmatex">\( 14.8/5 = 2.96\ (\%^2) \)</span>, so <span class="arithmatex">\( \hat\sigma \approx 1.72\% \)</span>.</p>
-<p><strong>Unbiased variance:</strong> <span class="arithmatex">\( 14.8/4 = 3.70\ (\%^2) \)</span>, so <span class="arithmatex">\( s \approx 1.92\% \)</span>.</p>
-<p>With only 5 observations the two differ by 25%, which is the factor <span class="arithmatex">\( n/(n-1) = 5/4 \)</span>.</p>
+<p>Take the numbers from Portfolio Basics: <span class="arithmatex">\( \sigma_1=0.20,\ \sigma_2=0.10,\ \rho=0.3 \)</span>.</p>
+<div class="arithmatex">\[
+w^*=\frac{0.01-0.3(0.20)(0.10)}{0.04+0.01-2(0.3)(0.20)(0.10)}=\frac{0.01-0.006}{0.05-0.012}=\frac{0.004}{0.038}\approx0.1053
+\]</div>
+<p>So the minimum-variance mix puts about 10.5% in the riskier asset and 89.5% in the safer one, even though (in Portfolio Basics) an investor targeting a specific expected return used a 60/40 split. Minimizing variance alone and targeting a given return are different objectives, reconciled by the full Markowitz problem in Module 3.</p>
 <h2 id="5-python-implementation">5. Python implementation<a class="headerlink" href="#5-python-implementation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>   <span class="c1"># returns in percent</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">rho</span> <span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">,</span> <span class="mf">0.3</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">s1</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">rho</span><span class="o">*</span><span class="n">s1</span><span class="o">*</span><span class="n">s2</span><span class="p">],</span> <span class="p">[</span><span class="n">rho</span><span class="o">*</span><span class="n">s1</span><span class="o">*</span><span class="n">s2</span><span class="p">,</span> <span class="n">s2</span><span class="o">**</span><span class="mi">2</span><span class="p">]])</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">var_mle</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># divide by n</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">var_unb</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>      <span class="c1"># divide by n-1</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mean=</span><span class="si">{</span><span class="n">mean</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  MLE var=</span><span class="si">{</span><span class="n">var_mle</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  unbiased var=</span><span class="si">{</span><span class="n">var_unb</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># --- Simulation: check the bias claim from Section 3 ---</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">true_var</span><span class="p">,</span> <span class="n">n_small</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mi">5</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">samples</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">true_var</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20000</span><span class="p">,</span> <span class="n">n_small</span><span class="p">))</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg MLE variance:     &quot;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      <span class="s2">&quot;(theory:&quot;</span><span class="p">,</span> <span class="n">true_var</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_small</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_small</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg unbiased variance:&quot;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># --- MLE for a fat-tailed model: fit a Student-t by maximum likelihood ---</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">returns</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">df_hat</span><span class="p">,</span> <span class="n">loc_hat</span><span class="p">,</span> <span class="n">scale_hat</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">returns</span><span class="p">)</span>   <span class="c1"># numerical MLE</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fitted Student-t: df=</span><span class="si">{</span><span class="n">df_hat</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, loc=</span><span class="si">{</span><span class="n">loc_hat</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">, scale=</span><span class="si">{</span><span class="n">scale_hat</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># --- Closed-form minimum-variance weight (unconstrained in w) ---</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">w_star</span> <span class="o">=</span> <span class="p">(</span><span class="n">s2</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">rho</span><span class="o">*</span><span class="n">s1</span><span class="o">*</span><span class="n">s2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">s1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">s2</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">s1</span><span class="o">*</span><span class="n">s2</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Closed-form w* = </span><span class="si">{</span><span class="n">w_star</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># --- Same answer via a numerical solver, with the budget constraint sum(w)=1 ---</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">def</span> <span class="nf">portfolio_var</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">w_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="k">return</span> <span class="n">w_full</span> <span class="o">@</span> <span class="n">Sigma</span> <span class="o">@</span> <span class="n">w_full</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">portfolio_var</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;SLSQP&quot;</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Numerical w* = </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, min variance = </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">fun</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># --- Gradient descent on a simple convex quadratic, f(x,y) = 0.5(x^2 + 10y^2) ---</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">def</span> <span class="nf">grad</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">p</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">y</span><span class="p">])</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">])</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">eta</span> <span class="o">=</span> <span class="mf">0.09</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">path</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">copy</span><span class="p">()]</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">grad</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Converged near:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1"># --- General constrained example: minimum-variance with a target return, N assets ---</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">])</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">Sigma_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.006</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.006</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">]])</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">target</span> <span class="o">=</span> <span class="mf">0.06</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="n">cons</span> <span class="o">=</span> <span class="p">({</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> <span class="s2">&quot;fun&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">w</span><span class="p">:</span> <span class="n">w</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">},</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> <span class="s2">&quot;fun&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">w</span><span class="p">:</span> <span class="n">w</span> <span class="o">@</span> <span class="n">mu</span> <span class="o">-</span> <span class="n">target</span><span class="p">})</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">w</span><span class="p">:</span> <span class="n">w</span> <span class="o">@</span> <span class="n">Sigma_full</span> <span class="o">@</span> <span class="n">w</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">constraints</span><span class="o">=</span><span class="n">cons</span><span class="p">)</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Target-return efficient weights:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 </span></code></pre></div>
-<p><code>stats.t.fit</code> maximizes the log-likelihood numerically, because the Student-t has no closed-form MLE. Numerical optimization is a general theme of Module 0's optimization lecture.</p>
 <h2 id="6-visualization">6. Visualization<a class="headerlink" href="#6-visualization" title="Permanent link">&para;</a></h2>
 <figure class="qf-figure">
-<p><img alt="Left: log-likelihood curve peaking at the MLE of sigma. Right: bar chart showing the MLE variance underestimates the true variance while the unbiased version does not" src="../../assets/images/estimation-mle-bias.png" /></p>
-<figcaption>Left: the log-likelihood of the five sample returns as a function of σ, peaking at the MLE. Right: across 20,000 simulated samples of size 5 from a Normal with true variance 4, the MLE variance averages about 3.2 (matching the theoretical \( \tfrac{4}{5}\times 4 \)), while the n−1 version averages about 4.</figcaption>
+<p><img alt="Left: portfolio variance as a convex function of the weight with a single marked minimum. Right: gradient descent path converging to the minimum of a quadratic bowl" src="../../assets/images/optimization-min-variance.png" /></p>
+<figcaption>Left: portfolio variance is a convex parabola in the weight w₁, with a single minimum at w₁ ≈ 0.105, matching Section 4. Right: gradient descent on a convex quadratic bowl steps steadily toward the single minimum at the origin — the same guarantee, illustrated as a search path rather than a closed-form solution.</figcaption>
 </figure>
 <h2 id="7-financial-interpretation">7. Financial interpretation<a class="headerlink" href="#7-financial-interpretation" title="Permanent link">&para;</a></h2>
-<p>Nearly every risk number is an estimate: volatility, covariance, beta, expected return. Sample noise means these numbers carry uncertainty, and with the short histories common in finance that uncertainty can be large. Expected returns in particular are notoriously hard to estimate precisely, while volatilities are estimated far more accurately. The choice of estimator matters most where data are scarce, such as tail risk, where extreme observations are by definition rare. MLE also underpins the GARCH models later in this module, which are fitted by maximizing a likelihood.</p>
+<p>Nearly every "optimal" object in quantitative finance, efficient portfolios, fitted model parameters, calibrated volatility surfaces, is the output of an optimization problem, and the properties of that problem (convex or not, constrained or not, well- or ill-conditioned) determine how much to trust the answer. A convex problem has one answer to find. A non-convex problem, common in machine learning (Module 8) and some calibration tasks (Module 7), may have many local optima, so the starting point and the algorithm can change the result, and reported "optimal" parameters deserve more scrutiny.</p>
 <h2 id="8-common-mistakes">8. Common mistakes<a class="headerlink" href="#8-common-mistakes" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: mixing up ddof conventions</p>
-<p>NumPy's <code>var</code> and <code>std</code> divide by <span class="arithmatex">\( n \)</span> by default (<code>ddof=0</code>), while pandas' <code>.var()</code> and <code>.std()</code> divide by <span class="arithmatex">\( n-1 \)</span> (<code>ddof=1</code>). The same data can give different volatilities depending on the library. Check which one you are using.</p>
+<p class="admonition-title">Common mistake: assuming any solver output is the global optimum</p>
+<p>Generic numerical solvers applied to non-convex problems can converge to a local optimum that depends on the starting point. For non-convex problems, try multiple starting points and compare results.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: equating unbiased with best</p>
-<p>Unbiasedness is one desirable property, not the only one. An estimator can be slightly biased yet have lower overall error, and <span class="arithmatex">\( s \)</span> is itself a biased estimator of the standard deviation <span class="arithmatex">\( \sigma \)</span>, even though <span class="arithmatex">\( s^2 \)</span> is unbiased for <span class="arithmatex">\( \sigma^2 \)</span>.</p>
+<p class="admonition-title">Common mistake: ignoring constraints when interpreting a solution</p>
+<p>A solution to an unconstrained problem (as in Section 4) can differ substantially from the constrained problem an investor actually faces, for example if short sales are disallowed (<span class="arithmatex">\( w\ge0 \)</span>). Check which constraints were actually imposed.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: ignoring estimation uncertainty</p>
-<p>Reporting a single estimated volatility or mean return with no notion of its sampling error invites false precision. Standard errors and confidence intervals, covered in the next lectures, quantify this.</p>
+<p class="admonition-title">Common mistake: picking a bad step size in gradient descent</p>
+<p>Too large a step size can make gradient descent diverge or oscillate; too small makes convergence very slow. This becomes especially important in Module 8, where training neural networks is essentially large-scale gradient descent.</p>
 </div>
 <h2 id="9-exercises">9. Exercises<a class="headerlink" href="#9-exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Derive the MLE of the rate <span class="arithmatex">\( \lambda \)</span> for an Exponential distribution with density <span class="arithmatex">\( f(x;\lambda)=\lambda e^{-\lambda x} \)</span>, <span class="arithmatex">\( x \ge 0 \)</span>. Verify that it matches the method of moments estimator.</li>
-<li>Modify the simulation in Section 5 to use <span class="arithmatex">\( n=50 \)</span> instead of <span class="arithmatex">\( n=5 \)</span>. How does the gap between the MLE and unbiased variances change, and does it match the factor <span class="arithmatex">\( (n-1)/n \)</span>?</li>
-<li>Simulate returns from a Student-t with 3 degrees of freedom and compare the sampling variability of <span class="arithmatex">\( s^2 \)</span> against a Normal sample of the same size. What does this suggest about estimating variance for fat-tailed returns?</li>
+<li>Re-derive <span class="arithmatex">\( w^* \)</span> in Section 3 using the Lagrangian approach if a constraint <span class="arithmatex">\( w\ge0 \)</span> is added, and explain qualitatively what changes if the unconstrained optimum were negative.</li>
+<li>Verify by hand that the Hessian of <span class="arithmatex">\( \sigma_p^2(w) \)</span> is a positive constant (confirming convexity) whenever <span class="arithmatex">\( \rho\ne\pm1 \)</span>.</li>
+<li>Modify the gradient descent code to use <span class="arithmatex">\( \eta=0.25 \)</span> instead of <span class="arithmatex">\( 0.09 \)</span> and observe what happens. Explain why in terms of the largest eigenvalue of the Hessian, <span class="arithmatex">\( \text{diag}(1,10) \)</span>.</li>
 </ol>
 <h2 id="10-further-reading">10. Further reading<a class="headerlink" href="#10-further-reading" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The next lectures in this module build on estimators to construct confidence intervals and hypothesis tests.</li>
+<li>Boyd and Vandenberghe's <em>Convex Optimization</em> is available free online and is the standard reference, cited below.</li>
 </ul>
 <h2 id="11-references">11. References<a class="headerlink" href="#11-references" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Casella, G., &amp; Berger, R. L. (2002). <em>Statistical Inference</em> (2nd ed.), Chapters 7 and 10. Duxbury.</li>
-<li>Campbell, J. Y., Lo, A. W., &amp; MacKinlay, A. C. (1997). <em>The Econometrics of Financial Markets</em>, Appendix and Chapter 1. Princeton University Press.</li>
-<li>SciPy Developers. "<code>scipy.stats.t</code>." <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html">docs.scipy.org</a></li>
+<li>Boyd, S., &amp; Vandenberghe, L. (2004). <em>Convex Optimization</em>. Cambridge University Press.</li>
+<li>Markowitz, H. (1952). "Portfolio Selection." <em>The Journal of Finance</em>, 7(1), 77–91.</li>
+<li>SciPy Developers. "<code>scipy.optimize.minimize</code>." <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html">docs.scipy.org</a></li>
 </ol>
 <hr />
 <div class="grid">
-<p><a class="md-button" href="/qf-lectures/statistics/probability-distributions/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Probability Distributions in Finance</a>
+<p><a class="md-button" href="/qf-lectures/prerequisites/statistical-inference/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Statistical Inference Foundations</a>
 <a class="md-button md-button--primary" href="/qf-lectures/curriculum/">Back to Curriculum <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </div>
 
@@ -1679,7 +1688,7 @@ E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../probability-distributions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Probability Distributions in Finance">
+          <a href="../statistical-inference/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Statistical Inference Foundations">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1689,20 +1698,20 @@ E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)
                 Previous
               </span>
               <div class="md-ellipsis">
-                Probability Distributions in Finance
+                Statistical Inference Foundations
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../portfolio-risk/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Portfolio &amp; Risk">
+          <a href="../../financial-foundations/" class="md-footer__link md-footer__link--next" aria-label="Next: Module 1 — Financial Foundations">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                3. Portfolio & Risk
+                Module 1 — Financial Foundations
               </div>
             </div>
             <div class="md-footer__button md-icon">

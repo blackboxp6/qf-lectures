@@ -12,13 +12,13 @@
         <meta name="author" content="Joshua Bloodymier P. Salvino">
       
       
-        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/statistics/estimation-theory/">
+        <link rel="canonical" href="https://jsbldquant04.github.io/qf-lectures/prerequisites/probability/">
       
       
-        <link rel="prev" href="../probability-distributions/">
+        <link rel="prev" href="../linear-algebra/">
       
       
-        <link rel="next" href="../../portfolio-risk/">
+        <link rel="next" href="../statistical-inference/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Estimation Theory: MLE and Method of Moments - Quantitative Finance Lectures</title>
+        <title>Probability Foundations - Quantitative Finance Lectures</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#estimation-theory-mle-and-method-of-moments" class="md-skip">
+        <a href="#probability-foundations" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Estimation Theory: MLE and Method of Moments
+              Probability Foundations
             
           </span>
         </div>
@@ -251,11 +251,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../prerequisites/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -291,13 +293,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../statistics/" class="md-tabs__link">
           
   
     
@@ -541,6 +541,8 @@
       
   
   
+    
+  
   
   
     
@@ -565,21 +567,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../prerequisites/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -590,13 +595,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             0. Prerequisites
@@ -612,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/python-numpy-pandas/" class="md-nav__link">
+      <a href="../python-numpy-pandas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/calculus/" class="md-nav__link">
+      <a href="../calculus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/linear-algebra/" class="md-nav__link">
+      <a href="../linear-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -672,10 +677,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../prerequisites/probability/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Probability Foundations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -684,6 +709,127 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Intuition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mathematical formulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Derivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-worked-numerical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Worked numerical example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-python-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Python implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-financial-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Financial interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Common mistakes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -696,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/statistical-inference/" class="md-nav__link">
+      <a href="../statistical-inference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -717,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prerequisites/optimization/" class="md-nav__link">
+      <a href="../optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,8 +1089,6 @@
       
   
   
-    
-  
   
   
     
@@ -961,24 +1105,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../statistics/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -989,13 +1130,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             2. Statistics & Econometrics
@@ -1011,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../probability-distributions/" class="md-nav__link">
+      <a href="../../statistics/probability-distributions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,30 +1170,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Estimation Theory: MLE and Method of Moments
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../statistics/estimation-theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,127 +1182,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-intuition" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Intuition
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-mathematical-formulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Mathematical formulation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-derivation" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Derivation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-worked-numerical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Worked numerical example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-python-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Python implementation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-visualization" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Visualization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-financial-interpretation" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Financial interpretation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-common-mistakes" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Common mistakes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Exercises
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Further reading
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1496,7 +1496,7 @@
                   
 
   
-    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/statistics/estimation-theory.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/jsbldquant04/qf-lectures/edit/main/docs/prerequisites/probability.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1504,142 +1504,145 @@
   
 
 
-<h1 id="estimation-theory-mle-and-method-of-moments">Estimation Theory: MLE and Method of Moments<a class="headerlink" href="#estimation-theory-mle-and-method-of-moments" title="Permanent link">&para;</a></h1>
+<h1 id="probability-foundations">Probability Foundations<a class="headerlink" href="#probability-foundations" title="Permanent link">&para;</a></h1>
 <div class="admonition objectives">
 <p class="admonition-title">Learning objectives</p>
 <p>By the end of this lecture you should be able to:</p>
 <ul>
-<li>[ ] Distinguish a parameter, an estimator, and an estimate</li>
-<li>[ ] Define bias and explain why an unbiased estimator is not automatically the "best" one</li>
-<li>[ ] Derive the maximum likelihood estimators of the mean and variance of a Normal distribution</li>
-<li>[ ] Explain why the MLE of the variance is biased, and correct it</li>
-<li>[ ] Fit a distribution to return data by maximum likelihood in Python</li>
+<li>[ ] Define a random variable, its distribution (PMF/PDF and CDF), expectation, and variance</li>
+<li>[ ] Compute conditional probabilities and apply Bayes' theorem</li>
+<li>[ ] Define covariance, correlation, and independence, and state how they differ</li>
+<li>[ ] State the Law of Large Numbers and the Central Limit Theorem and explain what each does and does not guarantee</li>
 </ul>
 </div>
 <h2 id="1-intuition">1. Intuition<a class="headerlink" href="#1-intuition" title="Permanent link">&para;</a></h2>
-<p>Every model in this curriculum has <strong>parameters</strong>: the mean and volatility of returns, the degrees of freedom of a Student-t, the coefficients of a regression. These are unknown constants of the process generating the data. All we have is a finite sample, so we need a rule that turns data into a guess for each parameter. That rule is an <strong>estimator</strong>, and the number it produces from a particular sample is an <strong>estimate</strong>.</p>
-<p>Because the sample is random, the estimate is random too. Estimation theory is about judging rules: on average, are they right (bias)? How much do they wobble from sample to sample (variance)? The two most widely used recipes are the <strong>method of moments</strong> (match sample averages to theoretical moments) and <strong>maximum likelihood</strong> (choose the parameters that make the observed data most probable).</p>
+<p>Future returns are uncertain, and probability is the vocabulary for reasoning about that uncertainty precisely. A <strong>random variable</strong> is a number whose value is not yet known, such as tomorrow's return. Its <strong>distribution</strong> says how likely each value is. Summaries of the distribution, chiefly the mean (expected value) and the variance, are what models actually work with.</p>
+<p>Two results explain why averaging is so powerful and why the Normal distribution shows up so often. The <strong>Law of Large Numbers</strong> says sample averages settle down to the true mean. The <strong>Central Limit Theorem</strong> says that, after suitable scaling, the fluctuations of a sample average look Normal regardless of the underlying shape (given finite variance). Both come back repeatedly in estimation, risk, and Monte Carlo simulation.</p>
 <h2 id="2-mathematical-formulation">2. Mathematical formulation<a class="headerlink" href="#2-mathematical-formulation" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">\( x_1, \dots, x_n \)</span> be independent observations from a distribution with density <span class="arithmatex">\( f(x;\theta) \)</span>, where <span class="arithmatex">\( \theta \)</span> is the parameter (or vector of parameters).</p>
-<p><strong>Likelihood and log-likelihood.</strong></p>
+<p><strong>Random variable and distribution.</strong> A random variable <span class="arithmatex">\( X \)</span> has cumulative distribution function</p>
 <div class="arithmatex">\[
-L(\theta) = \prod_{i=1}^{n} f(x_i;\theta) \qquad\qquad \ell(\theta) = \ln L(\theta) = \sum_{i=1}^{n} \ln f(x_i;\theta)
+F(x)=P(X\le x)
 \]</div>
-<p>The <strong>maximum likelihood estimator</strong> is</p>
+<p>If <span class="arithmatex">\( X \)</span> is continuous with density <span class="arithmatex">\( f \)</span>, then <span class="arithmatex">\( P(a\le X\le b)=\int_a^b f(x)\,dx \)</span> and <span class="arithmatex">\( f\ge0 \)</span>, <span class="arithmatex">\( \int f=1 \)</span>. If <span class="arithmatex">\( X \)</span> is discrete, the probability mass function <span class="arithmatex">\( p(x)=P(X=x) \)</span> sums to 1.</p>
+<p><strong>Expectation and variance.</strong></p>
 <div class="arithmatex">\[
-\hat{\theta}_{\text{MLE}} = \arg\max_{\theta}\ \ell(\theta)
+E[X]=\int x f(x)\,dx \ \ \left(\text{or }\sum_x x\,p(x)\right), \qquad \text{Var}(X)=E\big[(X-E[X])^2\big]
 \]</div>
-<p>We take logs because sums are easier to differentiate than products, and the log is increasing so the maximizer is unchanged.</p>
-<p><strong>Method of moments.</strong> Set the theoretical moments <span class="arithmatex">\( E[X^k] \)</span>, which depend on <span class="arithmatex">\( \theta \)</span>, equal to the sample moments <span class="arithmatex">\( \frac{1}{n}\sum_i x_i^k \)</span>, and solve for <span class="arithmatex">\( \theta \)</span>.</p>
-<p><strong>Bias.</strong> For an estimator <span class="arithmatex">\( \hat\theta \)</span>,</p>
+<p>Expectation is linear: <span class="arithmatex">\( E[aX+bY]=aE[X]+bE[Y] \)</span>, always.</p>
+<p><strong>Conditional probability and Bayes' theorem.</strong> For events <span class="arithmatex">\( A,B \)</span> with <span class="arithmatex">\( P(B)&gt;0 \)</span>:</p>
 <div class="arithmatex">\[
-\text{Bias}(\hat\theta) = E[\hat\theta] - \theta
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}, \qquad P(A\mid B)=\frac{P(B\mid A)\,P(A)}{P(B)}
 \]</div>
-<p>An estimator is <strong>unbiased</strong> if its bias is zero.</p>
-<p><strong>Normal case.</strong> For <span class="arithmatex">\( X \sim \mathcal{N}(\mu,\sigma^2) \)</span>:</p>
+<p><strong>Covariance, correlation, independence.</strong></p>
 <div class="arithmatex">\[
-\hat\mu = \bar{x} = \frac{1}{n}\sum_{i=1}^n x_i \qquad\qquad \hat\sigma^2_{\text{MLE}} = \frac{1}{n}\sum_{i=1}^n (x_i-\bar{x})^2
+\text{Cov}(X,Y)=E\big[(X-\mu_X)(Y-\mu_Y)\big], \qquad \rho_{XY}=\frac{\text{Cov}(X,Y)}{\sigma_X\sigma_Y}\in[-1,1]
 \]</div>
-<p>and the bias-corrected sample variance is</p>
+<p><span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> are <strong>independent</strong> if <span class="arithmatex">\( P(X\in A,\,Y\in B)=P(X\in A)P(Y\in B) \)</span> for all sets <span class="arithmatex">\( A,B \)</span>. Independence implies zero correlation, but not the other way around.</p>
+<p><strong>Variance of a sum.</strong></p>
 <div class="arithmatex">\[
-s^2 = \frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2
+\text{Var}(aX+bY)=a^2\text{Var}(X)+b^2\text{Var}(Y)+2ab\,\text{Cov}(X,Y)
 \]</div>
+<p><strong>Law of Large Numbers (LLN).</strong> If <span class="arithmatex">\( X_1,X_2,\dots \)</span> are independent with the same mean <span class="arithmatex">\( \mu \)</span> (and finite variance), then the sample mean <span class="arithmatex">\( \bar X_n\to\mu \)</span> as <span class="arithmatex">\( n\to\infty \)</span>.</p>
+<p><strong>Central Limit Theorem (CLT).</strong> If the <span class="arithmatex">\( X_i \)</span> are independent and identically distributed with mean <span class="arithmatex">\( \mu \)</span> and finite variance <span class="arithmatex">\( \sigma^2 \)</span>, then</p>
+<div class="arithmatex">\[
+\frac{\bar X_n-\mu}{\sigma/\sqrt n}\ \xrightarrow{d}\ \mathcal N(0,1)
+\]</div>
+<p>meaning the distribution of the standardized sample mean converges to the standard Normal.</p>
 <h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
-<p><strong>MLE for the Normal.</strong> The log-likelihood is</p>
+<p><strong>Variance computational formula.</strong> Expand the definition, using linearity of expectation and writing <span class="arithmatex">\( \mu=E[X] \)</span>:</p>
 <div class="arithmatex">\[
-\ell(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln\sigma^2 - \frac{1}{2\sigma^2}\sum_{i=1}^n (x_i-\mu)^2
+\text{Var}(X)=E[X^2-2\mu X+\mu^2]=E[X^2]-2\mu E[X]+\mu^2=E[X^2]-\mu^2
 \]</div>
-<p>Differentiate with respect to <span class="arithmatex">\( \mu \)</span> and set to zero:</p>
+<p><strong>Variance of a sum.</strong> Let <span class="arithmatex">\( Z=aX+bY \)</span> with mean <span class="arithmatex">\( a\mu_X+b\mu_Y \)</span>. Then <span class="arithmatex">\( Z-E[Z]=a(X-\mu_X)+b(Y-\mu_Y) \)</span>, and squaring and taking expectations gives</p>
 <div class="arithmatex">\[
-\frac{\partial \ell}{\partial \mu} = \frac{1}{\sigma^2}\sum_i (x_i-\mu) = 0 \quad\Longrightarrow\quad \hat\mu = \bar{x}
+\text{Var}(Z)=a^2E[(X-\mu_X)^2]+b^2E[(Y-\mu_Y)^2]+2ab\,E[(X-\mu_X)(Y-\mu_Y)]
 \]</div>
-<p>Differentiate with respect to <span class="arithmatex">\( \sigma^2 \)</span> and set to zero:</p>
+<p>which is the formula above. This is exactly the two-asset portfolio variance from the Portfolio Basics lecture, with <span class="arithmatex">\( a=w \)</span> and <span class="arithmatex">\( b=1-w \)</span>.</p>
+<p><strong>Why the standard error shrinks like <span class="arithmatex">\( 1/\sqrt n \)</span>.</strong> For independent <span class="arithmatex">\( X_i \)</span> with variance <span class="arithmatex">\( \sigma^2 \)</span>,</p>
 <div class="arithmatex">\[
-\frac{\partial \ell}{\partial \sigma^2} = -\frac{n}{2\sigma^2} + \frac{1}{2\sigma^4}\sum_i (x_i-\mu)^2 = 0 \quad\Longrightarrow\quad \hat\sigma^2 = \frac{1}{n}\sum_i (x_i-\hat\mu)^2
+\text{Var}(\bar X_n)=\frac{1}{n^2}\sum_{i=1}^n\text{Var}(X_i)=\frac{\sigma^2}{n}
 \]</div>
-<p><strong>Why the MLE variance is biased.</strong> Write <span class="arithmatex">\( x_i - \bar{x} = (x_i-\mu) - (\bar{x}-\mu) \)</span> and expand:</p>
-<div class="arithmatex">\[
-\sum_i (x_i-\bar{x})^2 = \sum_i (x_i-\mu)^2 - n(\bar{x}-\mu)^2
-\]</div>
-<p>Take expectations. Each <span class="arithmatex">\( E[(x_i-\mu)^2] = \sigma^2 \)</span>, and <span class="arithmatex">\( E[(\bar{x}-\mu)^2] = \text{Var}(\bar{x}) = \sigma^2/n \)</span>. Therefore</p>
-<div class="arithmatex">\[
-E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)\sigma^2
-\]</div>
-<p>so <span class="arithmatex">\( E[\hat\sigma^2_{\text{MLE}}] = \frac{n-1}{n}\sigma^2 &lt; \sigma^2 \)</span>. The estimator systematically underestimates variance because <span class="arithmatex">\( \bar{x} \)</span> was fitted to the same data and is, by construction, closer to the observations than the true <span class="arithmatex">\( \mu \)</span> is. Dividing by <span class="arithmatex">\( n-1 \)</span> instead of <span class="arithmatex">\( n \)</span> removes the bias, giving <span class="arithmatex">\( s^2 \)</span>. The bias vanishes as <span class="arithmatex">\( n \)</span> grows, and it matters most in small samples.</p>
-<p><strong>Method of moments for the Normal.</strong> Matching <span class="arithmatex">\( E[X]=\mu \)</span> and <span class="arithmatex">\( E[X^2]=\sigma^2+\mu^2 \)</span> to the sample moments gives the same estimators as MLE here. This is a coincidence of the Normal, not a general rule. For other distributions the two methods can differ, and MLE is generally preferred for its efficiency properties in large samples.</p>
+<p>so the standard deviation of the sample mean is <span class="arithmatex">\( \sigma/\sqrt n \)</span>. To halve the noise you need four times as much data. The CLT adds the shape: the sample mean is approximately Normal when <span class="arithmatex">\( n \)</span> is large. (A full proof of the CLT is beyond this lecture, see Casella and Berger, 2002.)</p>
+<p><strong>Uncorrelated does not mean independent.</strong> Let <span class="arithmatex">\( X \)</span> be symmetric around zero (say standard Normal) and <span class="arithmatex">\( Y=X^2 \)</span>. Then <span class="arithmatex">\( \text{Cov}(X,Y)=E[X^3]-E[X]E[X^2]=0-0=0 \)</span>, yet <span class="arithmatex">\( Y \)</span> is completely determined by <span class="arithmatex">\( X \)</span>. In finance this matters because returns can be nearly uncorrelated day to day while their <em>magnitudes</em> are strongly dependent (volatility clustering).</p>
 <h2 id="4-worked-numerical-example">4. Worked numerical example<a class="headerlink" href="#4-worked-numerical-example" title="Permanent link">&para;</a></h2>
-<p>Five daily returns (in percent): <span class="arithmatex">\( 1,\ -2,\ 3,\ 0,\ 2 \)</span>. (Illustrative data.)</p>
-<p><strong>Mean:</strong> <span class="arithmatex">\( \bar{x} = (1-2+3+0+2)/5 = 0.8\% \)</span>.</p>
-<p><strong>Squared deviations:</strong> <span class="arithmatex">\( (0.2)^2 = 0.04,\ (-2.8)^2 = 7.84,\ (2.2)^2 = 4.84,\ (-0.8)^2 = 0.64,\ (1.2)^2 = 1.44 \)</span>. Sum <span class="arithmatex">\( = 14.8 \)</span>.</p>
-<p><strong>MLE variance:</strong> <span class="arithmatex">\( 14.8/5 = 2.96\ (\%^2) \)</span>, so <span class="arithmatex">\( \hat\sigma \approx 1.72\% \)</span>.</p>
-<p><strong>Unbiased variance:</strong> <span class="arithmatex">\( 14.8/4 = 3.70\ (\%^2) \)</span>, so <span class="arithmatex">\( s \approx 1.92\% \)</span>.</p>
-<p>With only 5 observations the two differ by 25%, which is the factor <span class="arithmatex">\( n/(n-1) = 5/4 \)</span>.</p>
+<p><strong>Bayes' theorem.</strong> Suppose 2% of borrowers default in a year. A screening model flags 90% of borrowers who will default, and also wrongly flags 10% of those who will not. (Illustrative numbers.) A borrower is flagged. What is the probability of default?</p>
+<ul>
+<li><span class="arithmatex">\( P(D)=0.02,\ P(F\mid D)=0.90,\ P(F\mid D^c)=0.10 \)</span></li>
+<li><span class="arithmatex">\( P(F)=0.90(0.02)+0.10(0.98)=0.018+0.098=0.116 \)</span></li>
+<li><span class="arithmatex">\( P(D\mid F)=\dfrac{0.018}{0.116}\approx 0.155 \)</span></li>
+</ul>
+<p>Only about 15.5% of flagged borrowers actually default. The signal is informative (the probability rose from 2% to 15.5%) but far from conclusive, because defaults are rare. Ignoring the base rate <span class="arithmatex">\( P(D) \)</span> is called the base-rate fallacy, and it is a classic error when interpreting trading signals that fire on rare events.</p>
+<p><strong>Variance of a sum.</strong> Two assets with <span class="arithmatex">\( \sigma_X=0.20,\ \sigma_Y=0.10,\ \rho=0.3 \)</span>: <span class="arithmatex">\( \text{Var}(0.6X+0.4Y)=0.36(0.04)+0.16(0.01)+2(0.6)(0.4)(0.006)=0.01888 \)</span>, matching the earlier lecture.</p>
 <h2 id="5-python-implementation">5. Python implementation<a class="headerlink" href="#5-python-implementation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>   <span class="c1"># returns in percent</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">var_mle</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># divide by n</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">var_unb</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>      <span class="c1"># divide by n-1</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mean=</span><span class="si">{</span><span class="n">mean</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  MLE var=</span><span class="si">{</span><span class="n">var_mle</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  unbiased var=</span><span class="si">{</span><span class="n">var_unb</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># --- Bayes&#39; theorem ---</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">p_d</span><span class="p">,</span> <span class="n">p_f_given_d</span><span class="p">,</span> <span class="n">p_f_given_nd</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.90</span><span class="p">,</span> <span class="mf">0.10</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">p_f</span> <span class="o">=</span> <span class="n">p_f_given_d</span> <span class="o">*</span> <span class="n">p_d</span> <span class="o">+</span> <span class="n">p_f_given_nd</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p_d</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P(default | flagged) =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_f_given_d</span> <span class="o">*</span> <span class="n">p_d</span> <span class="o">/</span> <span class="n">p_f</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># --- LLN and CLT by simulation, with a skewed distribution ---</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">draws</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>   <span class="c1"># mean 1, variance 1</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># --- Simulation: check the bias claim from Section 3 ---</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">true_var</span><span class="p">,</span> <span class="n">n_small</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mi">5</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">samples</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">true_var</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20000</span><span class="p">,</span> <span class="n">n_small</span><span class="p">))</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg MLE variance:     &quot;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      <span class="s2">&quot;(theory:&quot;</span><span class="p">,</span> <span class="n">true_var</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_small</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_small</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg unbiased variance:&quot;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># --- MLE for a fat-tailed model: fit a Student-t by maximum likelihood ---</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">returns</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">df_hat</span><span class="p">,</span> <span class="n">loc_hat</span><span class="p">,</span> <span class="n">scale_hat</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">returns</span><span class="p">)</span>   <span class="c1"># numerical MLE</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fitted Student-t: df=</span><span class="si">{</span><span class="n">df_hat</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, loc=</span><span class="si">{</span><span class="n">loc_hat</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">, scale=</span><span class="si">{</span><span class="n">scale_hat</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># LLN: running mean of one long sample approaches the true mean 1</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">running_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running mean after 100, 10,000, 100,000 draws:&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      <span class="n">running_mean</span><span class="p">[[</span><span class="mi">99</span><span class="p">,</span> <span class="mi">9999</span><span class="p">,</span> <span class="mi">99999</span><span class="p">]]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># CLT: standardized sample means for n = 30 look standard Normal</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">means</span> <span class="o">=</span> <span class="n">draws</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">means</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean, std of standardized means:&quot;</span><span class="p">,</span> <span class="n">z</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">z</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fraction beyond +/-1.96:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">1.96</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;(Normal: 0.05)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># --- Uncorrelated but dependent ---</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">a</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Corr(X, X^2) =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </span></code></pre></div>
-<p><code>stats.t.fit</code> maximizes the log-likelihood numerically, because the Student-t has no closed-form MLE. Numerical optimization is a general theme of Module 0's optimization lecture.</p>
 <h2 id="6-visualization">6. Visualization<a class="headerlink" href="#6-visualization" title="Permanent link">&para;</a></h2>
 <figure class="qf-figure">
-<p><img alt="Left: log-likelihood curve peaking at the MLE of sigma. Right: bar chart showing the MLE variance underestimates the true variance while the unbiased version does not" src="../../assets/images/estimation-mle-bias.png" /></p>
-<figcaption>Left: the log-likelihood of the five sample returns as a function of σ, peaking at the MLE. Right: across 20,000 simulated samples of size 5 from a Normal with true variance 4, the MLE variance averages about 3.2 (matching the theoretical \( \tfrac{4}{5}\times 4 \)), while the n−1 version averages about 4.</figcaption>
+<p><img alt="Three histograms of standardized sample means of exponential draws for n=1, 5 and 30, with the standard Normal density overlaid" src="../../assets/images/probability-clt.png" /></p>
+<figcaption>Standardized sample means of Exponential(1) draws, which are strongly right-skewed. With n = 1 the histogram is the skewed Exponential itself. By n = 30 it is already close to the standard Normal density (red). Convergence is slower for heavier-tailed or more skewed distributions.</figcaption>
 </figure>
 <h2 id="7-financial-interpretation">7. Financial interpretation<a class="headerlink" href="#7-financial-interpretation" title="Permanent link">&para;</a></h2>
-<p>Nearly every risk number is an estimate: volatility, covariance, beta, expected return. Sample noise means these numbers carry uncertainty, and with the short histories common in finance that uncertainty can be large. Expected returns in particular are notoriously hard to estimate precisely, while volatilities are estimated far more accurately. The choice of estimator matters most where data are scarce, such as tail risk, where extreme observations are by definition rare. MLE also underpins the GARCH models later in this module, which are fitted by maximizing a likelihood.</p>
+<p>The CLT is the reason sums of many small independent shocks, such as log returns aggregated over a month, look approximately Normal. But it only describes the <em>center</em> of the distribution of the sum. Extreme tail events converge to Normality far more slowly, and when return variance is infinite or dependence is strong, the CLT may not apply in the standard form. That gap is one reason fat tails persist in practice (Cont, 2001). The LLN underlies Monte Carlo methods: averaging many simulated payoffs converges to the true expectation, with error shrinking like <span class="arithmatex">\( 1/\sqrt n \)</span>.</p>
 <h2 id="8-common-mistakes">8. Common mistakes<a class="headerlink" href="#8-common-mistakes" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: mixing up ddof conventions</p>
-<p>NumPy's <code>var</code> and <code>std</code> divide by <span class="arithmatex">\( n \)</span> by default (<code>ddof=0</code>), while pandas' <code>.var()</code> and <code>.std()</code> divide by <span class="arithmatex">\( n-1 \)</span> (<code>ddof=1</code>). The same data can give different volatilities depending on the library. Check which one you are using.</p>
+<p class="admonition-title">Common mistake: equating zero correlation with independence</p>
+<p>Correlation only measures linear dependence. Returns can be uncorrelated yet dependent in their volatility, as the <span class="arithmatex">\( X, X^2 \)</span> example shows.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: equating unbiased with best</p>
-<p>Unbiasedness is one desirable property, not the only one. An estimator can be slightly biased yet have lower overall error, and <span class="arithmatex">\( s \)</span> is itself a biased estimator of the standard deviation <span class="arithmatex">\( \sigma \)</span>, even though <span class="arithmatex">\( s^2 \)</span> is unbiased for <span class="arithmatex">\( \sigma^2 \)</span>.</p>
+<p class="admonition-title">Common mistake: assuming the CLT applies at any sample size</p>
+<p>The CLT is a limit statement. For skewed or fat-tailed data, and for tail quantities, a "large enough" <span class="arithmatex">\( n \)</span> can be very large. Check by simulation rather than assuming.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: ignoring estimation uncertainty</p>
-<p>Reporting a single estimated volatility or mean return with no notion of its sampling error invites false precision. Standard errors and confidence intervals, covered in the next lectures, quantify this.</p>
+<p class="admonition-title">Common mistake: ignoring base rates</p>
+<p>Interpreting <span class="arithmatex">\( P(F\mid D) \)</span> as <span class="arithmatex">\( P(D\mid F) \)</span> reverses the conditioning. Use Bayes' theorem and include the prior probability.</p>
 </div>
 <h2 id="9-exercises">9. Exercises<a class="headerlink" href="#9-exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Derive the MLE of the rate <span class="arithmatex">\( \lambda \)</span> for an Exponential distribution with density <span class="arithmatex">\( f(x;\lambda)=\lambda e^{-\lambda x} \)</span>, <span class="arithmatex">\( x \ge 0 \)</span>. Verify that it matches the method of moments estimator.</li>
-<li>Modify the simulation in Section 5 to use <span class="arithmatex">\( n=50 \)</span> instead of <span class="arithmatex">\( n=5 \)</span>. How does the gap between the MLE and unbiased variances change, and does it match the factor <span class="arithmatex">\( (n-1)/n \)</span>?</li>
-<li>Simulate returns from a Student-t with 3 degrees of freedom and compare the sampling variability of <span class="arithmatex">\( s^2 \)</span> against a Normal sample of the same size. What does this suggest about estimating variance for fat-tailed returns?</li>
+<li>A stock has a 55% chance of an up day. Assuming independent days, what is the probability of at least 3 up days in 5? (Use the Binomial distribution.)</li>
+<li>Using the Bayes example, recompute <span class="arithmatex">\( P(D\mid F) \)</span> if the default rate is 10% instead of 2%. Explain the change.</li>
+<li>Modify the CLT simulation to use a Student-t distribution with 3 degrees of freedom (variance exists but is heavy-tailed). Compare the fraction of standardized means beyond <span class="arithmatex">\( \pm1.96 \)</span> at <span class="arithmatex">\( n=30 \)</span> and <span class="arithmatex">\( n=500 \)</span>.</li>
 </ol>
 <h2 id="10-further-reading">10. Further reading<a class="headerlink" href="#10-further-reading" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The next lectures in this module build on estimators to construct confidence intervals and hypothesis tests.</li>
+<li>Blitzstein and Hwang's text is freely accompanied by video lectures and is very approachable.</li>
 </ul>
 <h2 id="11-references">11. References<a class="headerlink" href="#11-references" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Casella, G., &amp; Berger, R. L. (2002). <em>Statistical Inference</em> (2nd ed.), Chapters 7 and 10. Duxbury.</li>
-<li>Campbell, J. Y., Lo, A. W., &amp; MacKinlay, A. C. (1997). <em>The Econometrics of Financial Markets</em>, Appendix and Chapter 1. Princeton University Press.</li>
-<li>SciPy Developers. "<code>scipy.stats.t</code>." <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html">docs.scipy.org</a></li>
+<li>Blitzstein, J. K., &amp; Hwang, J. (2019). <em>Introduction to Probability</em> (2nd ed.). CRC Press.</li>
+<li>Casella, G., &amp; Berger, R. L. (2002). <em>Statistical Inference</em> (2nd ed.). Duxbury.</li>
+<li>Cont, R. (2001). "Empirical Properties of Asset Returns: Stylized Facts and Statistical Issues." <em>Quantitative Finance</em>, 1(2), 223–236.</li>
+<li>Wasserman, L. (2004). <em>All of Statistics</em>. Springer.</li>
 </ol>
 <hr />
 <div class="grid">
-<p><a class="md-button" href="/qf-lectures/statistics/probability-distributions/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Probability Distributions in Finance</a>
-<a class="md-button md-button--primary" href="/qf-lectures/curriculum/">Back to Curriculum <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
+<p><a class="md-button" href="/qf-lectures/prerequisites/linear-algebra/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Linear Algebra for Finance</a>
+<a class="md-button md-button--primary" href="/qf-lectures/prerequisites/statistical-inference/">Next: Statistical Inference Foundations <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </div>
 
 
@@ -1679,7 +1682,7 @@ E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../probability-distributions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Probability Distributions in Finance">
+          <a href="../linear-algebra/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linear Algebra for Finance">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1689,20 +1692,20 @@ E\Big[\sum_i (x_i-\bar{x})^2\Big] = n\sigma^2 - n\cdot\frac{\sigma^2}{n} = (n-1)
                 Previous
               </span>
               <div class="md-ellipsis">
-                Probability Distributions in Finance
+                Linear Algebra for Finance
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../portfolio-risk/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Portfolio &amp; Risk">
+          <a href="../statistical-inference/" class="md-footer__link md-footer__link--next" aria-label="Next: Statistical Inference Foundations">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                3. Portfolio & Risk
+                Statistical Inference Foundations
               </div>
             </div>
             <div class="md-footer__button md-icon">

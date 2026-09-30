@@ -2,7 +2,7 @@
 
 A free, open, citation-backed curriculum in quantitative finance — mathematics, statistics, stochastic calculus, derivatives pricing, portfolio theory, and machine learning applied to markets. Built as a static site with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and deployed to GitHub Pages.
 
-Live site (after deployment): `https://jsbldquant04.github.io/qf-lectures/`
+Live site (after deployment): `https://blackboxp6.github.io/qf-lectures/`
 
 ## What's here
 
@@ -25,7 +25,7 @@ Live site (after deployment): `https://jsbldquant04.github.io/qf-lectures/`
 Open a terminal in VS Code (`` Ctrl+` `` / `` Cmd+` ``) and run:
 
 ```bash
-git clone https://github.com/jsbldquant04/qf-lectures.git
+git clone https://github.com/blackboxp6/qf-lectures.git
 cd qf-lectures
 
 python3 -m venv .venv
@@ -62,7 +62,7 @@ This writes the built site to `site/` and fails loudly (`--strict`) on broken in
    git add .
    git commit -m "Initial commit: Quantitative Finance Lectures"
    git branch -M main
-   git remote add origin https://github.com/jsbldquant04/qf-lectures.git
+   git remote add origin https://github.com/blackboxp6/qf-lectures.git
    git push -u origin main
    ```
 
@@ -89,7 +89,7 @@ The `.github/workflows/deploy.yml` workflow will automatically:
 Within a minute or two of the workflow finishing, the update is live at:
 
 ```
-https://jsbldquant04.github.io/qf-lectures/
+https://blackboxp6.github.io/qf-lectures/
 ```
 
 You can also trigger the workflow manually from the **Actions** tab (it's configured with `workflow_dispatch`).

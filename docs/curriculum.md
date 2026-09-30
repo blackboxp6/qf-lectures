@@ -33,7 +33,7 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 | [Linear Regression and Regularization](statistics/regression-regularization.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Principal Component Analysis](statistics/pca.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Stationarity and Unit Roots](statistics/stationarity-unit-roots.md) | :material-check-circle:{ style="color:#4caf50" } |
-| AR / MA / ARIMA Models | :material-progress-clock:{ style="color:#ff9800" } |
+| [AR / MA / ARIMA Models](statistics/arima-models.md) | :material-check-circle:{ style="color:#4caf50" } |
 | Volatility Modeling: ARCH/GARCH | :material-progress-clock:{ style="color:#ff9800" } |
 | Cointegration | :material-progress-clock:{ style="color:#ff9800" } |
 

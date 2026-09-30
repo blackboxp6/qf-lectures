@@ -34,14 +34,14 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 | [Principal Component Analysis](statistics/pca.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Stationarity and Unit Roots](statistics/stationarity-unit-roots.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [AR / MA / ARIMA Models](statistics/arima-models.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Volatility Modeling: ARCH/GARCH | :material-progress-clock:{ style="color:#ff9800" } |
-| Cointegration | :material-progress-clock:{ style="color:#ff9800" } |
+| [Volatility Modeling: ARCH/GARCH](statistics/arch-garch.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Cointegration](statistics/cointegration.md) | :material-check-circle:{ style="color:#4caf50" } |
 
 ## 3. Portfolio & Risk
 | Lecture | Status |
 |---|---|
-| Markowitz Mean-Variance Optimization | :material-progress-clock:{ style="color:#ff9800" } |
-| CAPM and Factor Models | :material-progress-clock:{ style="color:#ff9800" } |
+| [Markowitz Mean-Variance Optimization](portfolio-risk/markowitz-optimization.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [CAPM and Factor Models](portfolio-risk/capm-factor-models.md) | :material-check-circle:{ style="color:#4caf50" } |
 | Sharpe Ratio, Beta, and Covariance | :material-progress-clock:{ style="color:#ff9800" } |
 | Value at Risk and Expected Shortfall | :material-progress-clock:{ style="color:#ff9800" } |
 | Monte Carlo Simulation for Risk | :material-progress-clock:{ style="color:#ff9800" } |

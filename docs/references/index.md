@@ -15,6 +15,9 @@ Every citation used anywhere on this site is collected here, organized by module
 - Sharpe, W. F. (1964). "Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk." *The Journal of Finance*, 19(3), 425–442.
 - Black, F., & Scholes, M. (1973). "The Pricing of Options and Corporate Liabilities." *Journal of Political Economy*, 81(3), 637–654.
 - Merton, R. C. (1973). "Theory of Rational Option Pricing." *The Bell Journal of Economics and Management Science*, 4(1), 141–183.
+- Merton, R. C. (1972). "An Analytic Derivation of the Efficient Portfolio Frontier." *Journal of Financial and Quantitative Analysis*, 7(4), 1851–1872.
+- Lintner, J. (1965). "The Valuation of Risk Assets and the Selection of Risky Investments in Stock Portfolios and Capital Budgets." *The Review of Economics and Statistics*, 47(1), 13–37.
+- Cochrane, J. H. (2005). *Asset Pricing* (Revised ed.). Princeton University Press.
 - Fama, E. F., & French, K. R. (1993). "Common Risk Factors in the Returns on Stocks and Bonds." *Journal of Financial Economics*, 33(1), 3–56.
 - Fama, E. F. (1970). "Efficient Capital Markets: A Review of Theory and Empirical Work." *The Journal of Finance*, 25(2), 383–417.
 - Engle, R. F. (1982). "Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation." *Econometrica*, 50(4), 987–1007.
@@ -27,6 +30,8 @@ Every citation used anywhere on this site is collected here, organized by module
 - Dickey, D. A., & Fuller, W. A. (1979). "Distribution of the Estimators for Autoregressive Time Series with a Unit Root." *Journal of the American Statistical Association*, 74(366a), 427–431.
 - Granger, C. W. J., & Newbold, P. (1974). "Spurious Regressions in Econometrics." *Journal of Econometrics*, 2(2), 111–120.
 - Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Mandelbrot, B. (1963). "The Variation of Certain Speculative Prices." *The Journal of Business*, 36(4), 394–419.
+- MacKinnon, J. G. (2010). "Critical Values for Cointegration Tests." Queen's Economics Department Working Paper No. 1227.
 - Connor, G., & Korajczyk, R. A. (1986). "Performance Measurement with the Arbitrage Pricing Theory: A New Framework for Analysis." *Journal of Financial Economics*, 15(3), 373–394.
 - Gordon, M. J., & Shapiro, E. (1956). "Capital Equipment Analysis: The Required Rate of Profit." *Management Science*, 3(1), 102–110.
 
@@ -72,6 +77,7 @@ Every citation used anywhere on this site is collected here, organized by module
 - Matplotlib Development Team — [matplotlib.org/stable](https://matplotlib.org/stable/)
 - scikit-learn Developers — [scikit-learn.org](https://scikit-learn.org/stable/)
 - statsmodels Developers — [statsmodels.org](https://www.statsmodels.org/stable/)
+- Sheppard, K., et al. — `arch` Python package. [bashtage.github.io/arch](https://bashtage.github.io/arch/)
 
 ---
 

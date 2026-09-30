@@ -113,7 +113,12 @@ nav:
       - Principal Component Analysis: statistics/pca.md
       - Stationarity and Unit Roots: statistics/stationarity-unit-roots.md
       - AR / MA / ARIMA Models: statistics/arima-models.md
-  - "3. Portfolio & Risk": portfolio-risk/index.md
+      - "Volatility Modeling: ARCH/GARCH": statistics/arch-garch.md
+      - Cointegration: statistics/cointegration.md
+  - "3. Portfolio & Risk":
+      - portfolio-risk/index.md
+      - Markowitz Mean-Variance Optimization: portfolio-risk/markowitz-optimization.md
+      - CAPM and Factor Models: portfolio-risk/capm-factor-models.md
   - "4. Derivatives": derivatives/index.md
   - "5. Stochastic Finance": stochastic-finance/index.md
   - "6. Quantitative Trading": trading/index.md

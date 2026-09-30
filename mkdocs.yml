@@ -119,6 +119,8 @@ nav:
       - portfolio-risk/index.md
       - Markowitz Mean-Variance Optimization: portfolio-risk/markowitz-optimization.md
       - CAPM and Factor Models: portfolio-risk/capm-factor-models.md
+      - Sharpe Ratio, Beta, and Covariance: portfolio-risk/sharpe-beta-covariance.md
+      - Value at Risk and Expected Shortfall: portfolio-risk/var-expected-shortfall.md
   - "4. Derivatives": derivatives/index.md
   - "5. Stochastic Finance": stochastic-finance/index.md
   - "6. Quantitative Trading": trading/index.md

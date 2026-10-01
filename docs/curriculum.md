@@ -44,8 +44,8 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 | [CAPM and Factor Models](portfolio-risk/capm-factor-models.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Sharpe Ratio, Beta, and Covariance](portfolio-risk/sharpe-beta-covariance.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Value at Risk and Expected Shortfall](portfolio-risk/var-expected-shortfall.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Monte Carlo Simulation for Risk | :material-progress-clock:{ style="color:#ff9800" } |
-| Risk Parity and Drawdowns | :material-progress-clock:{ style="color:#ff9800" } |
+| [Monte Carlo Simulation for Risk](portfolio-risk/monte-carlo-risk.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Risk Parity and Drawdowns](portfolio-risk/risk-parity-drawdowns.md) | :material-check-circle:{ style="color:#4caf50" } |
 
 ## 4. Derivatives
 | Lecture | Status |

@@ -20,6 +20,7 @@ Every citation used anywhere on this site is collected here, organized by module
 - Cochrane, J. H. (2005). *Asset Pricing* (Revised ed.). Princeton University Press.
 - Grinold, R. C., & Kahn, R. N. (1999). *Active Portfolio Management* (2nd ed.). McGraw-Hill.
 - Jorion, P. (2006). *Value at Risk: The New Benchmark for Managing Financial Risk* (3rd ed.). McGraw-Hill.
+- Glasserman, P. (2003). *Monte Carlo Methods in Financial Engineering*. Springer.
 - Fama, E. F., & French, K. R. (1993). "Common Risk Factors in the Returns on Stocks and Bonds." *Journal of Financial Economics*, 33(1), 3–56.
 - Fama, E. F. (1970). "Efficient Capital Markets: A Review of Theory and Empirical Work." *The Journal of Finance*, 25(2), 383–417.
 - Engle, R. F. (1982). "Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation." *Econometrica*, 50(4), 987–1007.
@@ -64,6 +65,9 @@ Every citation used anywhere on this site is collected here, organized by module
 - Acerbi, C., & Tasche, D. (2002). "On the Coherence of Expected Shortfall." *Journal of Banking & Finance*, 26(7), 1487–1503.
 - Basel Committee on Banking Supervision (2016). "Minimum Capital Requirements for Market Risk." Bank for International Settlements.
 - Sharpe, W. F. (1966). "Mutual Fund Performance." *The Journal of Business*, 39(1), 119–138.
+- Boyle, P. P. (1977). "Options: A Monte Carlo Approach." *Journal of Financial Economics*, 4(3), 323–338.
+- Qian, E. (2005). "Risk Parity Portfolios: Efficient Portfolios Through True Diversification." Panagora Asset Management.
+- Maillard, S., Roncalli, T., & Teïletche, J. (2010). "The Properties of Equally Weighted Risk Contribution Portfolios." *The Journal of Portfolio Management*, 36(4), 60–70.
 
 ## Official data & standards sources
 

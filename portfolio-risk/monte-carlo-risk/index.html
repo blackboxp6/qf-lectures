@@ -1,0 +1,2148 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A rigorous, free curriculum in quantitative finance — mathematics, statistics, stochastic calculus, derivatives pricing, portfolio theory, and machine learning applied to markets.">
+      
+      
+        <meta name="author" content="Joshua Bloodymier P. Salvino">
+      
+      
+        <link rel="canonical" href="https://blackboxp6.github.io/qf-lectures/portfolio-risk/monte-carlo-risk/">
+      
+      
+        <link rel="prev" href="../var-expected-shortfall/">
+      
+      
+        <link rel="next" href="../risk-parity-drawdowns/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Monte Carlo Simulation for Risk - Quantitative Finance Lectures</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monte-carlo-simulation-for-risk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Quantitative Finance Lectures" class="md-header__button md-logo" aria-label="Quantitative Finance Lectures" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quantitative Finance Lectures
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monte Carlo Simulation for Risk
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/blackboxp6/qf-lectures" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blackboxp6/qf-lectures
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../curriculum/" class="md-tabs__link">
+        
+  
+    
+  
+  Curriculum
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prerequisites/" class="md-tabs__link">
+          
+  
+    
+  
+  0. Prerequisites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../financial-foundations/" class="md-tabs__link">
+          
+  
+    
+  
+  1. Financial Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../statistics/" class="md-tabs__link">
+          
+  
+    
+  
+  2. Statistics & Econometrics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  3. Portfolio & Risk
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../derivatives/" class="md-tabs__link">
+        
+  
+    
+  
+  4. Derivatives
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../stochastic-finance/" class="md-tabs__link">
+        
+  
+    
+  
+  5. Stochastic Finance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../trading/" class="md-tabs__link">
+        
+  
+    
+  
+  6. Quantitative Trading
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../advanced/" class="md-tabs__link">
+        
+  
+    
+  
+  7. Advanced Quant Finance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../machine-learning/" class="md-tabs__link">
+        
+  
+    
+  
+  8. Machine Learning for Finance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../research-lab/" class="md-tabs__link">
+        
+  
+    
+  
+  9. Research Laboratory
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../references/" class="md-tabs__link">
+        
+  
+    
+  
+  References & Bibliography
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Quantitative Finance Lectures" class="md-nav__button md-logo" aria-label="Quantitative Finance Lectures" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Quantitative Finance Lectures
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/blackboxp6/qf-lectures" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blackboxp6/qf-lectures
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curriculum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curriculum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../prerequisites/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    0. Prerequisites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            0. Prerequisites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/python-numpy-pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python, NumPy & Pandas for Quant Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/calculus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculus for Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/linear-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Algebra for Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Probability Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/statistical-inference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Inference Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/optimization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimization Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../financial-foundations/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    1. Financial Foundations
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            1. Financial Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-foundations/returns-and-log-returns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Returns and Log Returns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-foundations/compounding-time-value/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compounding and the Time Value of Money
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-foundations/equities-and-bonds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Financial Instruments: Equities and Bonds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-foundations/derivatives-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Derivatives: An Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-foundations/market-structure-order-books/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Market Structure and Order Books
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-foundations/portfolio-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../statistics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    2. Statistics & Econometrics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            2. Statistics & Econometrics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/probability-distributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Probability Distributions in Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/estimation-theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estimation Theory: MLE and Method of Moments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/hypothesis-testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypothesis Testing for Financial Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/regression-regularization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Regression and Regularization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/pca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/stationarity-unit-roots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stationarity and Unit Roots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/arima-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AR / MA / ARIMA Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/arch-garch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volatility Modeling: ARCH/GARCH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/cointegration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cointegration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    3. Portfolio & Risk
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            3. Portfolio & Risk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markowitz-optimization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markowitz Mean-Variance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capm-factor-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CAPM and Factor Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharpe-beta-covariance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharpe Ratio, Beta, and Covariance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../var-expected-shortfall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value at Risk and Expected Shortfall
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Monte Carlo Simulation for Risk
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Monte Carlo Simulation for Risk
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Intuition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mathematical formulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Derivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-worked-numerical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Worked numerical example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-python-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Python implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-financial-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Financial interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Common mistakes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-parity-drawdowns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Parity and Drawdowns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../derivatives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Derivatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stochastic-finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Stochastic Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Quantitative Trading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Advanced Quant Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machine-learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Machine Learning for Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-lab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Research Laboratory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References & Bibliography
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Intuition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mathematical formulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Derivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-worked-numerical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Worked numerical example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-python-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Python implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-financial-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Financial interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Common mistakes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/blackboxp6/qf-lectures/edit/main/docs/portfolio-risk/monte-carlo-risk.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="monte-carlo-simulation-for-risk">Monte Carlo Simulation for Risk<a class="headerlink" href="#monte-carlo-simulation-for-risk" title="Permanent link">&para;</a></h1>
+<div class="admonition objectives">
+<p class="admonition-title">Learning objectives</p>
+<p>By the end of this lecture you should be able to:</p>
+<ul>
+<li>[ ] Explain the Monte Carlo method as an application of the Law of Large Numbers</li>
+<li>[ ] Derive how the standard error of a Monte Carlo estimate shrinks with the number of simulations</li>
+<li>[ ] Simulate correlated multi-asset returns and geometric Brownian motion price paths in Python</li>
+<li>[ ] Compute Monte Carlo VaR and Expected Shortfall for a nonlinear portfolio and explain when Monte Carlo is preferred over closed-form methods</li>
+</ul>
+</div>
+<h2 id="1-intuition">1. Intuition<a class="headerlink" href="#1-intuition" title="Permanent link">&para;</a></h2>
+<p>The VaR/Expected Shortfall lecture computed a closed-form VaR under a Normal return assumption and a historical VaR from an empirical sample. There is a third approach, <strong>Monte Carlo simulation</strong>: specify a model for how returns (or prices) evolve, generate many random scenarios from that model, and compute the risk measure directly from the simulated outcomes. This is the same Law of Large Numbers logic from the Probability Foundations lecture, applied constructively: rather than deriving a risk measure analytically, simulate enough scenarios that the empirical distribution of simulated outcomes closely approximates the true one.</p>
+<p>Monte Carlo earns its place, over the closed-form Normal approach, when the portfolio's payoff is not a simple linear function of a Normal return, exactly the situation for portfolios containing options (Module 4) or other nonlinear instruments, where no simple closed-form VaR formula exists. It also allows richer return models than a single Normal distribution, including the fat-tailed and volatility-clustering models introduced earlier in this module and the previous one.</p>
+<h2 id="2-mathematical-formulation">2. Mathematical formulation<a class="headerlink" href="#2-mathematical-formulation" title="Permanent link">&para;</a></h2>
+<p><strong>Monte Carlo estimator.</strong> To estimate <span class="arithmatex">\( E[g(X)] \)</span> for some function <span class="arithmatex">\( g \)</span> of a random variable <span class="arithmatex">\( X \)</span> with known distribution, draw <span class="arithmatex">\( n \)</span> i.i.d. samples <span class="arithmatex">\( X_1,\dots,X_n \)</span> and compute</p>
+<div class="arithmatex">\[
+\widehat{E[g(X)]} = \frac1n\sum_{i=1}^n g(X_i)
+\]</div>
+<p>By the Law of Large Numbers (Probability Foundations lecture), this converges to the true <span class="arithmatex">\( E[g(X)] \)</span> as <span class="arithmatex">\( n\to\infty \)</span>.</p>
+<p><strong>Monte Carlo standard error.</strong> By the same variance-of-a-sum argument used throughout this curriculum (Portfolio Basics, Probability Foundations),</p>
+<div class="arithmatex">\[
+\text{SE}\big(\widehat{E[g(X)]}\big) = \frac{\sigma_{g(X)}}{\sqrt n}
+\]</div>
+<p>where <span class="arithmatex">\( \sigma_{g(X)} \)</span> is the standard deviation of <span class="arithmatex">\( g(X) \)</span> across a single draw.</p>
+<p><strong>Geometric Brownian motion (GBM) simulation</strong>, a standard model for a price path (developed formally in Module 5):</p>
+<div class="arithmatex">\[
+S_{t+\Delta t} = S_t \exp\left[\left(\mu-\tfrac12\sigma^2\right)\Delta t + \sigma\sqrt{\Delta t}\,Z_t\right], \qquad Z_t\sim\mathcal N(0,1)\text{ i.i.d.}
+\]</div>
+<p><strong>Correlated multi-asset simulation.</strong> To simulate returns for <span class="arithmatex">\( N \)</span> assets with covariance matrix <span class="arithmatex">\( \Sigma=LL^\top \)</span> (a Cholesky decomposition, with <span class="arithmatex">\( L \)</span> lower-triangular), draw a vector <span class="arithmatex">\( \mathbf z\sim\mathcal N(\mathbf 0,I) \)</span> of independent standard Normals and set <span class="arithmatex">\( \mathbf r=\boldsymbol\mu+L\mathbf z \)</span>, which has the correct mean and covariance structure.</p>
+<p><strong>Monte Carlo VaR/ES.</strong> Given <span class="arithmatex">\( n \)</span> simulated portfolio losses <span class="arithmatex">\( L_1,\dots,L_n \)</span>, sorted ascending,</p>
+<div class="arithmatex">\[
+\widehat{\text{VaR}}_\alpha = L_{(\lceil (1-\alpha)n\rceil)}, \qquad \widehat{\text{ES}}_\alpha = \text{mean of the losses at or beyond } \widehat{\text{VaR}}_\alpha
+\]</div>
+<h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
+<p><strong>Why the Monte Carlo standard error shrinks as <span class="arithmatex">\( 1/\sqrt n \)</span>, and what this means practically.</strong> This is exactly the same variance-of-the-sample-mean result derived in the Probability Foundations lecture, applied here to <span class="arithmatex">\( g(X_i) \)</span> rather than <span class="arithmatex">\( X_i \)</span> directly: <span class="arithmatex">\( \text{Var}\big(\frac1n\sum_i g(X_i)\big)=\sigma_{g(X)}^2/n \)</span>, so the standard error is <span class="arithmatex">\( \sigma_{g(X)}/\sqrt n \)</span>. The practical consequence, also noted there, is that halving the Monte Carlo error requires <em>quadrupling</em> the number of simulations, a real computational cost when <span class="arithmatex">\( g \)</span> is expensive to evaluate (for instance, pricing a complex option inside every simulated scenario). This is precisely why Monte Carlo convergence is visibly slow in Section 6's chart, and why variance-reduction techniques (antithetic variates, control variates, and others, beyond this lecture's scope) are an active area of computational finance specifically aimed at improving this <span class="arithmatex">\( 1/\sqrt n \)</span> rate's constant factor.</p>
+<p><strong>Why the Cholesky decomposition produces correctly correlated draws.</strong> Suppose <span class="arithmatex">\( \mathbf z \)</span> is a vector of independent standard Normals, so <span class="arithmatex">\( \text{Cov}(\mathbf z)=I \)</span>. Let <span class="arithmatex">\( \mathbf r=L\mathbf z \)</span> for a matrix <span class="arithmatex">\( L \)</span>. Then, using the general rule for the covariance of a linear transformation (the same rule underlying the portfolio variance formula <span class="arithmatex">\( \mathbf w^\top\Sigma\mathbf w \)</span> from Portfolio Basics, here applied to a full vector transformation rather than a single scalar combination),</p>
+<div class="arithmatex">\[
+\text{Cov}(\mathbf r) = \text{Cov}(L\mathbf z) = L\,\text{Cov}(\mathbf z)\,L^\top = LIL^\top = LL^\top
+\]</div>
+<p>So if <span class="arithmatex">\( L \)</span> is chosen such that <span class="arithmatex">\( LL^\top=\Sigma \)</span>, exactly the defining property of the Cholesky decomposition (which exists and is unique for any symmetric positive semi-definite matrix, recall from Linear Algebra for Finance that a valid covariance matrix always has this property), then <span class="arithmatex">\( \mathbf r=L\mathbf z \)</span> has covariance matrix exactly <span class="arithmatex">\( \Sigma \)</span>, as desired. This is the standard, computationally efficient way to generate correlated Normal random vectors for Monte Carlo simulation, used directly in Section 5.</p>
+<h2 id="4-worked-numerical-example">4. Worked numerical example<a class="headerlink" href="#4-worked-numerical-example" title="Permanent link">&para;</a></h2>
+<p>Estimate the 95% VaR of a portfolio with returns <span class="arithmatex">\( \mathcal N(0,0.015^2) \)</span> (the same setup as the previous lecture's closed-form example, with true VaR <span class="arithmatex">\( \approx0.0247 \)</span>) using Monte Carlo simulation at increasing sample sizes: 100, 1,000, 10,000, and 100,000 simulations. Averaged over 200 independent repetitions at each sample size (to see the estimator's own sampling behavior), the Monte Carlo VaR estimate's spread visibly narrows as the number of simulations grows (Section 6), converging toward the true closed-form value of 0.0247 while its estimation noise shrinks at the theoretical <span class="arithmatex">\( 1/\sqrt n \)</span> rate: going from 100 to 10,000 simulations (a 100-fold increase) narrows the spread by roughly a factor of 10, exactly as the derivation in Section 3 predicts.</p>
+<h2 id="5-python-implementation">5. Python implementation<a class="headerlink" href="#5-python-implementation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">91</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># --- Monte Carlo VaR convergence: estimate at increasing simulation counts ---</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.015</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">true_var</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">mu</span> <span class="o">+</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">sample_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1_000</span><span class="p">,</span> <span class="mi">10_000</span><span class="p">,</span> <span class="mi">100_000</span><span class="p">]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">sample_sizes</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">reps</span> <span class="o">=</span> <span class="mi">200</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">estimates</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">alpha</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">reps</span><span class="p">)]</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;n=</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">&gt;7</span><span class="si">}</span><span class="s2">: mean VaR=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">estimates</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, std across reps=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">estimates</span><span class="p">)</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;True (closed-form) VaR: </span><span class="si">{</span><span class="n">true_var</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># --- Correlated multi-asset simulation via Cholesky decomposition ---</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">mu_assets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0005</span><span class="p">,</span> <span class="mf">0.0003</span><span class="p">,</span> <span class="mf">0.0004</span><span class="p">])</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">sig_assets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.012</span><span class="p">,</span> <span class="mf">0.015</span><span class="p">,</span> <span class="mf">0.010</span><span class="p">])</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">corr</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">sig_assets</span><span class="p">,</span> <span class="n">sig_assets</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cholesky</span><span class="p">(</span><span class="n">Sigma</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">n_sims</span> <span class="o">=</span> <span class="mi">50_000</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">Z</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_sims</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">simulated_returns</span> <span class="o">=</span> <span class="n">mu_assets</span> <span class="o">+</span> <span class="n">Z</span> <span class="o">@</span> <span class="n">L</span><span class="o">.</span><span class="n">T</span>   <span class="c1"># each row: one simulated day&#39;s 3-asset return vector</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Simulated covariance (should be close to Sigma):&quot;</span><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">simulated_returns</span><span class="p">,</span> <span class="n">rowvar</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Target Sigma:&quot;</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">Sigma</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1"># --- Monte Carlo VaR/ES for an equal-weighted portfolio of the three assets ---</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">])</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="n">portfolio_returns</span> <span class="o">=</span> <span class="n">simulated_returns</span> <span class="o">@</span> <span class="n">weights</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="n">VaR_mc</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">portfolio_returns</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="n">ES_mc</span> <span class="o">=</span> <span class="o">-</span><span class="n">portfolio_returns</span><span class="p">[</span><span class="n">portfolio_returns</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="n">VaR_mc</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Portfolio Monte Carlo VaR(95%) = </span><span class="si">{</span><span class="n">VaR_mc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, ES(95%) = </span><span class="si">{</span><span class="n">ES_mc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c1"># --- Geometric Brownian motion price path simulation ---</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="n">S0</span><span class="p">,</span> <span class="n">mu_gbm</span><span class="p">,</span> <span class="n">sigma_gbm</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">n_paths</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">1000</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">T</span> <span class="o">/</span> <span class="n">steps</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="n">paths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_paths</span><span class="p">,</span> <span class="n">steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="n">paths</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">S0</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="n">Z_paths</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_paths</span><span class="p">,</span> <span class="n">steps</span><span class="p">))</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="n">paths</span><span class="p">[:,</span> <span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">paths</span><span class="p">[:,</span> <span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">mu_gbm</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">sigma_gbm</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span> <span class="o">+</span> <span class="n">sigma_gbm</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span><span class="o">*</span><span class="n">Z_paths</span><span class="p">[:,</span> <span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="n">final_prices</span> <span class="o">=</span> <span class="n">paths</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Simulated GBM: mean final price=</span><span class="si">{</span><span class="n">final_prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, &quot;</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>      <span class="sa">f</span><span class="s2">&quot;analytic E[S_T]=</span><span class="si">{</span><span class="n">S0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">mu_gbm</span><span class="o">*</span><span class="n">T</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># --- Chart 1: MC VaR convergence as simulations increase ---</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">means</span><span class="p">,</span> <span class="n">stds</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ns</span><span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">ests</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">alpha</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">)]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ests</span><span class="p">));</span> <span class="n">stds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ests</span><span class="p">))</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">means</span><span class="p">,</span> <span class="n">stds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">means</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">stds</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">means</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Mean MC VaR estimate (200 reps)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">means</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">stds</span><span class="p">,</span> <span class="n">means</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">stds</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;±2 std across reps&quot;</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">true_var</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff5252&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;True VaR = </span><span class="si">{</span><span class="n">true_var</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Monte Carlo simulations&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Estimated 95% VaR&quot;</span><span class="p">)</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Monte Carlo VaR Estimate Converges as Simulations Increase&quot;</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="c1"># --- Chart 2: simulated GBM price paths ---</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">):</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">)</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Trading day&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Simulated price&quot;</span><span class="p">)</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;40 Simulated Geometric Brownian Motion Paths (Monte Carlo)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<h2 id="6-visualization">6. Visualization<a class="headerlink" href="#6-visualization" title="Permanent link">&para;</a></h2>
+<figure class="qf-figure">
+<p><img alt="Monte Carlo VaR estimate converging toward the true closed-form value as the number of simulations increases, with a shrinking confidence band" src="../../assets/images/montecarlo-var-convergence.png" /></p>
+<figcaption>The Monte Carlo VaR estimate (blue), averaged over 200 repetitions at each sample size, converges toward the true closed-form VaR (red dashed line) as the number of simulations grows, with the band of estimation uncertainty (shaded) narrowing at the 1/√n rate derived in Section 3.</figcaption>
+</figure>
+<figure class="qf-figure">
+<p><img alt="40 simulated geometric Brownian motion price paths fanning out from a common starting price" src="../../assets/images/montecarlo-gbm-paths.png" /></p>
+<figcaption>40 simulated one-year daily price paths under geometric Brownian motion, all starting from the same price. Each path represents one Monte Carlo scenario; a full risk or option-pricing simulation would typically use thousands or more such paths, computing whatever risk measure or payoff is needed on each before averaging.</figcaption>
+</figure>
+<h2 id="7-financial-interpretation">7. Financial interpretation<a class="headerlink" href="#7-financial-interpretation" title="Permanent link">&para;</a></h2>
+<p>Monte Carlo simulation is the standard tool for risk and pricing problems too complex for a closed-form solution: portfolios with options or other nonlinear payoffs (Module 4's Monte Carlo option pricing lecture applies exactly this machinery to pricing), multi-asset portfolios under non-Normal, correlated, or regime-dependent return models, and path-dependent risk measures that depend on more than a single-period return distribution. The trade-off is computational cost and the slow <span class="arithmatex">\( 1/\sqrt n \)</span> convergence rate derived in Section 3: getting a precise Monte Carlo estimate, especially for a deep-tail risk measure like a 99.9% VaR where relevant scenarios are rare by construction, can require a very large number of simulations, motivating the variance-reduction techniques mentioned above in more advanced treatments.</p>
+<h2 id="8-common-mistakes">8. Common mistakes<a class="headerlink" href="#8-common-mistakes" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Common mistake: using too few simulations for a deep-tail estimate</p>
+<p>Estimating a 99% or 99.9% VaR requires enough simulated scenarios to have a meaningful number of observations in that extreme tail; with only a few thousand simulations, a 99.9% VaR estimate may rest on only a handful of tail observations and be highly unstable, exactly the kind of estimation-noise problem quantified in Section 3.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Common mistake: forgetting the drift adjustment in GBM simulation</p>
+<p>The <span class="arithmatex">\( -\tfrac12\sigma^2 \)</span> term in the GBM formula (Section 2) is not optional; it corrects for the fact that the log of a lognormal variable's expectation is <em>not</em> simply the mean of the log. Omitting it produces a systematic upward bias in simulated price paths, a subtle but consequential error covered rigorously when Itô's lemma is developed in Module 5.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Common mistake: assuming independence across assets when simulating a portfolio</p>
+<p>Simulating each asset's returns independently, ignoring their true covariance structure, produces a portfolio risk estimate that is generally too low (since diversification benefits are overstated when correlations are wrongly set to zero) or, if correlations are actually negative in reality, too high. The Cholesky-based approach in Section 5 is the standard fix.</p>
+</div>
+<h2 id="9-exercises">9. Exercises<a class="headerlink" href="#9-exercises" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Using the code in Section 5, compute the Monte Carlo standard error of the VaR estimate at <span class="arithmatex">\( n=10,000 \)</span> and <span class="arithmatex">\( n=1{,}000{,}000 \)</span>, and confirm the ratio is close to <span class="arithmatex">\( \sqrt{100}=10 \)</span>, consistent with the <span class="arithmatex">\( 1/\sqrt n \)</span> convergence rate.</li>
+<li>Modify the correlated-asset simulation to use a correlation of <span class="arithmatex">\(-0.5\)</span> between the first two assets instead of <span class="arithmatex">\(+0.5\)</span>, and recompute the portfolio VaR. Does it increase or decrease, and does that match the diversification intuition from Portfolio Basics?</li>
+<li>Extend the GBM simulation to price a simple European call option via Monte Carlo: simulate many final prices <span class="arithmatex">\( S_T \)</span>, compute the payoff <span class="arithmatex">\( \max(S_T-K,0) \)</span> for each, average, and discount back at the risk-free rate. Compare your answer to the Black-Scholes closed-form price once you reach Module 4.</li>
+</ol>
+<h2 id="10-further-reading">10. Further reading<a class="headerlink" href="#10-further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Glasserman's <em>Monte Carlo Methods in Financial Engineering</em> is the standard graduate-level reference on variance reduction and simulation techniques for finance.</li>
+</ul>
+<h2 id="11-references">11. References<a class="headerlink" href="#11-references" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Glasserman, P. (2003). <em>Monte Carlo Methods in Financial Engineering</em>. Springer.</li>
+<li>Boyle, P. P. (1977). "Options: A Monte Carlo Approach." <em>Journal of Financial Economics</em>, 4(3), 323–338.</li>
+<li>Jorion, P. (2006). <em>Value at Risk: The New Benchmark for Managing Financial Risk</em> (3rd ed.), Chapter 12. McGraw-Hill.</li>
+<li>NumPy Developers. "<code>numpy.linalg.cholesky</code>." <a href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.cholesky.html">numpy.org/doc</a></li>
+</ol>
+<hr />
+<div class="grid">
+<p><a class="md-button" href="/qf-lectures/portfolio-risk/var-expected-shortfall/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Value at Risk and Expected Shortfall</a>
+<a class="md-button md-button--primary" href="/qf-lectures/portfolio-risk/risk-parity-drawdowns/">Next: Risk Parity and Drawdowns <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../var-expected-shortfall/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Value at Risk and Expected Shortfall">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Value at Risk and Expected Shortfall
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../risk-parity-drawdowns/" class="md-footer__link md-footer__link--next" aria-label="Next: Risk Parity and Drawdowns">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Risk Parity and Drawdowns
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Joshua Bloodymier P. Salvino. Educational content for learning purposes only — not investment advice.
+
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/blackboxp6" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

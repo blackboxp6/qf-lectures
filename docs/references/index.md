@@ -24,6 +24,7 @@ Every citation used anywhere on this site is collected here, organized by module
 - Fama, E. F., & French, K. R. (1993). "Common Risk Factors in the Returns on Stocks and Bonds." *Journal of Financial Economics*, 33(1), 3–56.
 - Fama, E. F. (1970). "Efficient Capital Markets: A Review of Theory and Empirical Work." *The Journal of Finance*, 25(2), 383–417.
 - Engle, R. F. (1982). "Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation." *Econometrica*, 50(4), 987–1007.
+- Stoll, H. R. (1969). "The Relationship Between Put and Call Option Prices." *The Journal of Finance*, 24(5), 801–824.
 - Bollerslev, T. (1986). "Generalized Autoregressive Conditional Heteroskedasticity." *Journal of Econometrics*, 31(3), 307–327.
 - Student [W. S. Gosset] (1908). "The Probable Error of a Mean." *Biometrika*, 6(1), 1–25.
 - Harvey, C. R., Liu, Y., & Zhu, H. (2016). "...and the Cross-Section of Expected Returns." *The Review of Financial Studies*, 29(1), 5–68.

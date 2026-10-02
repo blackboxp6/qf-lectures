@@ -50,8 +50,8 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 ## 4. Derivatives
 | Lecture | Status |
 |---|---|
-| Forwards and Futures | :material-progress-clock:{ style="color:#ff9800" } |
-| Options and No-Arbitrage Bounds | :material-progress-clock:{ style="color:#ff9800" } |
+| [Forwards and Futures](derivatives/forwards-futures.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Options and No-Arbitrage Bounds](derivatives/options-no-arbitrage-bounds.md) | :material-check-circle:{ style="color:#4caf50" } |
 | Binomial Trees | :material-progress-clock:{ style="color:#ff9800" } |
 | Black-Scholes-Merton Model | :material-progress-clock:{ style="color:#ff9800" } |
 | The Greeks | :material-progress-clock:{ style="color:#ff9800" } |

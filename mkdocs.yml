@@ -123,7 +123,10 @@ nav:
       - Value at Risk and Expected Shortfall: portfolio-risk/var-expected-shortfall.md
       - Monte Carlo Simulation for Risk: portfolio-risk/monte-carlo-risk.md
       - Risk Parity and Drawdowns: portfolio-risk/risk-parity-drawdowns.md
-  - "4. Derivatives": derivatives/index.md
+  - "4. Derivatives":
+      - derivatives/index.md
+      - Forwards and Futures: derivatives/forwards-futures.md
+      - Options and No-Arbitrage Bounds: derivatives/options-no-arbitrage-bounds.md
   - "5. Stochastic Finance": stochastic-finance/index.md
   - "6. Quantitative Trading": trading/index.md
   - "7. Advanced Quant Finance": advanced/index.md

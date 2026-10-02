@@ -12,13 +12,13 @@
         <meta name="author" content="Joshua Bloodymier P. Salvino">
       
       
-        <link rel="canonical" href="https://blackboxp6.github.io/qf-lectures/financial-foundations/compounding-time-value/">
+        <link rel="canonical" href="https://blackboxp6.github.io/qf-lectures/derivatives/forwards-futures/">
       
       
-        <link rel="prev" href="../returns-and-log-returns/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../equities-and-bonds/">
+        <link rel="next" href="../options-no-arbitrage-bounds/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Compounding and the Time Value of Money - Quantitative Finance Lectures</title>
+        <title>Forwards and Futures - Quantitative Finance Lectures</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#compounding-and-the-time-value-of-money" class="md-skip">
+        <a href="#forwards-and-futures" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compounding and the Time Value of Money
+              Forwards and Futures
             
           </span>
         </div>
@@ -271,13 +271,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../financial-foundations/" class="md-tabs__link">
           
   
     
@@ -333,11 +331,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../derivatives/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -748,8 +748,6 @@
       
   
   
-    
-  
   
   
     
@@ -774,24 +772,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../financial-foundations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -802,13 +797,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             1. Financial Foundations
@@ -824,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../returns-and-log-returns/" class="md-nav__link">
+      <a href="../../financial-foundations/returns-and-log-returns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,30 +837,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Compounding and the Time Value of Money
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../financial-foundations/compounding-time-value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,127 +849,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-intuition" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Intuition
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-mathematical-formulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Mathematical formulation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-derivation" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Derivation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-worked-numerical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Worked numerical example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-python-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Python implementation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-visualization" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Visualization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-financial-interpretation" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Financial interpretation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-common-mistakes" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Common mistakes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Exercises
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Further reading
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1007,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../equities-and-bonds/" class="md-nav__link">
+      <a href="../../financial-foundations/equities-and-bonds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../derivatives-overview/" class="md-nav__link">
+      <a href="../../financial-foundations/derivatives-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../market-structure-order-books/" class="md-nav__link">
+      <a href="../../financial-foundations/market-structure-order-books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../portfolio-basics/" class="md-nav__link">
+      <a href="../../financial-foundations/portfolio-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1566,6 +1420,8 @@
       
   
   
+    
+  
   
   
     
@@ -1582,21 +1438,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../derivatives/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1607,13 +1466,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             4. Derivatives
@@ -1626,10 +1485,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../derivatives/forwards-futures/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Forwards and Futures
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1638,6 +1517,127 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Intuition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mathematical formulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Derivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-worked-numerical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Worked numerical example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-python-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Python implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-financial-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Financial interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Common mistakes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1650,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../derivatives/options-no-arbitrage-bounds/" class="md-nav__link">
+      <a href="../options-no-arbitrage-bounds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1933,7 +1933,7 @@
                   
 
   
-    <a href="https://github.com/blackboxp6/qf-lectures/edit/main/docs/financial-foundations/compounding-time-value.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/blackboxp6/qf-lectures/edit/main/docs/derivatives/forwards-futures.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1941,211 +1941,178 @@
   
 
 
-<h1 id="compounding-and-the-time-value-of-money">Compounding and the Time Value of Money<a class="headerlink" href="#compounding-and-the-time-value-of-money" title="Permanent link">&para;</a></h1>
+<h1 id="forwards-and-futures">Forwards and Futures<a class="headerlink" href="#forwards-and-futures" title="Permanent link">&para;</a></h1>
 <div class="admonition objectives">
 <p class="admonition-title">Learning objectives</p>
 <p>By the end of this lecture you should be able to:</p>
 <ul>
-<li>[ ] State the time value of money principle and explain why it follows from the existence of a positive interest rate</li>
-<li>[ ] Derive the future value and present value formulas under simple interest, discrete (periodic) compounding, and continuous compounding</li>
-<li>[ ] Explain why continuous compounding is the natural limit of discrete compounding as the compounding frequency increases, and derive that limit</li>
-<li>[ ] Compute future value, present value, and effective annual rates in Python, and convert correctly between nominal and continuously compounded rates</li>
+<li>[ ] Derive the no-arbitrage forward price using a cost-of-carry argument</li>
+<li>[ ] Construct the specific arbitrage trade that enforces the no-arbitrage forward price when it is violated</li>
+<li>[ ] Explain the structural difference between a forward and a futures contract, specifically daily mark-to-market settlement</li>
+<li>[ ] Compute forward prices and simulate futures mark-to-market cash flows in Python</li>
 </ul>
 </div>
 <h2 id="1-intuition">1. Intuition<a class="headerlink" href="#1-intuition" title="Permanent link">&para;</a></h2>
-<p>A dollar today is worth more than a dollar a year from now — not because of inflation (though that's real too), but because a dollar today can be <em>invested</em> to earn a return, becoming more than a dollar by next year. This is the <strong>time value of money</strong>: money has a "rental price," the interest rate, and that price is what lets us compare cash flows that happen at different points in time on a common footing.</p>
-<p><strong>Compounding</strong> is what happens when interest itself earns interest. $100 growing at 8% simple interest gains a flat $8 every year forever. $100 compounding at 8% annually gains $8 in year one, but in year two it gains 8% of $108 — slightly more than $8 — because the first year's interest is now also earning interest. This snowballing effect is the single most important mechanism in this lecture, and understanding exactly how it behaves as you compound more and more frequently (annually, monthly, daily, continuously) sets up the mathematics used throughout Module 5 (Brownian motion, geometric Brownian motion) and Module 4 (Black-Scholes discounting).</p>
+<p>The Derivatives Overview lecture introduced the forward payoff <span class="arithmatex">\( S_T-K \)</span> and distinguished it from an option's kinked payoff. This lecture asks a sharper question: given today's spot price, what <em>should</em> the forward price <span class="arithmatex">\( K \)</span> be, if no one is to be able to lock in a riskless profit? The answer turns out not to depend on anyone's forecast of where the price is headed; it follows purely from a <strong>no-arbitrage</strong> argument based on the cost of financing and holding the underlying asset until the forward's maturity, the <strong>cost-of-carry</strong> model.</p>
+<p><strong>Futures</strong> contracts have economically the same payoff structure as forwards but differ in one operationally important way: a futures contract is <strong>marked to market daily</strong>, meaning gains and losses are settled in cash every single day rather than accumulated silently until maturity as with a forward. This distinction, mostly a technical, exchange-clearing detail, nonetheless has real financial consequences, covered at the end of this lecture.</p>
 <h2 id="2-mathematical-formulation">2. Mathematical formulation<a class="headerlink" href="#2-mathematical-formulation" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">\( PV \)</span> be the present value (today's value) of an amount of money, <span class="arithmatex">\( FV \)</span> its future value at some later time, <span class="arithmatex">\( r \)</span> the interest rate, and <span class="arithmatex">\( t \)</span> the time elapsed (in years).</p>
-<p><strong>Simple interest.</strong> Interest is earned only on the original principal:</p>
+<p><strong>No-arbitrage forward price</strong> on an asset with spot price <span class="arithmatex">\( S_0 \)</span>, continuously compounded risk-free rate <span class="arithmatex">\( r \)</span>, and time to maturity <span class="arithmatex">\( T \)</span> (assuming no dividends or storage costs, the simplest case):</p>
 <div class="arithmatex">\[
-FV = PV \,(1 + rt)
+F_0 = S_0\,e^{rT}
 \]</div>
-<p><strong>Discrete (periodic) compounding.</strong> Interest compounds <span class="arithmatex">\( m \)</span> times per year at nominal annual rate <span class="arithmatex">\( r \)</span>, over <span class="arithmatex">\( t \)</span> years:</p>
+<p><strong>With a continuous dividend yield <span class="arithmatex">\( q \)</span></strong> (e.g., for a stock index or currency):</p>
 <div class="arithmatex">\[
-FV = PV \left(1 + \frac{r}{m}\right)^{mt}
+F_0 = S_0\,e^{(r-q)T}
 \]</div>
-<p>where:</p>
-<ul>
-<li><span class="arithmatex">\( PV \)</span> — the present (initial) value</li>
-<li><span class="arithmatex">\( r \)</span> — the nominal annual interest rate (e.g., 0.08 for 8%)</li>
-<li><span class="arithmatex">\( m \)</span> — the number of compounding periods per year (1 = annual, 12 = monthly, 365 = daily)</li>
-<li><span class="arithmatex">\( t \)</span> — the number of years</li>
-<li><span class="arithmatex">\( FV \)</span> — the resulting future value after <span class="arithmatex">\( t \)</span> years</li>
-</ul>
-<p><strong>Continuous compounding.</strong> The limit as compounding frequency <span class="arithmatex">\( m \to \infty \)</span>:</p>
+<p><strong>With storage costs</strong> <span class="arithmatex">\( u \)</span> (continuously compounded, as a fraction of the asset's value, relevant for physical commodities) and a <strong>convenience yield</strong> <span class="arithmatex">\( y \)</span> (the non-monetary benefit of holding the physical commodity itself, such as avoiding a stockout):</p>
 <div class="arithmatex">\[
-FV = PV \, e^{rt}
+F_0 = S_0\,e^{(r+u-y)T}
 \]</div>
-<p><strong>Present value</strong> (discounting) is simply the future-value formula solved for <span class="arithmatex">\( PV \)</span> — under continuous compounding:</p>
+<p><strong>Value of an existing forward position</strong> at some time <span class="arithmatex">\( t&lt;T \)</span>, with current forward price <span class="arithmatex">\( F_t \)</span> for the same maturity and original contracted price <span class="arithmatex">\( K \)</span>:</p>
 <div class="arithmatex">\[
-PV = FV \, e^{-rt}
-\]</div>
-<p><strong>Effective annual rate (EAR)</strong> converts any compounding convention into the annually-compounded rate that produces the same growth:</p>
-<div class="arithmatex">\[
-\text{EAR} = \left(1 + \frac{r}{m}\right)^{m} - 1 \qquad \text{(discrete)} \qquad\qquad \text{EAR} = e^{r} - 1 \qquad \text{(continuous)}
+V_t = (F_t-K)\,e^{-r(T-t)}
 \]</div>
 <h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
-<p><strong>Claim: continuous compounding is the limit of discrete compounding as <span class="arithmatex">\( m \to \infty \)</span>.</strong></p>
-<p>Start from the discrete compounding formula and take the limit as the compounding frequency <span class="arithmatex">\( m \)</span> grows without bound, holding the nominal rate <span class="arithmatex">\( r \)</span> and time <span class="arithmatex">\( t \)</span> fixed:</p>
+<p><strong>The cost-of-carry forward price, via a replication/arbitrage argument.</strong> Consider two ways to guarantee ownership of the asset at time <span class="arithmatex">\( T \)</span>:</p>
+<ul>
+<li><strong>Strategy A</strong>: enter a forward contract today to buy the asset at <span class="arithmatex">\( T \)</span> for price <span class="arithmatex">\( F_0 \)</span>.</li>
+<li><strong>Strategy B</strong>: borrow <span class="arithmatex">\( S_0 \)</span> today at the risk-free rate, buy the asset now for <span class="arithmatex">\( S_0 \)</span>, and hold it until <span class="arithmatex">\( T \)</span>. At <span class="arithmatex">\( T \)</span>, the loan has grown to <span class="arithmatex">\( S_0e^{rT} \)</span>, which must be repaid, and the investor then owns the asset.</li>
+</ul>
+<p>Both strategies deliver exactly one unit of the asset at time <span class="arithmatex">\( T \)</span>, with no other cash flows in between (ignoring dividends and storage costs for now), so by the <strong>law of one price</strong> (if two strategies produce identical future payoffs, they must cost the same today, or a riskless arbitrage exists), their costs must be equal:</p>
 <div class="arithmatex">\[
-\lim_{m \to \infty} \left(1 + \frac{r}{m}\right)^{mt}
+F_0 = S_0 e^{rT}
 \]</div>
-<p>Substitute <span class="arithmatex">\( n = m/r \)</span> (so <span class="arithmatex">\( m = nr \)</span> and <span class="arithmatex">\( m \to \infty \iff n \to \infty \)</span>):</p>
+<p>exactly the formula in Section 2. If dividends at continuous yield <span class="arithmatex">\( q \)</span> are paid on the asset while held, Strategy B's holder additionally receives those dividends (reducing the effective cost of carrying the position, since dividend income can be reinvested or used to offset the financing cost), which modifies the replication argument to produce the <span class="arithmatex">\( e^{(r-q)T} \)</span> formula instead; a fully worked version of this adjustment appears in Hull (2022).</p>
+<p><strong>Why a mispriced forward creates a genuine arbitrage, with the explicit trade.</strong> Suppose, as in Section 6's chart, the market forward price <span class="arithmatex">\( F_{\text{market}} \)</span> exceeds the theoretical <span class="arithmatex">\( F_0=S_0e^{rT} \)</span>. An arbitrageur can:</p>
+<ol>
+<li><strong>Sell</strong> (go short) the overpriced forward at <span class="arithmatex">\( F_{\text{market}} \)</span>, agreeing to deliver the asset at <span class="arithmatex">\( T \)</span> for that price.</li>
+<li><strong>Borrow</strong> <span class="arithmatex">\( S_0 \)</span> today at rate <span class="arithmatex">\( r \)</span> and <strong>buy</strong> the asset now (replicating Strategy B above).</li>
+<li>At <span class="arithmatex">\( T \)</span>: deliver the asset into the forward contract, receiving <span class="arithmatex">\( F_{\text{market}} \)</span>; repay the loan, which has grown to <span class="arithmatex">\( S_0e^{rT} \)</span>.</li>
+</ol>
+<p>The riskless profit, locked in at time 0 with no net cash outlay, is exactly</p>
 <div class="arithmatex">\[
-\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{nrt} = \left[ \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{n} \right]^{rt}
+F_{\text{market}} - S_0e^{rT} &gt; 0
 \]</div>
-<p>The bracketed limit is the standard definition of Euler's number:</p>
-<div class="arithmatex">\[
-\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{n} = e
-\]</div>
-<p>so the whole expression collapses to <span class="arithmatex">\( e^{rt} \)</span>, giving <span class="arithmatex">\( FV = PV\, e^{rt} \)</span> exactly as stated in Section 2. This is not a separate assumption — continuous compounding is <em>mechanically</em> what discrete compounding becomes as the compounding periods get infinitely short, which is exactly the same limiting idea that motivates modeling asset prices as evolving continuously in time (Brownian motion, Module 5) rather than only at discrete daily or monthly steps.</p>
-<p><strong>Why compounding more often always earns you at least as much.</strong> Because <span class="arithmatex">\( m \)</span> only appears as <span class="arithmatex">\( (1 + r/m)^m \)</span>, and this expression is increasing in <span class="arithmatex">\( m \)</span> for fixed <span class="arithmatex">\( r &gt; 0 \)</span> (each extra compounding period lets a smaller, positive amount of interest start earning interest slightly sooner), the discrete formula is bounded above by, and converges monotonically to, the continuous formula. This is why the annual, monthly, daily, and continuous curves in Section 6's chart stack in that specific order — annual lowest, continuous highest — for the same nominal rate.</p>
+<p>by assumption. This is a genuine, riskless arbitrage: every cash flow and quantity involved is known and contracted for at time 0, with no exposure to where the spot price actually ends up at <span class="arithmatex">\( T \)</span>. The existence of this trade is precisely what competitive, well-functioning markets are expected to eliminate quickly, pushing <span class="arithmatex">\( F_{\text{market}} \)</span> back toward <span class="arithmatex">\( S_0e^{rT} \)</span>, which is why the no-arbitrage formula, not a forecast of future spot prices, is the standard pricing relationship used in practice. (An analogous short-the-asset, lend-the-proceeds trade enforces the price from the other direction if the market forward is instead too <em>low</em>.)</p>
 <h2 id="4-worked-numerical-example">4. Worked numerical example<a class="headerlink" href="#4-worked-numerical-example" title="Permanent link">&para;</a></h2>
-<p>Invest $100 at a nominal annual rate of 8% for 10 years.</p>
-<p><strong>Simple interest:</strong></p>
+<p>A non-dividend-paying stock trades at $100, the continuously compounded risk-free rate is 5%, and a forward contract matures in 1 year. The no-arbitrage forward price is</p>
 <div class="arithmatex">\[
-FV = 100 \times (1 + 0.08 \times 10) = 100 \times 1.80 = \$180.00
+F_0 = 100\,e^{0.05\times1} \approx \$105.13
 \]</div>
-<p><strong>Annual compounding</strong> (<span class="arithmatex">\(m=1\)</span>):</p>
-<div class="arithmatex">\[
-FV = 100 \times (1.08)^{10} = \$215.89
-\]</div>
-<p><strong>Monthly compounding</strong> (<span class="arithmatex">\(m=12\)</span>):</p>
-<div class="arithmatex">\[
-FV = 100 \times \left(1 + \frac{0.08}{12}\right)^{120} = \$221.96
-\]</div>
-<p><strong>Continuous compounding:</strong></p>
-<div class="arithmatex">\[
-FV = 100 \times e^{0.08 \times 10} = 100 \times e^{0.8} = \$222.55
-\]</div>
-<p>Note the ordering: $180.00 (simple) &lt; $215.89 (annual) &lt; $221.96 (monthly) &lt; $222.55 (continuous) — exactly the monotonic convergence proven in Section 3, with diminishing additional gains as compounding frequency keeps increasing.</p>
+<p>If the market were instead quoting a 1-year forward at $112 (Section 6's chart), the arbitrage trade in Section 3 locks in a riskless profit of <span class="arithmatex">\( 112-105.13=\$6.87 \)</span> per unit, with zero net investment and zero price risk, exactly the kind of "free money" that competitive markets compete away, which is the economic reason the forward price should converge to $105.13 rather than persist at $112.</p>
 <h2 id="5-python-implementation">5. Python implementation<a class="headerlink" href="#5-python-implementation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">PV</span> <span class="o">=</span> <span class="mf">100.0</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">r</span> <span class="o">=</span> <span class="mf">0.08</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># --- Simple interest ---</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">fv_simple</span> <span class="o">=</span> <span class="n">PV</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">r</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># --- Discrete compounding at various frequencies ---</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">def</span> <span class="nf">fv_discrete</span><span class="p">(</span><span class="n">pv</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">years</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">pv</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">m</span> <span class="o">*</span> <span class="n">years</span><span class="p">)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">fv_annual</span>   <span class="o">=</span> <span class="n">fv_discrete</span><span class="p">(</span><span class="n">PV</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">fv_monthly</span>  <span class="o">=</span> <span class="n">fv_discrete</span><span class="p">(</span><span class="n">PV</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">fv_daily</span>    <span class="o">=</span> <span class="n">fv_discrete</span><span class="p">(</span><span class="n">PV</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">365</span><span class="p">)</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># --- Continuous compounding: the limit as m -&gt; infinity ---</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">fv_continuous</span> <span class="o">=</span> <span class="n">PV</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Simple:      $</span><span class="si">{</span><span class="n">fv_simple</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Annual:      $</span><span class="si">{</span><span class="n">fv_annual</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Monthly:     $</span><span class="si">{</span><span class="n">fv_monthly</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Daily:       $</span><span class="si">{</span><span class="n">fv_daily</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Continuous:  $</span><span class="si">{</span><span class="n">fv_continuous</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1"># --- Present value: discounting a future cash flow back to today ---</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">FV_target</span> <span class="o">=</span> <span class="mf">1000.0</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">years_out</span> <span class="o">=</span> <span class="mi">5</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="n">pv_continuous</span> <span class="o">=</span> <span class="n">FV_target</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">years_out</span><span class="p">)</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">PV of $1,000 in 5 years at 8% (continuous): $</span><span class="si">{</span><span class="n">pv_continuous</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c1"># --- Effective annual rate (EAR): comparing compounding conventions on equal footing ---</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">nominal_rate</span> <span class="o">=</span> <span class="mf">0.08</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">ear_monthly</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">nominal_rate</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span> <span class="o">**</span> <span class="mi">12</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="n">ear_continuous</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">nominal_rate</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">EAR (nominal 8%, monthly compounding):    </span><span class="si">{</span><span class="n">ear_monthly</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;EAR (nominal 8%, continuous compounding): </span><span class="si">{</span><span class="n">ear_continuous</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="c1"># --- Converting a discretely-compounded rate to its continuous equivalent ---</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c1"># Used constantly in Module 4/5: r_continuous = ln(1 + EAR)</span>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="n">r_continuous_equiv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">ear_monthly</span><span class="p">)</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Continuous rate equivalent to that monthly-compounded EAR: </span><span class="si">{</span><span class="n">r_continuous_equiv</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># --- No-arbitrage forward pricing ---</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span> <span class="nf">forward_price</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Cost-of-carry forward price, with an optional continuous dividend/convenience yield q.&quot;&quot;&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">return</span> <span class="n">S0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">r</span> <span class="o">-</span> <span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span> <span class="o">=</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.0</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">F0</span> <span class="o">=</span> <span class="n">forward_price</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No-arbitrage forward price: $</span><span class="si">{</span><span class="n">F0</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># --- The arbitrage trade, explicitly, when the market forward is mispriced ---</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">F_market</span> <span class="o">=</span> <span class="mf">112.0</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">if</span> <span class="n">F_market</span> <span class="o">&gt;</span> <span class="n">F0</span><span class="p">:</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">profit</span> <span class="o">=</span> <span class="n">F_market</span> <span class="o">-</span> <span class="n">S0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Market forward ($</span><span class="si">{</span><span class="n">F_market</span><span class="si">}</span><span class="s2">) is overpriced.&quot;</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Arbitrage: short the forward, borrow $</span><span class="si">{</span><span class="n">S0</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> to buy the asset now.&quot;</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Riskless profit at T, locked in today: $</span><span class="si">{</span><span class="n">profit</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># --- Forward price with a dividend yield, e.g. an equity index ---</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">F0_with_div</span> <span class="o">=</span> <span class="n">forward_price</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Forward price with a 2% dividend yield: $</span><span class="si">{</span><span class="n">F0_with_div</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  (lower, since holding the asset earns income)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># --- Futures: simulated daily mark-to-market cash flows vs. a forward&#39;s single payoff at maturity ---</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">days</span> <span class="o">=</span> <span class="mi">20</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">price_path</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">days</span><span class="p">))</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">daily_mtm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">price_path</span><span class="p">,</span> <span class="n">prepend</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>   <span class="c1"># daily gain/loss on a long futures position</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">cumulative_mtm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">daily_mtm</span><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Futures: sum of daily mark-to-market cash flows = </span><span class="si">{</span><span class="n">cumulative_mtm</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Forward: single payoff at maturity (same underlying move) = </span><span class="si">{</span><span class="n">price_path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(Equal in this simplified, constant-rate example; they can differ once interest on interim cash flows is modeled.)&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># --- Chart 1: growth curves over 20 years ---</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">simple_curve</span> <span class="o">=</span> <span class="n">PV</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">r</span> <span class="o">*</span> <span class="n">years</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">annual_curve</span> <span class="o">=</span> <span class="n">PV</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span> <span class="o">**</span> <span class="n">years</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">continuous_curve</span> <span class="o">=</span> <span class="n">PV</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">years</span><span class="p">)</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.2</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">))</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">simple_curve</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Simple interest&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff5252&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.6</span><span class="p">)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">annual_curve</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Annual compounding&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.6</span><span class="p">)</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">continuous_curve</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Continuous compounding&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#4caf50&quot;</span><span class="p">,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.6</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Years&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Value of $100 invested at 8%&quot;</span><span class="p">)</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simple vs. Compound vs. Continuous Compounding&quot;</span><span class="p">)</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># --- Chart 1: no-arbitrage forward price curve and a mispriced forward ---</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">T_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">F_theoretical</span> <span class="o">=</span> <span class="n">S0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">T_grid</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">T1_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">T_grid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">))</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_grid</span><span class="p">,</span> <span class="n">F_theoretical</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;No-arbitrage forward price F=S₀e^(rT)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">F_market</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff5252&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Overpriced market forward (F=</span><span class="si">{</span><span class="n">F_market</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">F_theoretical</span><span class="p">[</span><span class="n">T1_idx</span><span class="p">]),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">F_market</span><span class="p">),</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#4caf50&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">))</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="p">(</span><span class="n">F_market</span> <span class="o">+</span> <span class="n">F_theoretical</span><span class="p">[</span><span class="n">T1_idx</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Arbitrage</span><span class="se">\n</span><span class="s2">profit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#4caf50&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time to maturity T (years)&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Forward price&quot;</span><span class="p">)</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Cost-of-Carry Forward Pricing and a Mispriced Forward&quot;</span><span class="p">)</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># --- Chart 2: value after 10 years at increasing compounding frequency ---</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">freqs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Annual (m=1)&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Quarterly (m=4)&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Monthly (m=12)&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;Daily (m=365)&quot;</span><span class="p">:</span> <span class="mi">365</span><span class="p">}</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">fv_discrete</span><span class="p">(</span><span class="n">PV</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">freqs</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span> <span class="o">+</span> <span class="p">[</span><span class="n">fv_continuous</span><span class="p">]</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">freqs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;Continuous (m→∞)&quot;</span><span class="p">]</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># --- Chart 2: futures daily mark-to-market vs. forward single payoff ---</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">days</span><span class="p">),</span> <span class="n">daily_mtm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#4caf50&quot;</span> <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;#ff5252&quot;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">daily_mtm</span><span class="p">])</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Futures: Daily Mark-to-Market Cash Flows&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Daily gain/loss&quot;</span><span class="p">)</span>
 </span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">bars</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">vals</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#9fa8da&quot;</span><span class="p">,</span> <span class="s2">&quot;#7986cb&quot;</span><span class="p">,</span> <span class="s2">&quot;#5c6bc0&quot;</span><span class="p">,</span> <span class="s2">&quot;#3949ab&quot;</span><span class="p">,</span> <span class="s2">&quot;#4caf50&quot;</span><span class="p">])</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Value of $100 after 10 years at 8%&quot;</span><span class="p">)</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Compounding Frequency Converges to the Continuous Limit&quot;</span><span class="p">)</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bars</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">v</span><span class="p">),</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>                <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">days</span><span class="p">),</span> <span class="n">cumulative_mtm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>             <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Futures: cumulative daily settlement&quot;</span><span class="p">)</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">days</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">cumulative_mtm</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff9800&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>             <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Forward: single payoff at maturity&quot;</span><span class="p">)</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Cumulative P&amp;L: Futures (marked daily) vs. Forward (settled once)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Day&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Cumulative P&amp;L&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
 <h2 id="6-visualization">6. Visualization<a class="headerlink" href="#6-visualization" title="Permanent link">&para;</a></h2>
 <figure class="qf-figure">
-<p><img alt="Growth of $100 under simple interest, annual compounding, and continuous compounding over 20 years" src="../../assets/images/compounding-growth-comparison.png" /></p>
-<figcaption>$100 invested at 8% under three conventions. Simple interest (red) grows linearly. Annual compounding (blue) and continuous compounding (green, dashed) both grow exponentially, with continuous compounding always at or above annual compounding — the monotonic ordering proven in Section 3.</figcaption>
+<p><img alt="The no-arbitrage forward price curve rising with maturity, with a mispriced market forward and the resulting arbitrage profit marked" src="../../assets/images/forwards-cost-of-carry.png" /></p>
+<figcaption>The theoretical no-arbitrage forward price (blue curve) grows with maturity at the risk-free rate, per the cost-of-carry formula. A market-quoted forward above this curve (red dot) permits the riskless arbitrage trade derived in Section 3, capturing the gap (green) as a locked-in profit.</figcaption>
 </figure>
 <figure class="qf-figure">
-<p><img alt="Bar chart showing future value converging to the continuous-compounding limit as compounding frequency increases" src="../../assets/images/compounding-frequency-limit.png" /></p>
-<figcaption>The same $100 at 8% for 10 years, compounded at increasing frequency. Each step toward more frequent compounding closes part of the gap to the continuous limit (green) — but with rapidly diminishing gains, illustrating why daily and continuous compounding are numerically almost indistinguishable in practice.</figcaption>
+<p><img alt="Daily mark-to-market cash flows for a simulated futures position, and the cumulative P&amp;L compared to a forward's single payoff at maturity" src="../../assets/images/futures-mark-to-market.png" /></p>
+<figcaption>Top: a futures position's daily gains (green) and losses (red) are settled in cash every day. Bottom: the cumulative sum of those daily settlements (blue) tracks a forward contract's single payoff at maturity (orange dashed) in this simplified example, but the *timing* of the cash flows differs sharply, interim cash is paid and received throughout the futures contract's life, not just at the end.</figcaption>
 </figure>
 <h2 id="7-financial-interpretation">7. Financial interpretation<a class="headerlink" href="#7-financial-interpretation" title="Permanent link">&para;</a></h2>
-<p>The time value of money is the reason every valuation technique in this curriculum — bond pricing (this module), option pricing (Module 4), portfolio net present value calculations (Module 3) — starts by <strong>discounting</strong> future cash flows back to the present using some interest rate. Continuous compounding isn't just a mathematical curiosity: it's the convention used almost universally in derivatives pricing (the risk-free discount factor in Black-Scholes is <span class="arithmatex">\( e^{-rT} \)</span>, not <span class="arithmatex">\( (1+r)^{-T} \)</span>) precisely because it's the natural limit that arises when modeling prices as evolving continuously through time, and because continuously compounded (log) returns are additive, as shown in the previous lecture.</p>
+<p>The cost-of-carry formula is the standard starting point for pricing forwards and futures across asset classes: equity index futures use the dividend-yield-adjusted version, currency forwards use an analogous interest-rate-differential version (covered interest rate parity), and commodity futures incorporate storage costs and convenience yield. The forward/futures distinction matters practically because daily mark-to-market settlement means a futures position generates (or demands) real interim cash flows well before maturity, exposing the holder to reinvestment-rate risk on interim gains and margin-call liquidity risk on interim losses, neither of which a forward contract, settled only once at maturity, exposes the holder to in the same way. This is also why futures prices and forward prices can differ slightly, in theory, when interest rates are themselves stochastic and correlated with the underlying's price path, though for most practical purposes, and in nearly all introductory treatments, the two are priced using the same cost-of-carry logic.</p>
 <h2 id="8-common-mistakes">8. Common mistakes<a class="headerlink" href="#8-common-mistakes" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: mixing nominal and effective rates</p>
-<p>Quoting a "12% annual rate, compounded monthly" and then plugging 12% directly into an annual-compounding formula understates the true growth — the effective annual rate (EAR) is what should be compared across products with different compounding frequencies, not the nominal rate.</p>
+<p class="admonition-title">Common mistake: using the simple discounted-spot formula when dividends or storage costs apply</p>
+<p>Omitting a known dividend yield, or storage costs for a physical commodity, systematically misprices the forward relative to what a correct replication argument implies, as Section 2's extended formulas make explicit.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: using the wrong discount factor convention</p>
-<p>Discounting a cash flow with <span class="arithmatex">\( (1+r)^{-t} \)</span> when the rate quoted is actually continuously compounded (or vice versa) introduces a small but real pricing error. Always check which convention a quoted rate uses before discounting — Section 5's code shows how to convert between them via <span class="arithmatex">\( r_{\text{continuous}} = \ln(1 + \text{EAR}) \)</span>.</p>
+<p class="admonition-title">Common mistake: treating the forward price as a 'forecast' of the future spot price</p>
+<p>The no-arbitrage forward price reflects the <em>cost of carrying</em> the asset to maturity, not a market consensus prediction of where the spot price will actually be. Under certain assumptions the two can coincide, but the forward price is derived without any reference to expected future spot prices at all, exactly the point of the replication argument in Section 3.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: applying simple interest over long horizons</p>
-<p>Simple interest is only appropriate for very short-term instruments (e.g., some money-market calculations) or as a first approximation. Applying it over multi-year horizons, where compounding effects are material, significantly understates true growth, as the 10-year example in Section 4 shows ($180 vs. $215.89+).</p>
+<p class="admonition-title">Common mistake: ignoring the practical consequences of daily mark-to-market</p>
+<p>Assuming a futures position behaves exactly like a forward in terms of cash flow timing ignores the real liquidity and reinvestment implications of daily settlement, margin calls on losing positions are a genuine practical risk that a forward contract, by construction, does not carry in the same way.</p>
 </div>
 <h2 id="9-exercises">9. Exercises<a class="headerlink" href="#9-exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li>$5,000 is invested for 15 years at a nominal annual rate of 6%. Compute the future value under annual, quarterly, and continuous compounding, and rank them.</li>
-<li>Derive, from the continuous-compounding present value formula, the interest rate <span class="arithmatex">\( r \)</span> implied by a bond that costs $950 today and pays $1,000 in exactly 1 year (assume no coupons). Solve for <span class="arithmatex">\( r \)</span> algebraically before checking your answer numerically.</li>
-<li>Two savings accounts advertise "10% annual, compounded annually" and "9.8% annual, compounded monthly." Compute the EAR of each and determine which is actually the better deal.</li>
+<li>A commodity trades at $50 per unit, the risk-free rate is 4%, annual storage costs are 2% of value, and the commodity's convenience yield is estimated at 1%. Compute the 6-month no-arbitrage futures price.</li>
+<li>Suppose the market forward price in Section 5's example were instead $100 (below the $105.13 theoretical price) rather than $112. Describe the specific arbitrage trade (the mirror image of Section 3's trade) that would profit from this mispricing, and compute the riskless profit.</li>
+<li>Extend the futures mark-to-market simulation in Section 5 to include a (small) short-term reinvestment rate on each day's cash settlement, compounded daily, and compare the final cumulative value to the simple-sum version. Under what condition would this make futures and forward payoffs diverge?</li>
 </ol>
 <h2 id="10-further-reading">10. Further reading<a class="headerlink" href="#10-further-reading" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Any standard corporate finance textbook's chapter on time value of money is a good supplementary read — cross-check formulas against the references below.</li>
+<li>Hull (2022), Chapters 3 and 5, develops the cost-of-carry model for a wide range of underlying asset types in full detail.</li>
 </ul>
 <h2 id="11-references">11. References<a class="headerlink" href="#11-references" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Bodie, Z., Kane, A., &amp; Marcus, A. J. (2021). <em>Investments</em> (12th ed.), Chapter 14 (Bond discounting conventions). McGraw-Hill.</li>
-<li>Hull, J. C. (2022). <em>Options, Futures, and Other Derivatives</em> (11th ed.), Chapter 4 (Interest rates and compounding conventions). Pearson.</li>
-<li>Shreve, S. E. (2004). <em>Stochastic Calculus for Finance I</em>, Chapter 1 (Discrete-time models and discounting). Springer Finance.</li>
-<li>NumPy Developers. "<code>numpy.exp</code>." <a href="https://numpy.org/doc/stable/reference/generated/numpy.exp.html">numpy.org/doc</a></li>
+<li>Hull, J. C. (2022). <em>Options, Futures, and Other Derivatives</em> (11th ed.), Chapters 3 and 5. Pearson.</li>
+<li>Bodie, Z., Kane, A., &amp; Marcus, A. J. (2021). <em>Investments</em> (12th ed.), Chapter 22. McGraw-Hill.</li>
+<li>CFA Institute — "Pricing and Valuation of Forward Commitments." <a href="https://www.cfainstitute.org/">cfainstitute.org</a></li>
 </ol>
 <hr />
 <div class="grid">
-<p><a class="md-button" href="/qf-lectures/financial-foundations/returns-and-log-returns/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Returns and Log Returns</a>
-<a class="md-button md-button--primary" href="/qf-lectures/financial-foundations/equities-and-bonds/">Next: Financial Instruments: Equities and Bonds <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
+<p><a class="md-button" href="/qf-lectures/curriculum/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Back to Curriculum</a>
+<a class="md-button md-button--primary" href="/qf-lectures/derivatives/options-no-arbitrage-bounds/">Next: Options and No-Arbitrage Bounds <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </div>
 
 
@@ -2185,7 +2152,7 @@ FV = 100 \times e^{0.08 \times 10} = 100 \times e^{0.8} = \$222.55
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../returns-and-log-returns/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Returns and Log Returns">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module 4 — Derivatives">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2195,20 +2162,20 @@ FV = 100 \times e^{0.08 \times 10} = 100 \times e^{0.8} = \$222.55
                 Previous
               </span>
               <div class="md-ellipsis">
-                Returns and Log Returns
+                Module 4 — Derivatives
               </div>
             </div>
           </a>
         
         
           
-          <a href="../equities-and-bonds/" class="md-footer__link md-footer__link--next" aria-label="Next: Financial Instruments: Equities and Bonds">
+          <a href="../options-no-arbitrage-bounds/" class="md-footer__link md-footer__link--next" aria-label="Next: Options and No-Arbitrage Bounds">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Financial Instruments: Equities and Bonds
+                Options and No-Arbitrage Bounds
               </div>
             </div>
             <div class="md-footer__button md-icon">

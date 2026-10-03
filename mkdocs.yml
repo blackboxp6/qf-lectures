@@ -127,6 +127,9 @@ nav:
       - derivatives/index.md
       - Forwards and Futures: derivatives/forwards-futures.md
       - Options and No-Arbitrage Bounds: derivatives/options-no-arbitrage-bounds.md
+      - Binomial Trees: derivatives/binomial-trees.md
+      - Black-Scholes-Merton Model: derivatives/black-scholes-merton.md
+      - The Greeks: derivatives/the-greeks.md
   - "5. Stochastic Finance": stochastic-finance/index.md
   - "6. Quantitative Trading": trading/index.md
   - "7. Advanced Quant Finance": advanced/index.md

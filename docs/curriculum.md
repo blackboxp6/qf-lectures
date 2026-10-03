@@ -52,9 +52,9 @@ Legend: :material-check-circle:{ style="color:#4caf50" } Published · :material-
 |---|---|
 | [Forwards and Futures](derivatives/forwards-futures.md) | :material-check-circle:{ style="color:#4caf50" } |
 | [Options and No-Arbitrage Bounds](derivatives/options-no-arbitrage-bounds.md) | :material-check-circle:{ style="color:#4caf50" } |
-| Binomial Trees | :material-progress-clock:{ style="color:#ff9800" } |
-| Black-Scholes-Merton Model | :material-progress-clock:{ style="color:#ff9800" } |
-| The Greeks | :material-progress-clock:{ style="color:#ff9800" } |
+| [Binomial Trees](derivatives/binomial-trees.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [Black-Scholes-Merton Model](derivatives/black-scholes-merton.md) | :material-check-circle:{ style="color:#4caf50" } |
+| [The Greeks](derivatives/the-greeks.md) | :material-check-circle:{ style="color:#4caf50" } |
 | Implied Volatility and the Volatility Smile | :material-progress-clock:{ style="color:#ff9800" } |
 | Monte Carlo Option Pricing | :material-progress-clock:{ style="color:#ff9800" } |
 

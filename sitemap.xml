@@ -2,174 +2,186 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/curriculum/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/_template/lecture-template/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/advanced/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/derivatives/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
+    </url>
+    <url>
+         <loc>https://blackboxp6.github.io/qf-lectures/derivatives/binomial-trees/</loc>
+         <lastmod>2026-10-03</lastmod>
+    </url>
+    <url>
+         <loc>https://blackboxp6.github.io/qf-lectures/derivatives/black-scholes-merton/</loc>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/derivatives/forwards-futures/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/derivatives/options-no-arbitrage-bounds/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
+    </url>
+    <url>
+         <loc>https://blackboxp6.github.io/qf-lectures/derivatives/the-greeks/</loc>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/financial-foundations/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/financial-foundations/compounding-time-value/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/financial-foundations/derivatives-overview/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/financial-foundations/equities-and-bonds/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/financial-foundations/market-structure-order-books/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/financial-foundations/portfolio-basics/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/financial-foundations/returns-and-log-returns/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/machine-learning/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/portfolio-risk/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/portfolio-risk/capm-factor-models/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/portfolio-risk/markowitz-optimization/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/portfolio-risk/monte-carlo-risk/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/portfolio-risk/risk-parity-drawdowns/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/portfolio-risk/sharpe-beta-covariance/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/portfolio-risk/var-expected-shortfall/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/prerequisites/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/prerequisites/calculus/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/prerequisites/linear-algebra/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/prerequisites/optimization/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/prerequisites/probability/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/prerequisites/python-numpy-pandas/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/prerequisites/statistical-inference/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/references/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/research-lab/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/arch-garch/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/arima-models/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/cointegration/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/estimation-theory/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/hypothesis-testing/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/pca/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/probability-distributions/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/regression-regularization/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/statistics/stationarity-unit-roots/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/stochastic-finance/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
     <url>
          <loc>https://blackboxp6.github.io/qf-lectures/trading/</loc>
-         <lastmod>2026-10-02</lastmod>
+         <lastmod>2026-10-03</lastmod>
     </url>
 </urlset>

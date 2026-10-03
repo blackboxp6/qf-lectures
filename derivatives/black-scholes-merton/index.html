@@ -12,13 +12,13 @@
         <meta name="author" content="Joshua Bloodymier P. Salvino">
       
       
-        <link rel="canonical" href="https://blackboxp6.github.io/qf-lectures/derivatives/forwards-futures/">
+        <link rel="canonical" href="https://blackboxp6.github.io/qf-lectures/derivatives/black-scholes-merton/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../binomial-trees/">
       
       
-        <link rel="next" href="../options-no-arbitrage-bounds/">
+        <link rel="next" href="../the-greeks/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Forwards and Futures - Quantitative Finance Lectures</title>
+        <title>Black-Scholes-Merton Model - Quantitative Finance Lectures</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#forwards-and-futures" class="md-skip">
+        <a href="#black-scholes-merton-model" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Forwards and Futures
+              Black-Scholes-Merton Model
             
           </span>
         </div>
@@ -1491,6 +1491,69 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../forwards-futures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forwards and Futures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../options-no-arbitrage-bounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Options and No-Arbitrage Bounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../binomial-trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binomial Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1507,7 +1570,7 @@
           
   
   <span class="md-ellipsis">
-    Forwards and Futures
+    Black-Scholes-Merton Model
   </span>
   
 
@@ -1518,7 +1581,7 @@
         
   
   <span class="md-ellipsis">
-    Forwards and Futures
+    Black-Scholes-Merton Model
   </span>
   
 
@@ -1644,69 +1707,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../options-no-arbitrage-bounds/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Options and No-Arbitrage Bounds
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../binomial-trees/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Binomial Trees
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../black-scholes-merton/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Black-Scholes-Merton Model
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2002,7 +2002,7 @@
                   
 
   
-    <a href="https://github.com/blackboxp6/qf-lectures/edit/main/docs/derivatives/forwards-futures.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/blackboxp6/qf-lectures/edit/main/docs/derivatives/black-scholes-merton.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2010,178 +2010,176 @@
   
 
 
-<h1 id="forwards-and-futures">Forwards and Futures<a class="headerlink" href="#forwards-and-futures" title="Permanent link">&para;</a></h1>
+<h1 id="black-scholes-merton-model">Black-Scholes-Merton Model<a class="headerlink" href="#black-scholes-merton-model" title="Permanent link">&para;</a></h1>
 <div class="admonition objectives">
 <p class="admonition-title">Learning objectives</p>
 <p>By the end of this lecture you should be able to:</p>
 <ul>
-<li>[ ] Derive the no-arbitrage forward price using a cost-of-carry argument</li>
-<li>[ ] Construct the specific arbitrage trade that enforces the no-arbitrage forward price when it is violated</li>
-<li>[ ] Explain the structural difference between a forward and a futures contract, specifically daily mark-to-market settlement</li>
-<li>[ ] Compute forward prices and simulate futures mark-to-market cash flows in Python</li>
+<li>[ ] State the Black-Scholes-Merton formula for a European call and put, and interpret each term</li>
+<li>[ ] Explain, at the level of the underlying argument, how the binomial model's limit as steps increase leads to Black-Scholes</li>
+<li>[ ] Verify put-call parity and the no-arbitrage bounds from earlier lectures hold for the Black-Scholes price</li>
+<li>[ ] Compute Black-Scholes prices in Python and confirm them via Monte Carlo simulation</li>
 </ul>
 </div>
 <h2 id="1-intuition">1. Intuition<a class="headerlink" href="#1-intuition" title="Permanent link">&para;</a></h2>
-<p>The Derivatives Overview lecture introduced the forward payoff <span class="arithmatex">\( S_T-K \)</span> and distinguished it from an option's kinked payoff. This lecture asks a sharper question: given today's spot price, what <em>should</em> the forward price <span class="arithmatex">\( K \)</span> be, if no one is to be able to lock in a riskless profit? The answer turns out not to depend on anyone's forecast of where the price is headed; it follows purely from a <strong>no-arbitrage</strong> argument based on the cost of financing and holding the underlying asset until the forward's maturity, the <strong>cost-of-carry</strong> model.</p>
-<p><strong>Futures</strong> contracts have economically the same payoff structure as forwards but differ in one operationally important way: a futures contract is <strong>marked to market daily</strong>, meaning gains and losses are settled in cash every single day rather than accumulated silently until maturity as with a forward. This distinction, mostly a technical, exchange-clearing detail, nonetheless has real financial consequences, covered at the end of this lecture.</p>
+<p>The Binomial Trees lecture showed that an option can be priced exactly, within a discrete up/down model, through replication and risk-neutral valuation, and that the resulting price converges to a single limiting value as the number of time steps grows and each step becomes infinitesimally short. The <strong>Black-Scholes-Merton model</strong> (Black &amp; Scholes, 1973; Merton, 1973) is the continuous-time version of exactly this limit: instead of the underlying taking discrete up/down steps, it is modeled as following a continuous random process (geometric Brownian motion, developed rigorously in Module 5), and the same replication logic, now using continuous trading and calculus rather than discrete steps and algebra, yields a closed-form pricing formula.</p>
+<p>This formula was a landmark result (it won Scholes and Merton the 1997 Nobel Memorial Prize in Economic Sciences; Black had died in 1995 and was ineligible) precisely because it gives an <em>exact, closed-form</em> price for a European option as a function of only five observable or estimable inputs, with no need to simulate a tree or run a Monte Carlo simulation at all. This lecture presents the formula and its ingredients; its full derivation via stochastic calculus (Itô's lemma and the Black-Scholes partial differential equation) is developed properly in Module 5, once the necessary mathematical machinery is in place.</p>
 <h2 id="2-mathematical-formulation">2. Mathematical formulation<a class="headerlink" href="#2-mathematical-formulation" title="Permanent link">&para;</a></h2>
-<p><strong>No-arbitrage forward price</strong> on an asset with spot price <span class="arithmatex">\( S_0 \)</span>, continuously compounded risk-free rate <span class="arithmatex">\( r \)</span>, and time to maturity <span class="arithmatex">\( T \)</span> (assuming no dividends or storage costs, the simplest case):</p>
+<p>For a European call and put on a non-dividend-paying underlying with current price <span class="arithmatex">\( S_0 \)</span>, strike <span class="arithmatex">\( K \)</span>, continuously compounded risk-free rate <span class="arithmatex">\( r \)</span>, volatility <span class="arithmatex">\( \sigma \)</span> (of log returns), and time to maturity <span class="arithmatex">\( T \)</span>:</p>
 <div class="arithmatex">\[
-F_0 = S_0\,e^{rT}
+C = S_0\,N(d_1) - Ke^{-rT}\,N(d_2)
 \]</div>
-<p><strong>With a continuous dividend yield <span class="arithmatex">\( q \)</span></strong> (e.g., for a stock index or currency):</p>
 <div class="arithmatex">\[
-F_0 = S_0\,e^{(r-q)T}
+P = Ke^{-rT}\,N(-d_2) - S_0\,N(-d_1)
 \]</div>
-<p><strong>With storage costs</strong> <span class="arithmatex">\( u \)</span> (continuously compounded, as a fraction of the asset's value, relevant for physical commodities) and a <strong>convenience yield</strong> <span class="arithmatex">\( y \)</span> (the non-monetary benefit of holding the physical commodity itself, such as avoiding a stockout):</p>
+<p>where</p>
 <div class="arithmatex">\[
-F_0 = S_0\,e^{(r+u-y)T}
+d_1 = \frac{\ln(S_0/K)+\left(r+\tfrac12\sigma^2\right)T}{\sigma\sqrt T}, \qquad d_2 = d_1-\sigma\sqrt T
 \]</div>
-<p><strong>Value of an existing forward position</strong> at some time <span class="arithmatex">\( t&lt;T \)</span>, with current forward price <span class="arithmatex">\( F_t \)</span> for the same maturity and original contracted price <span class="arithmatex">\( K \)</span>:</p>
-<div class="arithmatex">\[
-V_t = (F_t-K)\,e^{-r(T-t)}
-\]</div>
-<h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
-<p><strong>The cost-of-carry forward price, via a replication/arbitrage argument.</strong> Consider two ways to guarantee ownership of the asset at time <span class="arithmatex">\( T \)</span>:</p>
+<p>and <span class="arithmatex">\( N(\cdot) \)</span> is the standard Normal cumulative distribution function (the Probability Foundations lecture).</p>
+<p><strong>Interpretation of each piece:</strong></p>
 <ul>
-<li><strong>Strategy A</strong>: enter a forward contract today to buy the asset at <span class="arithmatex">\( T \)</span> for price <span class="arithmatex">\( F_0 \)</span>.</li>
-<li><strong>Strategy B</strong>: borrow <span class="arithmatex">\( S_0 \)</span> today at the risk-free rate, buy the asset now for <span class="arithmatex">\( S_0 \)</span>, and hold it until <span class="arithmatex">\( T \)</span>. At <span class="arithmatex">\( T \)</span>, the loan has grown to <span class="arithmatex">\( S_0e^{rT} \)</span>, which must be repaid, and the investor then owns the asset.</li>
+<li><span class="arithmatex">\( N(d_1) \)</span> and <span class="arithmatex">\( N(d_2) \)</span> are both probabilities between 0 and 1, computed under different measures; <span class="arithmatex">\( N(d_2) \)</span> is (under the risk-neutral measure) the probability the option is exercised, and <span class="arithmatex">\( S_0N(d_1) \)</span> can be interpreted as the present value of receiving the stock conditional on exercise.</li>
+<li><span class="arithmatex">\( Ke^{-rT} \)</span> is the present value of the strike, exactly as it appeared in the put-call parity and no-arbitrage bounds lectures.</li>
+<li><span class="arithmatex">\( \sigma\sqrt T \)</span> is the total standard deviation of the log return over the option's life, the natural "scale" of uncertainty the formula is built around.</li>
 </ul>
-<p>Both strategies deliver exactly one unit of the asset at time <span class="arithmatex">\( T \)</span>, with no other cash flows in between (ignoring dividends and storage costs for now), so by the <strong>law of one price</strong> (if two strategies produce identical future payoffs, they must cost the same today, or a riskless arbitrage exists), their costs must be equal:</p>
+<h2 id="3-derivation">3. Derivation<a class="headerlink" href="#3-derivation" title="Permanent link">&para;</a></h2>
+<p>A full derivation of the Black-Scholes partial differential equation from first principles requires Itô's lemma and is deferred to Module 5. What can be said now, using only tools already developed, is how the formula connects to, and is consistent with, everything derived so far in this module.</p>
+<p><strong>Connecting to risk-neutral pricing from the Binomial Trees lecture.</strong> The Black-Scholes formula can be written as a discounted risk-neutral expectation, exactly the structure derived for the one-period binomial model:</p>
 <div class="arithmatex">\[
-F_0 = S_0 e^{rT}
+C = e^{-rT}\,E^{\mathbb Q}\big[\max(S_T-K,0)\big]
 \]</div>
-<p>exactly the formula in Section 2. If dividends at continuous yield <span class="arithmatex">\( q \)</span> are paid on the asset while held, Strategy B's holder additionally receives those dividends (reducing the effective cost of carrying the position, since dividend income can be reinvested or used to offset the financing cost), which modifies the replication argument to produce the <span class="arithmatex">\( e^{(r-q)T} \)</span> formula instead; a fully worked version of this adjustment appears in Hull (2022).</p>
-<p><strong>Why a mispriced forward creates a genuine arbitrage, with the explicit trade.</strong> Suppose, as in Section 6's chart, the market forward price <span class="arithmatex">\( F_{\text{market}} \)</span> exceeds the theoretical <span class="arithmatex">\( F_0=S_0e^{rT} \)</span>. An arbitrageur can:</p>
-<ol>
-<li><strong>Sell</strong> (go short) the overpriced forward at <span class="arithmatex">\( F_{\text{market}} \)</span>, agreeing to deliver the asset at <span class="arithmatex">\( T \)</span> for that price.</li>
-<li><strong>Borrow</strong> <span class="arithmatex">\( S_0 \)</span> today at rate <span class="arithmatex">\( r \)</span> and <strong>buy</strong> the asset now (replicating Strategy B above).</li>
-<li>At <span class="arithmatex">\( T \)</span>: deliver the asset into the forward contract, receiving <span class="arithmatex">\( F_{\text{market}} \)</span>; repay the loan, which has grown to <span class="arithmatex">\( S_0e^{rT} \)</span>.</li>
-</ol>
-<p>The riskless profit, locked in at time 0 with no net cash outlay, is exactly</p>
+<p>where <span class="arithmatex">\( \mathbb Q \)</span> is the risk-neutral measure under which the underlying's expected growth rate is exactly <span class="arithmatex">\( r \)</span> (the continuous-time analogue of the binomial risk-neutral probability <span class="arithmatex">\( p \)</span>), the same "price as if risk-neutral" logic that made the binomial formula work, carried over to continuous time. Under <span class="arithmatex">\( \mathbb Q \)</span>, <span class="arithmatex">\( \ln S_T \)</span> is Normally distributed with mean <span class="arithmatex">\( \ln S_0+(r-\tfrac12\sigma^2)T \)</span> and variance <span class="arithmatex">\( \sigma^2T \)</span>; evaluating the expectation above using this distribution (a calculus exercise using the Normal density, carried out in full in most derivatives textbooks, e.g. Hull, 2022, Chapter 15) produces exactly the <span class="arithmatex">\( d_1,d_2 \)</span> formula in Section 2. The binomial model, as the number of steps grows, has its risk-neutral terminal distribution converge to precisely this lognormal distribution (a continuous-time, many-step limit of a sum of many small up/down log-moves, itself an application of the Central Limit Theorem from the Probability Foundations lecture), which is the formal sense in which the binomial model converges to Black-Scholes, as demonstrated numerically in the previous lecture.</p>
+<p><strong>Consistency with put-call parity.</strong> Subtracting the put formula from the call formula:</p>
 <div class="arithmatex">\[
-F_{\text{market}} - S_0e^{rT} &gt; 0
+C-P = S_0\big[N(d_1)+N(-d_1)\big] - Ke^{-rT}\big[N(d_2)+N(-d_2)\big] = S_0 - Ke^{-rT}
 \]</div>
-<p>by assumption. This is a genuine, riskless arbitrage: every cash flow and quantity involved is known and contracted for at time 0, with no exposure to where the spot price actually ends up at <span class="arithmatex">\( T \)</span>. The existence of this trade is precisely what competitive, well-functioning markets are expected to eliminate quickly, pushing <span class="arithmatex">\( F_{\text{market}} \)</span> back toward <span class="arithmatex">\( S_0e^{rT} \)</span>, which is why the no-arbitrage formula, not a forecast of future spot prices, is the standard pricing relationship used in practice. (An analogous short-the-asset, lend-the-proceeds trade enforces the price from the other direction if the market forward is instead too <em>low</em>.)</p>
+<p>using the identity <span class="arithmatex">\( N(x)+N(-x)=1 \)</span> for the standard Normal CDF (since <span class="arithmatex">\( N(-x)=1-N(x) \)</span> by the Normal distribution's symmetry around zero, established in the Probability Distributions lecture). This exactly recovers put-call parity, derived purely from no-arbitrage in the Options and No-Arbitrage Bounds lecture, with no assumption about the underlying's distribution at all. That the Black-Scholes formula, built from a <em>specific</em> distributional assumption (lognormal terminal prices), automatically satisfies a relationship that had to hold under <em>any</em> correct model is an essential consistency check, confirming the formula does not violate the model-free constraints derived earlier.</p>
 <h2 id="4-worked-numerical-example">4. Worked numerical example<a class="headerlink" href="#4-worked-numerical-example" title="Permanent link">&para;</a></h2>
-<p>A non-dividend-paying stock trades at $100, the continuously compounded risk-free rate is 5%, and a forward contract matures in 1 year. The no-arbitrage forward price is</p>
+<p>A stock at $100, strike $100, risk-free rate 5%, volatility 20%, 1-year maturity (the same inputs used for the binomial convergence check in the previous lecture):</p>
 <div class="arithmatex">\[
-F_0 = 100\,e^{0.05\times1} \approx \$105.13
+d_1 = \frac{\ln(1)+(0.05+0.02)\times1}{0.2\times1} = \frac{0.07}{0.2}=0.35, \qquad d_2 = 0.35-0.2=0.15
 \]</div>
-<p>If the market were instead quoting a 1-year forward at $112 (Section 6's chart), the arbitrage trade in Section 3 locks in a riskless profit of <span class="arithmatex">\( 112-105.13=\$6.87 \)</span> per unit, with zero net investment and zero price risk, exactly the kind of "free money" that competitive markets compete away, which is the economic reason the forward price should converge to $105.13 rather than persist at $112.</p>
+<div class="arithmatex">\[
+N(0.35)\approx0.6368, \qquad N(0.15)\approx0.5596
+\]</div>
+<div class="arithmatex">\[
+C = 100\times0.6368 - 100e^{-0.05}\times0.5596 = 63.68 - 95.12\times0.5596 \approx 63.68-53.23=\$10.45
+\]</div>
+<p>matching, as expected, the Black-Scholes price of $10.4506 used as the convergence target in the previous lecture's binomial tree chart.</p>
 <h2 id="5-python-implementation">5. Python implementation<a class="headerlink" href="#5-python-implementation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># --- No-arbitrage forward pricing ---</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span> <span class="nf">forward_price</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Cost-of-carry forward price, with an optional continuous dividend/convenience yield q.&quot;&quot;&quot;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">return</span> <span class="n">S0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">r</span> <span class="o">-</span> <span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span> <span class="o">=</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.0</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">F0</span> <span class="o">=</span> <span class="n">forward_price</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No-arbitrage forward price: $</span><span class="si">{</span><span class="n">F0</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span> <span class="nf">black_scholes</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">option_type</span><span class="o">=</span><span class="s2">&quot;call&quot;</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">d1</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">S0</span><span class="o">/</span><span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">d2</span> <span class="o">=</span> <span class="n">d1</span> <span class="o">-</span> <span class="n">sigma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">if</span> <span class="n">option_type</span> <span class="o">==</span> <span class="s2">&quot;call&quot;</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="k">return</span> <span class="n">S0</span><span class="o">*</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span> <span class="o">-</span> <span class="n">K</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="k">return</span> <span class="n">K</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d2</span><span class="p">)</span> <span class="o">-</span> <span class="n">S0</span><span class="o">*</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d1</span><span class="p">)</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># --- The arbitrage trade, explicitly, when the market forward is mispriced ---</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">F_market</span> <span class="o">=</span> <span class="mf">112.0</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">if</span> <span class="n">F_market</span> <span class="o">&gt;</span> <span class="n">F0</span><span class="p">:</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">profit</span> <span class="o">=</span> <span class="n">F_market</span> <span class="o">-</span> <span class="n">S0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Market forward ($</span><span class="si">{</span><span class="n">F_market</span><span class="si">}</span><span class="s2">) is overpriced.&quot;</span><span class="p">)</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Arbitrage: short the forward, borrow $</span><span class="si">{</span><span class="n">S0</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> to buy the asset now.&quot;</span><span class="p">)</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Riskless profit at T, locked in today: $</span><span class="si">{</span><span class="n">profit</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># --- Forward price with a dividend yield, e.g. an equity index ---</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">F0_with_div</span> <span class="o">=</span> <span class="n">forward_price</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Forward price with a 2% dividend yield: $</span><span class="si">{</span><span class="n">F0_with_div</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">  (lower, since holding the asset earns income)&quot;</span><span class="p">)</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># --- Futures: simulated daily mark-to-market cash flows vs. a forward&#39;s single payoff at maturity ---</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">days</span> <span class="o">=</span> <span class="mi">20</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">price_path</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">days</span><span class="p">))</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">daily_mtm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">price_path</span><span class="p">,</span> <span class="n">prepend</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>   <span class="c1"># daily gain/loss on a long futures position</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">cumulative_mtm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">daily_mtm</span><span class="p">)</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Futures: sum of daily mark-to-market cash flows = </span><span class="si">{</span><span class="n">cumulative_mtm</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Forward: single payoff at maturity (same underlying move) = </span><span class="si">{</span><span class="n">price_path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(Equal in this simplified, constant-rate example; they can differ once interest on interim cash flows is modeled.)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">S0</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">T</span> <span class="o">=</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">1.0</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">call_price</span> <span class="o">=</span> <span class="n">black_scholes</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;call&quot;</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">put_price</span> <span class="o">=</span> <span class="n">black_scholes</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;put&quot;</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Call price: </span><span class="si">{</span><span class="n">call_price</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Put price:  </span><span class="si">{</span><span class="n">put_price</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># --- Verify put-call parity holds exactly ---</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">parity_lhs</span> <span class="o">=</span> <span class="n">call_price</span> <span class="o">-</span> <span class="n">put_price</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">parity_rhs</span> <span class="o">=</span> <span class="n">S0</span> <span class="o">-</span> <span class="n">K</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">C - P = </span><span class="si">{</span><span class="n">parity_lhs</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">, S0 - Ke^(-rT) = </span><span class="si">{</span><span class="n">parity_rhs</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">  (should match exactly)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># --- Verify via Monte Carlo simulation (the risk-neutral expectation, directly) ---</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">n_sims</span> <span class="o">=</span> <span class="mi">200_000</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">Z</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">n_sims</span><span class="p">)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">S_T</span> <span class="o">=</span> <span class="n">S0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">r</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">T</span> <span class="o">+</span> <span class="n">sigma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">Z</span><span class="p">)</span>   <span class="c1"># risk-neutral terminal price</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">payoffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">S_T</span> <span class="o">-</span> <span class="n">K</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">mc_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">payoffs</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="n">mc_se</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">payoffs</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_sims</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Monte Carlo call price: </span><span class="si">{</span><span class="n">mc_price</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> +/- </span><span class="si">{</span><span class="mf">1.96</span><span class="o">*</span><span class="n">mc_se</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (95% CI)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Black-Scholes call price: </span><span class="si">{</span><span class="n">call_price</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">  (should fall within the CI)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1"># --- Check against the no-arbitrage bounds from the earlier lecture ---</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">call_lower</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">S0</span> <span class="o">-</span> <span class="n">K</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">No-arbitrage lower bound: </span><span class="si">{</span><span class="n">call_lower</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &lt;= BS price </span><span class="si">{</span><span class="n">call_price</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &lt;= S0 = </span><span class="si">{</span><span class="n">S0</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Continuing directly from the code above, here is the plotting code that produces both charts in Section 6:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># --- Chart 1: no-arbitrage forward price curve and a mispriced forward ---</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">T_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">F_theoretical</span> <span class="o">=</span> <span class="n">S0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">T_grid</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">T1_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">T_grid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">))</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_grid</span><span class="p">,</span> <span class="n">F_theoretical</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;No-arbitrage forward price F=S₀e^(rT)&quot;</span><span class="p">)</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">F_market</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff5252&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Overpriced market forward (F=</span><span class="si">{</span><span class="n">F_market</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">F_theoretical</span><span class="p">[</span><span class="n">T1_idx</span><span class="p">]),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">F_market</span><span class="p">),</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#4caf50&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">))</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="p">(</span><span class="n">F_market</span> <span class="o">+</span> <span class="n">F_theoretical</span><span class="p">[</span><span class="n">T1_idx</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Arbitrage</span><span class="se">\n</span><span class="s2">profit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#4caf50&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time to maturity T (years)&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Forward price&quot;</span><span class="p">)</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Cost-of-Carry Forward Pricing and a Mispriced Forward&quot;</span><span class="p">)</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># --- Chart 1: call price vs. spot, at different maturities ---</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">S_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">for</span> <span class="n">T_plot</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[(</span><span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;#ff9800&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;#3f51b5&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;#4caf50&quot;</span><span class="p">)]:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">prices</span> <span class="o">=</span> <span class="n">black_scholes</span><span class="p">(</span><span class="n">S_range</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">T_plot</span><span class="p">,</span> <span class="s2">&quot;call&quot;</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S_range</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;T=</span><span class="si">{</span><span class="n">T_plot</span><span class="si">}</span><span class="s2">yr&quot;</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">S_range</span> <span class="o">-</span> <span class="n">K</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Intrinsic value (T=0)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Spot price S₀&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Call option price&quot;</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Black-Scholes Call Price vs. Spot, at Different Maturities&quot;</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># --- Chart 2: Monte Carlo running estimate converging to the Black-Scholes price ---</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">mc_running</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">payoffs</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ns</span><span class="p">]</span>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># --- Chart 2: futures daily mark-to-market vs. forward single payoff ---</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">days</span><span class="p">),</span> <span class="n">daily_mtm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#4caf50&quot;</span> <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;#ff5252&quot;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">daily_mtm</span><span class="p">])</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Futures: Daily Mark-to-Market Cash Flows&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Daily gain/loss&quot;</span><span class="p">)</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">days</span><span class="p">),</span> <span class="n">cumulative_mtm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>             <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Futures: cumulative daily settlement&quot;</span><span class="p">)</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">days</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">cumulative_mtm</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff9800&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>             <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Forward: single payoff at maturity&quot;</span><span class="p">)</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Cumulative P&amp;L: Futures (marked daily) vs. Forward (settled once)&quot;</span><span class="p">)</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Day&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Cumulative P&amp;L&quot;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">))</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">mc_running</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#3f51b5&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Monte Carlo running estimate&quot;</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">call_price</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff5252&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Black-Scholes = </span><span class="si">{</span><span class="n">call_price</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Number of simulated paths&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Call price estimate&quot;</span><span class="p">)</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Monte Carlo Converges to the Black-Scholes Price&quot;</span><span class="p">)</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
 <h2 id="6-visualization">6. Visualization<a class="headerlink" href="#6-visualization" title="Permanent link">&para;</a></h2>
 <figure class="qf-figure">
-<p><img alt="The no-arbitrage forward price curve rising with maturity, with a mispriced market forward and the resulting arbitrage profit marked" src="../../assets/images/forwards-cost-of-carry.png" /></p>
-<figcaption>The theoretical no-arbitrage forward price (blue curve) grows with maturity at the risk-free rate, per the cost-of-carry formula. A market-quoted forward above this curve (red dot) permits the riskless arbitrage trade derived in Section 3, capturing the gap (green) as a locked-in profit.</figcaption>
+<p><img alt="Black-Scholes call price plotted against spot price for three different maturities, approaching the intrinsic value as maturity shrinks" src="../../assets/images/bs-price-vs-spot.png" /></p>
+<figcaption>Black-Scholes call prices as a function of spot price, for three maturities. Shorter-maturity curves (orange) sit closer to the intrinsic value (black dashed), while longer-maturity curves (green) retain more time value, especially near the strike, where outcome uncertainty matters most.</figcaption>
 </figure>
 <figure class="qf-figure">
-<p><img alt="Daily mark-to-market cash flows for a simulated futures position, and the cumulative P&amp;L compared to a forward's single payoff at maturity" src="../../assets/images/futures-mark-to-market.png" /></p>
-<figcaption>Top: a futures position's daily gains (green) and losses (red) are settled in cash every day. Bottom: the cumulative sum of those daily settlements (blue) tracks a forward contract's single payoff at maturity (orange dashed) in this simplified example, but the *timing* of the cash flows differs sharply, interim cash is paid and received throughout the futures contract's life, not just at the end.</figcaption>
+<p><img alt="Monte Carlo running price estimate converging to the Black-Scholes closed-form price as the number of simulated paths increases" src="../../assets/images/bs-montecarlo-check.png" /></p>
+<figcaption>A Monte Carlo estimate of the same call option's price, using the risk-neutral simulation from Section 5, converges to the Black-Scholes closed-form price (red dashed) as the number of simulated paths grows, the same 1/√n convergence behavior derived in the Monte Carlo Simulation for Risk lecture, here applied to option pricing specifically.</figcaption>
 </figure>
 <h2 id="7-financial-interpretation">7. Financial interpretation<a class="headerlink" href="#7-financial-interpretation" title="Permanent link">&para;</a></h2>
-<p>The cost-of-carry formula is the standard starting point for pricing forwards and futures across asset classes: equity index futures use the dividend-yield-adjusted version, currency forwards use an analogous interest-rate-differential version (covered interest rate parity), and commodity futures incorporate storage costs and convenience yield. The forward/futures distinction matters practically because daily mark-to-market settlement means a futures position generates (or demands) real interim cash flows well before maturity, exposing the holder to reinvestment-rate risk on interim gains and margin-call liquidity risk on interim losses, neither of which a forward contract, settled only once at maturity, exposes the holder to in the same way. This is also why futures prices and forward prices can differ slightly, in theory, when interest rates are themselves stochastic and correlated with the underlying's price path, though for most practical purposes, and in nearly all introductory treatments, the two are priced using the same cost-of-carry logic.</p>
+<p>The Black-Scholes formula's inputs are instructive about what actually drives an option's value: <span class="arithmatex">\( S_0 \)</span> and <span class="arithmatex">\( K \)</span> jointly determine moneyness, <span class="arithmatex">\( r \)</span> and <span class="arithmatex">\( T \)</span> determine the present value of the strike, and <span class="arithmatex">\( \sigma \)</span> (together with <span class="arithmatex">\( T \)</span>, through the combined term <span class="arithmatex">\( \sigma\sqrt T \)</span>) determines the magnitude of outcome uncertainty the option is providing protection against or exposure to. Notably, the formula does <strong>not</strong> depend on the underlying's expected return (the real-world drift), only on <span class="arithmatex">\( r \)</span>, a direct consequence of risk-neutral pricing (Section 3): two traders with wildly different views on where the stock is headed should, if they agree on <span class="arithmatex">\( \sigma \)</span>, agree on the option's fair price, which can feel counterintuitive at first but follows directly from the same replication logic used throughout this module. In practice, every input except <span class="arithmatex">\( \sigma \)</span> is directly observable; <span class="arithmatex">\( \sigma \)</span> must be estimated or, as the Implied Volatility lecture later in this module covers, backed out from observed option prices themselves, inverting the formula rather than using it to produce a price.</p>
 <h2 id="8-common-mistakes">8. Common mistakes<a class="headerlink" href="#8-common-mistakes" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: using the simple discounted-spot formula when dividends or storage costs apply</p>
-<p>Omitting a known dividend yield, or storage costs for a physical commodity, systematically misprices the forward relative to what a correct replication argument implies, as Section 2's extended formulas make explicit.</p>
+<p class="admonition-title">Common mistake: using the wrong volatility convention</p>
+<p><span class="arithmatex">\( \sigma \)</span> in the Black-Scholes formula is the annualized standard deviation of continuously compounded (log) returns, exactly the quantity derived and discussed at length in the Returns and Log Returns lecture, not simple returns and not a single-period (e.g., daily) figure without proper annualization (typically scaling a daily estimate by <span class="arithmatex">\( \sqrt{252} \)</span>).</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: treating the forward price as a 'forecast' of the future spot price</p>
-<p>The no-arbitrage forward price reflects the <em>cost of carrying</em> the asset to maturity, not a market consensus prediction of where the spot price will actually be. Under certain assumptions the two can coincide, but the forward price is derived without any reference to expected future spot prices at all, exactly the point of the replication argument in Section 3.</p>
+<p class="admonition-title">Common mistake: applying the formula to dividend-paying or American-style options without adjustment</p>
+<p>The formula in Section 2 assumes no dividends and European-style exercise. A dividend-paying underlying requires the same <span class="arithmatex">\( S_0\to S_0e^{-qT} \)</span> adjustment seen in the Forwards and Futures lecture, and American options generally require a numerical method (such as the binomial tree from the previous lecture) rather than this closed form, since early exercise can be optimal in some cases (puts, and calls on dividend-paying stocks).</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Common mistake: ignoring the practical consequences of daily mark-to-market</p>
-<p>Assuming a futures position behaves exactly like a forward in terms of cash flow timing ignores the real liquidity and reinvestment implications of daily settlement, margin calls on losing positions are a genuine practical risk that a forward contract, by construction, does not carry in the same way.</p>
+<p class="admonition-title">Common mistake: forgetting the formula gives a price, not a prediction</p>
+<p>As emphasized in Section 7, the Black-Scholes price does not encode a view on whether the stock will go up or down; using it, or its implied probabilities <span class="arithmatex">\( N(d_1),N(d_2) \)</span>, as a forecast of the real-world likelihood of the stock rising is a misapplication of what the formula's risk-neutral construction actually represents.</p>
 </div>
 <h2 id="9-exercises">9. Exercises<a class="headerlink" href="#9-exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li>A commodity trades at $50 per unit, the risk-free rate is 4%, annual storage costs are 2% of value, and the commodity's convenience yield is estimated at 1%. Compute the 6-month no-arbitrage futures price.</li>
-<li>Suppose the market forward price in Section 5's example were instead $100 (below the $105.13 theoretical price) rather than $112. Describe the specific arbitrage trade (the mirror image of Section 3's trade) that would profit from this mispricing, and compute the riskless profit.</li>
-<li>Extend the futures mark-to-market simulation in Section 5 to include a (small) short-term reinvestment rate on each day's cash settlement, compounded daily, and compare the final cumulative value to the simple-sum version. Under what condition would this make futures and forward payoffs diverge?</li>
+<li>Reproduce the hand calculation in Section 4 for a put instead of a call, and verify your answer against the Python implementation in Section 5.</li>
+<li>Using the code in Section 5, compute how the call price changes if volatility rises from 20% to 30% (all else equal), and relate the direction of the change to the role of <span class="arithmatex">\( \sigma\sqrt T \)</span> discussed in Section 2.</li>
+<li>Verify numerically that as <span class="arithmatex">\( T\to0 \)</span> (e.g., <span class="arithmatex">\( T=0.001 \)</span>), the Black-Scholes call price converges to the option's intrinsic value <span class="arithmatex">\( \max(S_0-K,0) \)</span>, consistent with the T=0 curve shown in Section 6's first chart.</li>
 </ol>
 <h2 id="10-further-reading">10. Further reading<a class="headerlink" href="#10-further-reading" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Hull (2022), Chapters 3 and 5, develops the cost-of-carry model for a wide range of underlying asset types in full detail.</li>
+<li>Black and Scholes (1973) and Merton (1973) are the two foundational papers; both are challenging but rewarding to read directly once the Itô calculus machinery from Module 5 is in hand.</li>
 </ul>
 <h2 id="11-references">11. References<a class="headerlink" href="#11-references" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Hull, J. C. (2022). <em>Options, Futures, and Other Derivatives</em> (11th ed.), Chapters 3 and 5. Pearson.</li>
-<li>Bodie, Z., Kane, A., &amp; Marcus, A. J. (2021). <em>Investments</em> (12th ed.), Chapter 22. McGraw-Hill.</li>
-<li>CFA Institute — "Pricing and Valuation of Forward Commitments." <a href="https://www.cfainstitute.org/">cfainstitute.org</a></li>
+<li>Black, F., &amp; Scholes, M. (1973). "The Pricing of Options and Corporate Liabilities." <em>Journal of Political Economy</em>, 81(3), 637–654.</li>
+<li>Merton, R. C. (1973). "Theory of Rational Option Pricing." <em>The Bell Journal of Economics and Management Science</em>, 4(1), 141–183.</li>
+<li>Hull, J. C. (2022). <em>Options, Futures, and Other Derivatives</em> (11th ed.), Chapter 15. Pearson.</li>
+<li>SciPy Developers. "<code>scipy.stats.norm</code>." <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html">docs.scipy.org</a></li>
 </ol>
 <hr />
 <div class="grid">
-<p><a class="md-button" href="/qf-lectures/curriculum/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Back to Curriculum</a>
-<a class="md-button md-button--primary" href="/qf-lectures/derivatives/options-no-arbitrage-bounds/">Next: Options and No-Arbitrage Bounds <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
+<p><a class="md-button" href="/qf-lectures/derivatives/binomial-trees/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg></span> Previous: Binomial Trees</a>
+<a class="md-button md-button--primary" href="/qf-lectures/derivatives/the-greeks/">Next: The Greeks <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </div>
 
 
@@ -2221,7 +2219,7 @@ F_0 = 100\,e^{0.05\times1} \approx \$105.13
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module 4 — Derivatives">
+          <a href="../binomial-trees/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Binomial Trees">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2231,20 +2229,20 @@ F_0 = 100\,e^{0.05\times1} \approx \$105.13
                 Previous
               </span>
               <div class="md-ellipsis">
-                Module 4 — Derivatives
+                Binomial Trees
               </div>
             </div>
           </a>
         
         
           
-          <a href="../options-no-arbitrage-bounds/" class="md-footer__link md-footer__link--next" aria-label="Next: Options and No-Arbitrage Bounds">
+          <a href="../the-greeks/" class="md-footer__link md-footer__link--next" aria-label="Next: The Greeks">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Options and No-Arbitrage Bounds
+                The Greeks
               </div>
             </div>
             <div class="md-footer__button md-icon">
